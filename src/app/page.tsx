@@ -81,14 +81,14 @@ export default async function Home() {
             href="https://london.metro-memory.com"
             className="color-blue -mx-2 mt-2 inline-block rounded-full px-2 py-1 transition-all duration-200 hover:bg-zinc-100 dark:hover:bg-zinc-800"
           >
-            London Undeground (soon)
+            London Tube
           </a>
           <br />
           <a
             href="https://berlin.metro-memory.com"
             className="color-blue -mx-2 mt-2 inline-block rounded-full px-2 py-1 transition-all duration-200 hover:bg-zinc-100 dark:hover:bg-zinc-800"
           >
-            Berlin U-Bahn & S-Bahn (soon)
+            Berlin U-Bahn & S-Bahn
           </a>
 
           <p className="mt-6">
