@@ -14,6 +14,7 @@ import paris from '@/images/photos/paris.png'
 import london from '@/images/photos/london.png'
 import berlin from '@/images/photos/berlin.png'
 import ny from '@/images/photos/ny.png'
+import Tweets from '@/components/Tweets'
 
 interface ICity {
   name: string
@@ -73,7 +74,7 @@ const City = ({ city, className }: { city: ICity; className?: string }) => {
       </h1>
       <div
         className={clsx(
-          'relative aspect-[9/10] w-60 flex-none overflow-hidden rounded-xl bg-zinc-100 shadow transition-all  dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
+          'relative aspect-square w-60 flex-none overflow-hidden rounded-xl bg-zinc-100 shadow transition-all  dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
           {
             'group-hover:shadow-lg group-hover:shadow-yellow-300/50':
               !city.disabled,
@@ -86,7 +87,6 @@ const City = ({ city, className }: { city: ICity; className?: string }) => {
           draggable={false}
           src={city.image}
           alt=""
-          sizes="(min-width: 640px) 18rem, 14rem"
           className="absolute inset-0 h-full w-full object-cover"
         />
       </div>
@@ -112,7 +112,7 @@ export default async function Home() {
             The goal is simple. Type as many of the stations as you can
             remember, and see them pop up on the map. No time limit.
           </p>
-          <div className="my-16 grid w-[80vw] grid-cols-1 gap-8 md:grid-cols-2 2xl:grid-cols-3">
+          <div className="mx-auto my-16 mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:mt-20 md:grid-cols-2 2xl:grid-cols-3">
             {cities.map((city, i) => (
               <City
                 city={city}
@@ -156,6 +156,11 @@ export default async function Home() {
           Inspired by the game Chris Arvin created for{' '}
           <a href="https://carvin.github.io/sf-street-names/">San Francisco</a>.
         </p>
+
+        <h2 className="mt-12 text-4xl font-bold">
+          What people say about Metro Memory
+        </h2>
+        <Tweets />
       </Container>
     </>
   )
