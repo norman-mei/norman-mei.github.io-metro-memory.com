@@ -1,4 +1,4 @@
-import Image, { type ImageProps } from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 
@@ -10,11 +10,42 @@ import {
   TwitterIcon,
 } from '@/components/SocialIcons'
 
-import image1 from '@/images/photos/image-1.png'
-import image2 from '@/images/photos/image-2.jpg'
-import image3 from '@/images/photos/image-3.jpg'
-import image4 from '@/images/photos/image-4.jpg'
-import image5 from '@/images/photos/image-5.jpg'
+import paris from '@/images/photos/paris.png'
+import london from '@/images/photos/london.png'
+import berlin from '@/images/photos/berlin.png'
+import ny from '@/images/photos/ny.png'
+
+interface ICity {
+  name: string
+  image: StaticImageData
+  link: string
+  disabled?: boolean
+}
+
+const cities: ICity[] = [
+  {
+    name: 'Paris Metro',
+    image: paris,
+    link: 'https://memory.pour.paris',
+  },
+  {
+    name: 'London Tube',
+    image: london,
+    link: 'https://london.metro-memory.com',
+  },
+  {
+    name: 'Berlin S- & U-Bahn (soon)',
+    image: berlin,
+    link: '#',
+    disabled: true,
+  },
+  // {
+  //   name: 'New York Subway (soon)',
+  //   image: ny,
+  //   link: '#',
+  //   disabled: true,
+  // },
+]
 
 function SocialLink({
   icon: Icon,
@@ -29,30 +60,37 @@ function SocialLink({
   )
 }
 
-function Photos() {
-  let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
-
+const City = ({ city, className }: { city: ICity; className?: string }) => {
   return (
-    <div className="mt-16 sm:mt-20">
-      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1].map((image, imageIndex) => (
-          <div
-            key={image.src}
-            className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
-              rotations[imageIndex % rotations.length],
-            )}
-          >
-            <Image
-              src={image}
-              alt=""
-              sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>
-        ))}
+    <a
+      href={city.link}
+      key={city.link}
+      className="group mt-4"
+      aria-disabled={city.disabled}
+    >
+      <h1 className="mb-4 text-2xl font-bold group-hover:underline">
+        {city.name}
+      </h1>
+      <div
+        className={clsx(
+          'relative aspect-[9/10] w-60 flex-none overflow-hidden rounded-xl bg-zinc-100 shadow transition-all  dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
+          {
+            'group-hover:shadow-lg group-hover:shadow-yellow-300/50':
+              !city.disabled,
+            grayscale: city.disabled,
+          },
+          className,
+        )}
+      >
+        <Image
+          draggable={false}
+          src={city.image}
+          alt=""
+          sizes="(min-width: 640px) 18rem, 14rem"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
       </div>
-    </div>
+    </a>
   )
 }
 
@@ -65,41 +103,29 @@ export default async function Home() {
             Metro Memory{' '}
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Test your knowledge of your city.
+            Challenge yourself to remember the stations of your city&apos;s
+            metro.
             <br />
-            How well do you know your city&apos;s transit system? In this series
-            of games, try to type as many station names from memory as possible.
+            How well do you know your city&apos;s transit system?
           </p>
-          <a
-            href="https://memory.pour.paris"
-            className="color-blue -mx-2 mt-2 inline-block rounded-full px-2 py-1 transition-all duration-200 hover:bg-zinc-100 dark:hover:bg-zinc-800"
-          >
-            Paris Metro
-          </a>
-          <br />
-          <a
-            href="https://london.metro-memory.com"
-            className="color-blue -mx-2 mt-2 inline-block rounded-full px-2 py-1 transition-all duration-200 hover:bg-zinc-100 dark:hover:bg-zinc-800"
-          >
-            London Tube
-          </a>
-          <br />
-          <a
-            href="https://berlin.metro-memory.com"
-            className="color-blue -mx-2 mt-2 inline-block rounded-full px-2 py-1 transition-all duration-200 hover:bg-zinc-100 dark:hover:bg-zinc-800"
-          >
-            Berlin U-Bahn & S-Bahn
-          </a>
-
-          <p className="mt-6">
-            Inspired by the game Chris Arvin created for San Francisco, discover
-            the memory challenge that went viral in Paris. How many of the 309
-            Paris metro stations do you know by heart?
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+            The goal is simple. Type as many of the stations as you can
+            remember, and see them pop up on the map. No time limit.
           </p>
+          <div className="my-16 grid w-[80vw] grid-cols-1 gap-8 md:grid-cols-2 2xl:grid-cols-3">
+            {cities.map((city, i) => (
+              <City
+                city={city}
+                key={city.link}
+                className={i % 2 ? 'rotate-2' : '-rotate-2'}
+              />
+            ))}
+          </div>
 
           <p className="mt-6">
             If you want the game to be available in your city, send me a message
-            on Twitter @_benjamintd.
+            on Twitter{' '}
+            <a href="https://twitter.com/_benjamintd">@_benjamintd</a>.
           </p>
 
           <p className="mt-6"></p>
@@ -126,8 +152,11 @@ export default async function Home() {
             />
           </div>
         </div>
+        <p className="mt-6">
+          Inspired by the game Chris Arvin created for{' '}
+          <a href="https://carvin.github.io/sf-street-names/">San Francisco</a>.
+        </p>
       </Container>
-      <Photos />
     </>
   )
 }
