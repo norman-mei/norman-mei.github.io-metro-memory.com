@@ -37,7 +37,7 @@ const cities: ICity[] = [
   {
     name: 'Berlin S- & U-Bahn',
     image: berlin,
-    link: '#',
+    link: 'https://berlin.metro-memory.com',
   },
   {
     name: 'New York Subway (soon)',
