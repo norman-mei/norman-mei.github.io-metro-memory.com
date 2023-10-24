@@ -35,17 +35,16 @@ const cities: ICity[] = [
     link: 'https://london.metro-memory.com',
   },
   {
-    name: 'Berlin S- & U-Bahn (soon)',
+    name: 'Berlin S- & U-Bahn',
     image: berlin,
+    link: '#',
+  },
+  {
+    name: 'New York Subway (soon)',
+    image: ny,
     link: '#',
     disabled: true,
   },
-  // {
-  //   name: 'New York Subway (soon)',
-  //   image: ny,
-  //   link: '#',
-  //   disabled: true,
-  // },
 ]
 
 function SocialLink({
