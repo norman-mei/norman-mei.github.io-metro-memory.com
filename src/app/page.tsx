@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
+import classNames from 'classnames'
 
 import { Container } from '@/components/Container'
 import {
@@ -15,6 +16,7 @@ import london from '@/images/photos/london.png'
 import berlin from '@/images/photos/berlin.png'
 import ny from '@/images/photos/ny.png'
 import wien from '@/images/photos/wien.png'
+import dc from '@/images/photos/dc.png'
 import Tweets from '@/components/Tweets'
 
 interface ICity {
@@ -46,6 +48,11 @@ const cities: ICity[] = [
     link: 'https://wien.metro-memory.com',
   },
   {
+    name: "Washington DC's Metro",
+    image: dc,
+    link: 'https://dc.metro-memory.com',
+  },
+  {
     name: 'New York Subway (soon)',
     image: ny,
     link: '#',
@@ -74,14 +81,19 @@ const City = ({ city, className }: { city: ICity; className?: string }) => {
       className="group mt-4"
       aria-disabled={city.disabled}
     >
-      <h1 className="mb-4 text-2xl font-bold group-hover:underline">
+      <h1
+        className={classNames('mb-4 text-2xl font-bold group-hover:underline', {
+          'text-zinc-800 dark:text-zinc-100': !city.disabled,
+          'text-zinc-400 dark:text-zinc-500': city.disabled,
+        })}
+      >
         {city.name}
       </h1>
       <div
         className={clsx(
           'relative aspect-square w-60 flex-none overflow-hidden rounded-xl bg-zinc-100 shadow transition-all  dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
           {
-            'group-hover:shadow-lg group-hover:shadow-yellow-300/50':
+            'group-hover:shadow-lg group-hover:shadow-orange-300/60':
               !city.disabled,
             grayscale: city.disabled,
           },
