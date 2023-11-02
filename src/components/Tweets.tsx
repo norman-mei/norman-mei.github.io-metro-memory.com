@@ -13,7 +13,7 @@ const quotes = [
 
 const Tweets = () => {
   return (
-    <div className="mt-2 max-w-2xl sm:mt-20">
+    <div className="mt-6">
       <div className="columns-2xs break-inside-avoid gap-4">
         {quotes.map((id) => (
           <Tweet key={id} id={id} />

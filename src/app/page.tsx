@@ -18,6 +18,7 @@ import ny from '@/images/photos/ny.png'
 import wien from '@/images/photos/wien.png'
 import dc from '@/images/photos/dc.png'
 import Tweets from '@/components/Tweets'
+import LinkPreviews from '@/components/LinkPreviews'
 
 interface ICity {
   name: string
@@ -177,6 +178,9 @@ export default async function Home() {
           What people say about Metro Memory
         </h2>
         <Tweets />
+
+        <h2 className="mt-12 text-4xl font-bold">They talked about us</h2>
+        <LinkPreviews />
       </Container>
     </>
   )
