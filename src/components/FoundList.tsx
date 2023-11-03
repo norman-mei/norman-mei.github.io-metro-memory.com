@@ -197,7 +197,7 @@ const GroupedLine = memo(
                   src={`/images/${feature.properties.line}.svg`}
                   width={64}
                   height={64}
-                  className="-mr-0.5 h-5 w-5 overflow-visible object-cover"
+                  className="-mr-0.5 h-5 w-5 object-contain"
                 />
               )
             },

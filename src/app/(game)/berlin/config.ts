@@ -220,6 +220,7 @@ export const CITY_NAME = 'berlin'
 export const LOCALE = 'de'
 
 const config: Config = {
+  GAUGE_COLORS: 'inverted',
   LOCALE,
   STRIPE_LINK,
   CITY_NAME,

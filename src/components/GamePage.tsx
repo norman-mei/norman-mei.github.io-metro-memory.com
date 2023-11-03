@@ -294,11 +294,14 @@ export default function GamePage({ fc }: { fc: DataFeatureCollection }) {
   }, [setMap, fc, LINES, MAP_CONFIG])
 
   useEffect(() => {
-    if (!map) return
-    ;(map.getSource('hovered') as mapboxgl.GeoJSONSource).setData({
-      type: 'FeatureCollection',
-      features: hoveredId ? [idMap.get(hoveredId)!] : [],
-    })
+    if (!map) {
+      return
+    } else {
+      ;(map.getSource('hovered') as mapboxgl.GeoJSONSource).setData({
+        type: 'FeatureCollection',
+        features: hoveredId ? [idMap.get(hoveredId)!] : [],
+      })
+    }
   }, [map, hoveredId, idMap])
 
   useEffect(() => {

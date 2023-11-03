@@ -5,13 +5,22 @@ import { DataFeatureCollection } from '@/lib/types'
 import config from './config'
 import GamePage from '@/components/GamePage'
 import { Provider } from '@/lib/configContext'
-import { Cabin } from 'next/font/google'
+import localFont from 'next/font/local'
 
-export const font = Cabin({
-  weight: ['400', '700'],
-  style: ['normal'],
-  subsets: ['latin'],
-  display: 'swap',
+const font = localFont({
+  src: [
+    {
+      path: './fonts/sans.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/sans-bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-sans',
 })
 
 const fc = {
