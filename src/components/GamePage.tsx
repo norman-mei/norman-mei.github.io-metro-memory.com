@@ -9,7 +9,6 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import 'react-circular-progressbar/dist/styles.css'
 import MenuComponent from '@/components/Menu'
 import IntroModal from '@/components/IntroModal'
-import normalizeString from '@/lib/normalizeString'
 import FoundSummary from '@/components/FoundSummary'
 import { DataFeatureCollection, DataFeature } from '@/lib/types'
 import Input from '@/components/Input'
@@ -18,10 +17,13 @@ import StripeModal from '@/components/StripeModal'
 import { useConfig } from '@/lib/configContext'
 import useTranslation from '@/hooks/useTranslation'
 import FoundList from '@/components/FoundList'
+import useNormalizeString from '@/hooks/useNormalizeString'
 
 export default function GamePage({ fc }: { fc: DataFeatureCollection }) {
   const { BEG_THRESHOLD, CITY_NAME, MAP_CONFIG, LINES } = useConfig()
   const { t } = useTranslation()
+
+  const normalizeString = useNormalizeString()
 
   const [map, setMap] = useState<mapboxgl.Map | null>(null)
   const [hoveredId, setHoveredId] = useState<number | null>(null)

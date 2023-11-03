@@ -6,7 +6,7 @@ import { Config } from './types'
 export const ConfigContext = createContext<Config>({
   LOCALE: 'en',
   BEG_THRESHOLD: 0.2,
-  CITY_NAME: 'Default',
+  CITY_NAME: 'default',
   MAP_CONFIG: {
     container: 'map',
     style: 'mapbox://styles/benjamintd/clohp062g002b01o4e3lt1exh',

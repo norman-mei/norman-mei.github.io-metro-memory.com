@@ -1,6 +1,5 @@
 'use client'
 
-import normalizeString from '@/lib/normalizeString'
 import classNames from 'classnames'
 import { useState, KeyboardEventHandler, useCallback } from 'react'
 import Fuse from 'fuse.js'
@@ -8,6 +7,7 @@ import { DataFeature } from '@/lib/types'
 import { Transition } from '@headlessui/react'
 import { Feature, Point } from 'geojson'
 import useTranslation from '@/hooks/useTranslation'
+import useNormalizeString from '@/hooks/useNormalizeString'
 
 const Input = ({
   fuse,
@@ -27,6 +27,7 @@ const Input = ({
   idMap: Map<number, DataFeature>
 }) => {
   const { t } = useTranslation()
+  const normalizeString = useNormalizeString()
   const [search, setSearch] = useState<string>('')
   const [wrong, setWrong] = useState<boolean>(false)
   const [success, setSuccess] = useState<boolean>(false)
