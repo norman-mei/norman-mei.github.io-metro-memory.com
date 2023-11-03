@@ -122,6 +122,7 @@ const Input = ({
       map,
       idMap,
       zoomToStation,
+      normalizeString,
     ],
   )
 

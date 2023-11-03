@@ -122,7 +122,7 @@ export default function GamePage({ fc }: { fc: DataFeatureCollection }) {
           }
         },
       }),
-    [fc],
+    [fc, normalizeString],
   )
 
   const foundProportion = found.length / fc.features.length
