@@ -43,6 +43,19 @@ export default function GamePage({ fc }: { fc: DataFeatureCollection }) {
     return map
   }, [fc.features])
 
+  const stationsPerLine = useMemo(() => {
+    const stationsPerLine: { [key: string]: number } = {}
+    for (let feature of fc.features) {
+      const line = feature.properties.line
+      if (!line) {
+        continue
+      }
+      stationsPerLine[line] = (stationsPerLine[line] || 0) + 1
+    }
+
+    return stationsPerLine
+  }, [fc])
+
   const { value: localFound, set: setFound } = useLocalStorageValue<
     number[] | null
   >(`${CITY_NAME}-stations`, {
@@ -346,7 +359,7 @@ export default function GamePage({ fc }: { fc: DataFeatureCollection }) {
             className="mb-4 rounded-lg bg-white p-4 shadow-md lg:hidden"
             foundProportion={foundProportion}
             foundStationsPerLine={foundStationsPerLine}
-            stationsPerLine={fc.properties.stationsPerLine}
+            stationsPerLine={stationsPerLine}
             defaultMinimized
             minimizable
           />
@@ -372,7 +385,7 @@ export default function GamePage({ fc }: { fc: DataFeatureCollection }) {
         <FoundSummary
           foundProportion={foundProportion}
           foundStationsPerLine={foundStationsPerLine}
-          stationsPerLine={fc.properties.stationsPerLine}
+          stationsPerLine={stationsPerLine}
           minimizable
           defaultMinimized
         />
