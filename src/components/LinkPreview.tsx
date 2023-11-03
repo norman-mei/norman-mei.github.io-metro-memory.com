@@ -15,8 +15,6 @@ async function LinkPreview({ url }: { url: string }) {
       .querySelector('meta[property="og:image"]')
       ?.getAttribute('content') || ''
 
-  console.log(title, description, image)
-
   return (
     <a
       href={url}

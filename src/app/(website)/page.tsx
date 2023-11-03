@@ -17,6 +17,7 @@ import berlin from '@/images/photos/berlin.png'
 import ny from '@/images/photos/ny.png'
 import wien from '@/images/photos/wien.png'
 import dc from '@/images/photos/dc.png'
+import madrid from '@/images/photos/madrid.png'
 import Tweets from '@/components/Tweets'
 import LinkPreviews from '@/components/LinkPreviews'
 
@@ -36,22 +37,27 @@ const cities: ICity[] = [
   {
     name: 'London Tube',
     image: london,
-    link: 'https://london.metro-memory.com',
+    link: '/london',
   },
   {
     name: 'Berlin S- & U-Bahn',
     image: berlin,
-    link: 'https://berlin.metro-memory.com',
+    link: '/berlin',
   },
   {
     name: 'Vienna U-Bahn',
     image: wien,
-    link: 'https://wien.metro-memory.com',
+    link: '/wien',
   },
   {
     name: "Washington DC's Metro",
     image: dc,
-    link: 'https://dc.metro-memory.com',
+    link: '/dc',
+  },
+  {
+    name: 'Madrid Metro',
+    image: madrid,
+    link: '/madrid',
   },
   {
     name: 'New York Subway (soon)',
@@ -76,7 +82,7 @@ function SocialLink({
 
 const City = ({ city, className }: { city: ICity; className?: string }) => {
   return (
-    <a
+    <Link
       href={city.link}
       key={city.link}
       className="group mt-4"
@@ -108,7 +114,7 @@ const City = ({ city, className }: { city: ICity; className?: string }) => {
           className="absolute inset-0 h-full w-full object-cover"
         />
       </div>
-    </a>
+    </Link>
   )
 }
 

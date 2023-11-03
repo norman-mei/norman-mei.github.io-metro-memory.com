@@ -1,14 +1,11 @@
-import { type TwitterComponents } from 'react-tweet'
 import Tweet from './Tweet'
 
 const quotes = [
-  '1716446689207218221',
   '1716359058704187729',
   '1716310657467822513',
   '1716241950238502947',
   '1716222381012734132',
   '1716116098611831182',
-  '1716102962894754139',
 ]
 
 const Tweets = () => {

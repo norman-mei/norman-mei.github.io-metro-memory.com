@@ -1,0 +1,76 @@
+{
+  "MadridMetroL1": {
+    "name": "1",
+    "color": "#009CE1",
+    "backgroundColor": "#004E71",
+    "order": 1000
+  },
+  "MadridMetroL2": {
+    "name": "2",
+    "color": "#E20A16",
+    "backgroundColor": "#71050B",
+    "order": 1000
+  },
+  "MadridMetroL3": {
+    "name": "3",
+    "color": "#FFBC00",
+    "backgroundColor": "#805E00",
+    "order": 1000
+  },
+  "MadridMetroL4": {
+    "name": "4",
+    "color": "#BE5316",
+    "backgroundColor": "#5F290B",
+    "order": 1000
+  },
+  "MadridMetroL5": {
+    "name": "5",
+    "color": "#6EAB23",
+    "backgroundColor": "#375612",
+    "order": 1000
+  },
+  "MadridMetroL6": {
+    "name": "6",
+    "color": "#716F6E",
+    "backgroundColor": "#393837",
+    "order": 1000
+  },
+  "MadridMetroL7": {
+    "name": "7",
+    "color": "#F45C23",
+    "backgroundColor": "#852907",
+    "textColor": "#FFFFFF",
+    "order": 1000
+  },
+  "MadridMetroL8": {
+    "name": "8",
+    "color": "#EA5F95",
+    "backgroundColor": "#911344",
+    "order": 1000
+  },
+  "MadridMetroL9": {
+    "name": "9",
+    "color": "#7A1364",
+    "backgroundColor": "#3D0A32",
+    "textColor": "#FFFFFF",
+    "order": 1000
+  },
+  "MadridMetroL10": {
+    "name": "10",
+    "color": "#004186",
+    "backgroundColor": "#002143",
+    "order": 1000
+  },
+  "MadridMetroL11": {
+    "name": "11",
+    "color": "#00693C",
+    "backgroundColor": "#00351E",
+    "order": 1000
+  },
+  "MadridMetroL12": {
+    "name": "12",
+    "color": "#AA9507",
+    "backgroundColor": "#554B04",
+    "order": 1000
+  }
+}
