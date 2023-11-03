@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { MapboxOptions } from 'mapbox-gl'
-import { Line } from '@/lib/types'
+import { Config, Line } from '@/lib/types'
 
 export const BEG_THRESHOLD = 0.2
 
@@ -145,7 +145,7 @@ export const LOCALE = 'en'
 
 export const GAUGE_COLORS = 'inverted'
 
-const config = {
+const config: Config = {
   GAUGE_COLORS,
   LOCALE,
   STRIPE_LINK,

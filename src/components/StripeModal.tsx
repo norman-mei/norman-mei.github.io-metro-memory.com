@@ -70,14 +70,14 @@ export default function StripeModal({
                     className="mb-2 inline-flex w-full justify-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                     onClick={() => setOpen(false)}
                   >
-                    Support the project
+                    {t('supportProject')}
                   </a>
                   <button
                     type="button"
                     className="inline-flex w-full justify-center rounded-md bg-gray-100 px-3 py-2 text-sm font-semibold text-gray-800 shadow-sm hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                     onClick={() => setOpen(false)}
                   >
-                    Keep going for free
+                    {t('keepGoingForFree')}
                   </button>
                 </div>
               </Dialog.Panel>
