@@ -30,7 +30,7 @@ const fc = {
 
 export const metadata = config.METADATA
 
-export default function London() {
+export default function Berlin() {
   return (
     <Provider value={config}>
       <main className={font.className}>
