@@ -8,6 +8,7 @@ import { Transition } from '@headlessui/react'
 import { Feature, Point } from 'geojson'
 import useTranslation from '@/hooks/useTranslation'
 import useNormalizeString from '@/hooks/useNormalizeString'
+import usePushEvent from '@/hooks/usePushEvent'
 
 const Input = ({
   fuse,
@@ -32,6 +33,7 @@ const Input = ({
   const [wrong, setWrong] = useState<boolean>(false)
   const [success, setSuccess] = useState<boolean>(false)
   const [alreadyFound, setAlreadyFound] = useState<boolean>(false)
+  const pushEvent = usePushEvent()
 
   const zoomToStation = useCallback(
     (id: number) => {
@@ -109,6 +111,7 @@ const Input = ({
         setFound([...matches, ...(found || [])])
         setIsNewPlayer(false)
         setSearch('')
+        pushEvent(matches)
       }
     },
     [
@@ -123,6 +126,7 @@ const Input = ({
       idMap,
       zoomToStation,
       normalizeString,
+      pushEvent,
     ],
   )
 
