@@ -7,7 +7,7 @@ import GamePage from '@/components/GamePage'
 import { Provider } from '@/lib/configContext'
 import { Cabin } from 'next/font/google'
 
-export const font = Cabin({
+const font = Cabin({
   weight: ['400', '700'],
   style: ['normal'],
   subsets: ['latin'],
