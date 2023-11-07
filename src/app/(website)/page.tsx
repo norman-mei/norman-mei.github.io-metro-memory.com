@@ -62,7 +62,8 @@ const cities: ICity[] = [
   {
     name: 'New York Subway',
     image: ny,
-    link: '/ny',
+    disabled: true,
+    link: '', // '/ny',
   },
 ]
 
@@ -80,8 +81,10 @@ function SocialLink({
 }
 
 const City = ({ city, className }: { city: ICity; className?: string }) => {
+  const Component = city.disabled ? 'div' : Link
+
   return (
-    <Link
+    <Component
       href={city.link}
       key={city.link}
       className="group mt-4"
@@ -113,7 +116,7 @@ const City = ({ city, className }: { city: ICity; className?: string }) => {
           className="absolute inset-0 h-full w-full object-cover"
         />
       </div>
-    </Link>
+    </Component>
   )
 }
 
