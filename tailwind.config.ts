@@ -1,4 +1,5 @@
 import typographyPlugin from '@tailwindcss/typography'
+import containerQueriesPlugin from '@tailwindcss/container-queries'
 import { type Config } from 'tailwindcss'
 
 import typographyStyles from './typography'
@@ -6,7 +7,7 @@ import typographyStyles from './typography'
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: 'class',
-  plugins: [typographyPlugin],
+  plugins: [typographyPlugin, containerQueriesPlugin],
   theme: {
     fontSize: {
       xs: ['0.8125rem', { lineHeight: '1.5rem' }],
@@ -24,5 +25,18 @@ export default {
       '9xl': ['8rem', { lineHeight: '1' }],
     },
     typography: typographyStyles,
+    extend: {
+      animation: {
+        shake: 'shake 0.5s ease-in-out',
+      },
+      keyframes: {
+        shake: {
+          '0%, 100%': { transform: 'translateX(0px)' },
+          '20%, 40%, 60%, 80%': { transform: 'translateX(-2px) ' },
+          '10%, 90%': { transform: 'translateX(1px)' },
+          '30%, 50%, 70%': { transform: 'translateX(2px)' },
+        },
+      },
+    },
   },
 } satisfies Config

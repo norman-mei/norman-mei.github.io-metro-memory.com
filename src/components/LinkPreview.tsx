@@ -15,8 +15,6 @@ async function LinkPreview({ url }: { url: string }) {
       .querySelector('meta[property="og:image"]')
       ?.getAttribute('content') || ''
 
-  console.log(title, description, image)
-
   return (
     <a
       href={url}
@@ -31,7 +29,15 @@ async function LinkPreview({ url }: { url: string }) {
           {description.length > 150 && '...'}
         </p>
       </div>
-      {image && <img src={image} alt="Link Preview" width="400" height="400" />}
+      {image && (
+        <img
+          src={image}
+          alt="Link Preview"
+          width="400"
+          height="400"
+          className="w-full object-cover"
+        />
+      )}
     </a>
   )
 }

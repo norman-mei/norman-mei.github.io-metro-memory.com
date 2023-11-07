@@ -17,6 +17,7 @@ import berlin from '@/images/photos/berlin.png'
 import ny from '@/images/photos/ny.png'
 import wien from '@/images/photos/wien.png'
 import dc from '@/images/photos/dc.png'
+import madrid from '@/images/photos/madrid.png'
 import Tweets from '@/components/Tweets'
 import LinkPreviews from '@/components/LinkPreviews'
 
@@ -36,28 +37,34 @@ const cities: ICity[] = [
   {
     name: 'London Tube',
     image: london,
-    link: 'https://london.metro-memory.com',
+    link: '/london',
   },
   {
     name: 'Berlin S- & U-Bahn',
     image: berlin,
-    link: 'https://berlin.metro-memory.com',
+    link: '/berlin',
   },
   {
     name: 'Vienna U-Bahn',
     image: wien,
-    link: 'https://wien.metro-memory.com',
+    link: '/wien',
   },
   {
     name: "Washington DC's Metro",
     image: dc,
-    link: 'https://dc.metro-memory.com',
+    link: '/dc',
   },
   {
-    name: 'New York Subway (soon)',
-    image: ny,
-    link: '#',
+    name: 'Madrid Metro',
+    image: madrid,
     disabled: true,
+    link: '', // '/madrid',
+  },
+  {
+    name: 'New York Subway',
+    image: ny,
+    disabled: true,
+    link: '', // '/ny',
   },
 ]
 
@@ -75,8 +82,10 @@ function SocialLink({
 }
 
 const City = ({ city, className }: { city: ICity; className?: string }) => {
+  const Component = city.disabled ? 'div' : Link
+
   return (
-    <a
+    <Component
       href={city.link}
       key={city.link}
       className="group mt-4"
@@ -89,6 +98,7 @@ const City = ({ city, className }: { city: ICity; className?: string }) => {
         })}
       >
         {city.name}
+        {city.disabled && ' (soon)'}
       </h1>
       <div
         className={clsx(
@@ -108,7 +118,7 @@ const City = ({ city, className }: { city: ICity; className?: string }) => {
           className="absolute inset-0 h-full w-full object-cover"
         />
       </div>
-    </a>
+    </Component>
   )
 }
 
@@ -124,12 +134,13 @@ export default async function Home() {
             Challenge yourself to remember the stations of your city&apos;s
             metro.
             <br />
-            How well do you know your city&apos;s transit system?
+            How well do you think know your city?
           </p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             The goal is simple. Type as many of the stations as you can
             remember, and see them pop up on the map. No time limit.
           </p>
+          <p>If you do well, there might be some confetti involved.</p>
         </div>
         <div className="mx-auto my-16 mt-16 grid max-w-full grid-cols-1 gap-8 sm:mt-20 md:grid-cols-2 xl:grid-cols-3">
           {cities.map((city, i) => (
@@ -143,14 +154,15 @@ export default async function Home() {
 
         <p className="mt-6">
           If you want the game to be available in your city, send me a message
-          on Twitter <a href="https://twitter.com/_benjamintd">@_benjamintd</a>.
+          on Twitter/X{' '}
+          <a href="https://twitter.com/_benjamintd">@_benjamintd</a>.
         </p>
 
         <p className="mt-6"></p>
         <div className="mt-6 flex gap-6">
           <SocialLink
             href="https://twitter.com/_benjamintd"
-            aria-label="Follow on Twitter"
+            aria-label="Follow on Twitter/X"
             icon={TwitterIcon}
           />
           <SocialLink
