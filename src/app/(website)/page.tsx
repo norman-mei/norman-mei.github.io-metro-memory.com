@@ -57,7 +57,8 @@ const cities: ICity[] = [
   {
     name: 'Madrid Metro',
     image: madrid,
-    link: '/madrid',
+    disabled: true,
+    link: '', // '/madrid',
   },
   {
     name: 'New York Subway',
