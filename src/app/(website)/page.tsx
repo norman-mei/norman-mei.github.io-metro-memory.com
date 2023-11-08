@@ -20,6 +20,7 @@ import dc from '@/images/photos/dc.png'
 import madrid from '@/images/photos/madrid.png'
 import Tweets from '@/components/Tweets'
 import LinkPreviews from '@/components/LinkPreviews'
+import ConfettiButton from '@/components/ConfettiButton'
 
 interface ICity {
   name: string
@@ -141,7 +142,8 @@ export default async function Home() {
             remember, and see them pop up on the map. No time limit.
           </p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            If you do well, there might be some confetti involved.
+            If you do well, there might be some{' '}
+            <ConfettiButton>confetti</ConfettiButton> involved.
           </p>
         </div>
         <div className="mx-auto my-16 mt-16 grid max-w-full grid-cols-1 gap-8 sm:mt-20 md:grid-cols-2 xl:grid-cols-3">
