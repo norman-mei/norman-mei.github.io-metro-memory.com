@@ -5,23 +5,19 @@ import remarkGfm from 'remark-gfm'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
-  rewrites() {
-    return {
-      beforeFiles: [
-        // rewrites for individal repos -> monorepo migrations.
+  redirects: [
+    {
+      source: '/',
+      has: [
         {
-          source: '/:path*',
-          has: [
-            {
-              type: 'host',
-              value: 'berlin.metro-memory.com',
-            },
-          ],
-          destination: '/berlin/:path*',
+          type: 'host',
+          value: 'berlin.metro-memory.com',
         },
       ],
-    }
-  },
+      destination: 'metro-memory.com/berlin',
+      permanent: true,
+    },
+  ],
 }
 
 const withMDX = nextMDX({
