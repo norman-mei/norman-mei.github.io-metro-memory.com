@@ -18,7 +18,7 @@ const ProgressBars = ({
   return (
     <div
       className={classNames('grid gap-2 @container', {
-        'grid-cols-[repeat(7,min-content)]': minimized,
+        'grid-cols-[repeat(8,min-content)]': minimized,
         'grid-cols-2': !minimized,
       })}
     >
