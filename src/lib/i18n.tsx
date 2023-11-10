@@ -58,7 +58,6 @@ export const i18n = rosetta({
     keepGoingForFree: 'Continuar gratis',
   },
   de: {
-    // use "du" instead of "Sie" for informal form
     restartWarning:
       'Du wirst deinen Fortschritt verlieren. Bist du sicher, dass du von vorne anfangen willst?',
     introInstruction: 'Gib den Namen einer Station ein, und drücke Enter',
