@@ -91,6 +91,27 @@ export const LINES: {
     textColor: '#FFFFFF',
     order: 12,
   },
+  MetroLigeroMl1: {
+    name: 'ML1',
+    color: '#0C61A0',
+    backgroundColor: '#063150',
+    textColor: '#FFFFFF',
+    order: 13,
+  },
+  MetroLigeroMl2: {
+    name: 'ML2',
+    color: '#7A1364',
+    backgroundColor: '#3D0A32',
+    textColor: '#FFFFFF',
+    order: 14,
+  },
+  MetroLigeroMl3: {
+    name: 'ML3',
+    color: '#E20A16',
+    backgroundColor: '#71050B',
+    textColor: '#FFFFFF',
+    order: 15,
+  },
 }
 
 export const METADATA: Metadata = {

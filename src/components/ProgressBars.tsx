@@ -17,7 +17,7 @@ const ProgressBars = ({
   const { LINES, GAUGE_COLORS } = useConfig()
   return (
     <div
-      className={classNames('@container grid gap-2', {
+      className={classNames('grid gap-2 @container', {
         'grid-cols-[repeat(7,min-content)]': minimized,
         'grid-cols-2': !minimized,
       })}
@@ -56,7 +56,7 @@ const ProgressBars = ({
                 src={`/images/${line}.svg`}
                 width={64}
                 height={64}
-                className="z-20 h-6 w-6 rounded-full object-contain"
+                className="z-20 h-6 w-6 rounded-full object-cover"
               />
             </div>
             {!minimized && (
