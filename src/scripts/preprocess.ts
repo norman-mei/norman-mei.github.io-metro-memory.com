@@ -20,7 +20,9 @@ const Bun = {
 const main = async () => {
   // --- STATIONS ---
   // @todo parametrize
-  const data = Bun.file(path.join(__dirname, '../data/source.json'))
+  const data = Bun.file(
+    path.join(__dirname, '../app/(game)/madrid/data/source.json'),
+  )
 
   const { routes, stops } = (await data.json()) as any
 
@@ -81,7 +83,7 @@ const main = async () => {
   )
 
   Bun.write(
-    path.join(__dirname, '../data/features.json'),
+    path.join(__dirname, '../app/(game)/madrid/data/features.json'),
     JSON.stringify({
       type: 'FeatureCollection',
       features: sortBy(
@@ -99,7 +101,7 @@ const main = async () => {
   )
 
   Bun.write(
-    path.join(__dirname, '../data/routes.json'),
+    path.join(__dirname, '../app/(game)/madrid/data/routes.json'),
     JSON.stringify({
       type: 'FeatureCollection',
       features: sortBy(featuresRoutes, (f) => -f.properties.order),
@@ -107,14 +109,14 @@ const main = async () => {
   )
 
   Bun.write(
-    path.join(__dirname, '../data/lines.json'),
+    path.join(__dirname, '../app/(game)/madrid/data/lines.json'),
     JSON.stringify(
       routes.reduce((acc: any, route: any, i: number) => {
         acc[route.live_line_code] = {
           name: route.name,
           color: route.color,
           backgroundColor: Color(route.color).darken(0.5).hex(),
-          textColor: route.text_color,
+          textColor: route.text_color || '#FFFFFF',
           order: i,
         }
         return acc

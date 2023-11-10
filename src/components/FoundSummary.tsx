@@ -67,15 +67,14 @@ const FoundSummary = ({
     <div
       className={classNames(className, '@container', {
         relative: minimizable,
-        'grid grid-cols-2 gap-2': minimized,
       })}
     >
       <div className="mb-2">
         <p className="mb-2">
-          <span className="@md:text-2xl text-lg font-bold">
+          <span className="text-lg font-bold @md:text-2xl">
             {((foundProportion || 0) * 100).toFixed(1)}
           </span>{' '}
-          <span className="@md:text-xl mr-2 text-lg">%</span>
+          <span className="mr-2 text-lg @md:text-xl">%</span>
           <span className="text-sm">{t('stationsFound')}</span>
         </p>
         <ProgressBars
