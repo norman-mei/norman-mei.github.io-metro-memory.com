@@ -3,6 +3,8 @@ import { groupBy, mapValues, sortBy, uniqBy } from 'lodash'
 import { promises as fs } from 'fs'
 import Color from 'color'
 
+// copy this to the /data folder of the city.
+
 const Bun = {
   file(path: string) {
     return {
@@ -66,6 +68,16 @@ const main = async () => {
                 properties: {
                   id,
                   name: stops[code].name,
+                  // only roman characters
+                  short_name: stops[code].name
+                    .replace(/\([^()]*\)/g, '')
+                    .replace(/[\u3131-\uD79D]/g, '')
+                    .trim(),
+                  // only korean characters
+                  long_name: stops[code].name
+                    .replace(/\([^()]*\)/g, '')
+                    .replace(/[^\u3131-\uD79D]/g, '')
+                    .trim(),
                   line: route.live_line_code,
                   order: path_index,
                 },

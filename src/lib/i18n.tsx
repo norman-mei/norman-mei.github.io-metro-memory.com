@@ -112,4 +112,26 @@ export const i18n = rosetta({
       'Dieser Link öffnet einen neuen Tab und dein Fortschritt wird in deinem Browser gespeichert.',
     keepGoingForFree: 'Kostenlos weitermachen',
   },
+  ko: {
+    restartWarning: '진행한 모든 내용이 사라집니다. 계속하시겠습니까?',
+    introInstruction: '역 이름을 입력하고 엔터 키를 누르세요',
+    backToTheGame: '게임으로 돌아가기',
+    stations: ({ count }: { count: number }) => `${count}개의 역`,
+    stationsFound: '역 발견됨',
+    inputPlaceholder: '역 이름',
+    alreadyFound: '이미 찾음',
+    startOver: '처음부터 다시 시작하기',
+    showSolutions: '해답 보기',
+    hideSolutions: '해답 숨기기',
+    supportProject: '프로젝트 후원하기',
+    about: '정보',
+    congrats: ({ foundProportion }: { foundProportion: number }) =>
+      `축하합니다! ${Math.floor(foundProportion * 100)}% 달성했어요!`,
+    freeGame: '이 게임은 무료로 제공됩니다.',
+    supportWithDonation: ({ title }: { title: string }) =>
+      `<span><strong>${title}</strong> 개발을 후원하기 위해 기부해 주세요.</span>`,
+    opensANewTab:
+      '이 링크를 클릭하면 새 탭에서 열리며, 진행 상황은 브라우저에 저장됩니다.',
+    keepGoingForFree: '무료로 계속 진행하기',
+  },
 })
