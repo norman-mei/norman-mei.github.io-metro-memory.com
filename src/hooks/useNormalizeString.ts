@@ -126,6 +126,14 @@ const replacers: { [key: string]: (str: string) => string } = {
       .replace(/passeig/g, 'pg')
       .replace('/sant /g', 'st ')
       .replace(/rambla/g, 'rbla'),
+
+  seoul: (str) =>
+    str
+      .toLowerCase()
+      .replace(/\([^()]*\)/g, '')
+      .replace(/\s+/g, ' ')
+      .replace('university', 'univ')
+      .trim(),
 }
 
 const getCustomReplacer = (cityName: string) => {
@@ -134,6 +142,11 @@ const getCustomReplacer = (cityName: string) => {
 
 const useNormalizeString = () => {
   const { CITY_NAME } = useConfig()
+
+  // normalization for seoul does not use roman characters only
+  if (CITY_NAME === 'seoul') {
+    return (str: string) => getCustomReplacer(CITY_NAME)(str)
+  }
 
   const normalizeStringBefore = (str?: string) =>
     (str || '')

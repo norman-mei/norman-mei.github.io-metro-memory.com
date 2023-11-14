@@ -5,12 +5,13 @@ import { DataFeatureCollection } from '@/lib/types'
 import config from './config'
 import GamePage from '@/components/GamePage'
 import { Provider } from '@/lib/configContext'
-import { Noto_Sans } from 'next/font/google'
+import { Noto_Sans_KR } from 'next/font/google'
 
-const font = Noto_Sans({
+const font = Noto_Sans_KR({
   weight: ['400', '700'],
   style: ['normal'],
   display: 'swap',
+  subsets: ['latin'],
 })
 
 const fc = {
