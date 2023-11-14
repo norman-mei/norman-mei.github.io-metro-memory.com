@@ -182,7 +182,7 @@ const GroupedLine = memo(
           className={classNames(
             'flex w-full items-center rounded px-2 py-1 text-sm',
             {
-              'bg-yellow-400 shadow-sm': features.some(
+              'bg-yellow-200 shadow-sm': features.some(
                 (f) => f.id === hoveredId,
               ),
             },
@@ -207,7 +207,7 @@ const GroupedLine = memo(
             {features[0].properties.name}
           </span>
           {times > 1 && (
-            <span className="ml-auto font-sans font-light text-gray-500">
+            <span className="ml-auto whitespace-nowrap font-sans font-light text-gray-500">
               ｘ{times}
             </span>
           )}

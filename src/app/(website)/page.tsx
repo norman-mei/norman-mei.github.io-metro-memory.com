@@ -63,8 +63,7 @@ const cities: ICity[] = [
   {
     name: 'New York Subway',
     image: ny,
-    disabled: true,
-    link: '', // '/ny',
+    link: '/ny',
   },
 ]
 
