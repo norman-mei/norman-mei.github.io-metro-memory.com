@@ -1,10 +1,12 @@
+import { normalizeString } from '@/hooks/useNormalizeString'
+
 export function extractKorean(str: string) {
+  str = normalizeString('seoul')(str)
   // Regular expression to match Korean characters
   const koreanRegex = /[\u3131-\uD79D]/
 
   // Find the index of the first Korean character
   const firstKoreanIndex = str.search(koreanRegex)
-  if (firstKoreanIndex === -1) return '' // No Korean characters found
 
   // Reverse the string to find the last Korean character index from the end
   const reversedStr = str.split('').reverse().join('')

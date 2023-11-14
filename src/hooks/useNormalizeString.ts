@@ -131,8 +131,11 @@ const replacers: { [key: string]: (str: string) => string } = {
     str
       .toLowerCase()
       .replace(/\([^()]*\)/g, '')
-      .replace(/\s+/g, ' ')
       .replace('university', 'univ')
+      .replace('international', 'intl')
+      .replace('national', 'natl')
+      .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '')
+      .replace(/\s+/g, ' ')
       .trim(),
 }
 
@@ -140,12 +143,10 @@ const getCustomReplacer = (cityName: string) => {
   return replacers[cityName] || replacers['default']
 }
 
-const useNormalizeString = () => {
-  const { CITY_NAME } = useConfig()
-
+export const normalizeString = (city: string) => {
   // normalization for seoul does not use roman characters only
-  if (CITY_NAME === 'seoul') {
-    return (str: string) => getCustomReplacer(CITY_NAME)(str)
+  if (city === 'seoul') {
+    return getCustomReplacer(city)
   }
 
   const normalizeStringBefore = (str?: string) =>
@@ -155,7 +156,7 @@ const useNormalizeString = () => {
       .replace(/[\u2010-\u2015]/g, ' ')
       .replace(/[\u0300-\u036F]/g, '')
 
-  const customReplacements = getCustomReplacer(CITY_NAME)
+  const customReplacements = getCustomReplacer(city)
 
   const normalizeStringAfter = (str?: string) =>
     (str || '')
@@ -165,6 +166,11 @@ const useNormalizeString = () => {
 
   return (str?: string) =>
     normalizeStringAfter(customReplacements(normalizeStringBefore(str)))
+}
+
+const useNormalizeString = () => {
+  const { CITY_NAME } = useConfig()
+  return normalizeString(CITY_NAME)
 }
 
 export default useNormalizeString

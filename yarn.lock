@@ -1984,6 +1984,11 @@ aria-query@^5.1.3:
   dependencies:
     dequal "^2.0.3"
 
+aromanize@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.npmjs.org/aromanize/-/aromanize-0.1.5.tgz"
+  integrity sha512-fyFsbmpocja8wnYuYjwt2k7WRkBZftZKDDmLgX9tclV94TRn7b29skxU66tTDInNFZ3MwITPdNvb8bLg2rbbDA==
+
 array-buffer-byte-length@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/array-buffer-byte-length/-/array-buffer-byte-length-1.0.0.tgz"
