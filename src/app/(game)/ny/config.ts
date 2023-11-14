@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { MapboxOptions } from 'mapbox-gl'
 import { Config, Line } from '@/lib/types'
 
-export const BEG_THRESHOLD = 0.5
+export const BEG_THRESHOLD = 0.2
 
 export const LINES: {
   [name: string]: Line

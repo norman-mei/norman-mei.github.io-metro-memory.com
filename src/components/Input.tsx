@@ -70,7 +70,7 @@ const Input = ({
           result.matches.length &&
           result.matches.some(
             (match) =>
-              match.indices[0][0] < 2 &&
+              match.indices[0][0] === 0 &&
               match.value!.length - match.indices[match.indices.length - 1][1] <
                 2 &&
               Math.abs(match.value!.length - sanitizedSearch.length) < 4,
