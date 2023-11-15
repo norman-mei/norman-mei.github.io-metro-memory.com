@@ -2,7 +2,6 @@ import * as path from 'path'
 import { groupBy, mapValues, sortBy, uniqBy } from 'lodash'
 import { promises as fs } from 'fs'
 import Color from 'color'
-import { extractKorean } from '@/lib/extractKorean'
 
 // copy this to the /data folder of the city.
 
@@ -59,7 +58,6 @@ const main = async () => {
               const id = ++index
 
               const name = stops[code].name
-              const [korean, english] = extractKorean(name)
               return {
                 type: 'Feature',
                 geometry: {
@@ -72,10 +70,6 @@ const main = async () => {
                 properties: {
                   id,
                   name: stops[code].name,
-                  // only roman characters
-                  short_name: english.trim(),
-                  // only korean characters
-                  long_name: korean.trim(),
                   line: route.live_line_code,
                   order: path_index,
                 },

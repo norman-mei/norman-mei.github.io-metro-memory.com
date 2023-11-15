@@ -4,7 +4,7 @@ import { promises as fs } from 'fs'
 import Color from 'color'
 import { extractKorean } from '@/lib/extractKorean'
 import Aromanize from 'aromanize'
-import useNormalizeString, { normalizeString } from '@/hooks/useNormalizeString'
+import { normalizeString } from '@/hooks/useNormalizeString'
 
 const Bun = {
   file(path: string) {
@@ -61,6 +61,12 @@ const main = async () => {
 
               const name = stops[code].name
               const [korean, english] = extractKorean(name)
+              const [koreanParenthesis, englishParenthesis] = extractKorean(
+                name
+                  .replace(/[^\(]*(\(.*?\))[^\(]*/, '$1')
+                  .replace(/[\(\)]/g, ' '),
+              )
+
               return {
                 type: 'Feature',
                 geometry: {
@@ -79,11 +85,10 @@ const main = async () => {
                       korean.trim(),
                       Aromanize.hangulToLatin(korean.trim(), 'rr-translit'),
                       Aromanize.romanize(korean.trim()),
-                      ...extractKorean(
-                        name
-                          .replace(/[^\(]*(\(.*?\))[^\(]*/, '$1')
-                          .replace(/[\(\)]/g, ' '),
-                      ),
+                      koreanParenthesis.trim(),
+                      englishParenthesis.trim(),
+                      (english + ' ' + englishParenthesis).trim(),
+                      (korean + ' ' + koreanParenthesis).trim(),
                     ]
                       .map(normalizeString('seoul'))
                       .filter(Boolean),
