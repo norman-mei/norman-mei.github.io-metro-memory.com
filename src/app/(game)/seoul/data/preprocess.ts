@@ -90,8 +90,8 @@ const main = async () => {
                       (english + ' ' + englishParenthesis).trim(),
                       (korean + ' ' + koreanParenthesis).trim(),
                     ]
-                      .map(normalizeString('seoul'))
-                      .filter(Boolean),
+                      .filter(Boolean)
+                      .map(normalizeString('seoul')),
                   ),
                   line: route.live_line_code,
                   order: path_index,
