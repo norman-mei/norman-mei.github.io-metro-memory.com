@@ -108,7 +108,7 @@
       "properties": {
         "id": 135,
         "name": "Aeroport T1",
-        "line": "TMBMetroL9S",
+        "line": "TMBMetroL9",
         "order": 0
       },
       "id": 135
@@ -122,7 +122,7 @@
       "properties": {
         "id": 150,
         "name": "La Sagrera-Meridiana",
-        "line": "TMBMetroL10N",
+        "line": "TMBMetroL10",
         "order": 0
       },
       "id": 150
@@ -136,7 +136,7 @@
       "properties": {
         "id": 156,
         "name": "ZAL | Riu Vell",
-        "line": "TMBMetroL10S",
+        "line": "TMBMetroL10",
         "order": 0
       },
       "id": 156
@@ -290,7 +290,7 @@
       "properties": {
         "id": 149,
         "name": "Zona Universitària",
-        "line": "TMBMetroL9S",
+        "line": "TMBMetroL9",
         "order": 668
       },
       "id": 149
@@ -304,7 +304,7 @@
       "properties": {
         "id": 148,
         "name": "Collblanc",
-        "line": "TMBMetroL9S",
+        "line": "TMBMetroL9",
         "order": 614
       },
       "id": 148
@@ -318,7 +318,7 @@
       "properties": {
         "id": 147,
         "name": "Torrassa",
-        "line": "TMBMetroL9S",
+        "line": "TMBMetroL9",
         "order": 600
       },
       "id": 147
@@ -346,7 +346,7 @@
       "properties": {
         "id": 146,
         "name": "Can Tries | Gornal",
-        "line": "TMBMetroL9S",
+        "line": "TMBMetroL9",
         "order": 551
       },
       "id": 146
@@ -360,7 +360,7 @@
       "properties": {
         "id": 145,
         "name": "Europa | Fira",
-        "line": "TMBMetroL9S",
+        "line": "TMBMetroL9",
         "order": 536
       },
       "id": 145
@@ -388,7 +388,7 @@
       "properties": {
         "id": 144,
         "name": "Fira",
-        "line": "TMBMetroL9S",
+        "line": "TMBMetroL9",
         "order": 529
       },
       "id": 144
@@ -458,7 +458,7 @@
       "properties": {
         "id": 143,
         "name": "Parc Logístic",
-        "line": "TMBMetroL9S",
+        "line": "TMBMetroL9",
         "order": 477
       },
       "id": 143
@@ -570,7 +570,7 @@
       "properties": {
         "id": 142,
         "name": "Mercabarna",
-        "line": "TMBMetroL9S",
+        "line": "TMBMetroL9",
         "order": 434
       },
       "id": 142
@@ -696,7 +696,7 @@
       "properties": {
         "id": 141,
         "name": "Les Moreres",
-        "line": "TMBMetroL9S",
+        "line": "TMBMetroL9",
         "order": 369
       },
       "id": 141
@@ -1144,7 +1144,7 @@
       "properties": {
         "id": 140,
         "name": "El Prat Estació",
-        "line": "TMBMetroL9S",
+        "line": "TMBMetroL9",
         "order": 265
       },
       "id": 140
@@ -1396,7 +1396,7 @@
       "properties": {
         "id": 139,
         "name": "Cèntric",
-        "line": "TMBMetroL9S",
+        "line": "TMBMetroL9",
         "order": 232
       },
       "id": 139
@@ -1718,7 +1718,7 @@
       "properties": {
         "id": 166,
         "name": "Collblanc",
-        "line": "TMBMetroL10S",
+        "line": "TMBMetroL10",
         "order": 184
       },
       "id": 166
@@ -1788,7 +1788,7 @@
       "properties": {
         "id": 138,
         "name": "Parc Nou",
-        "line": "TMBMetroL9S",
+        "line": "TMBMetroL9",
         "order": 177
       },
       "id": 138
@@ -1872,7 +1872,7 @@
       "properties": {
         "id": 165,
         "name": "Torrassa",
-        "line": "TMBMetroL10S",
+        "line": "TMBMetroL10",
         "order": 170
       },
       "id": 165
@@ -1998,7 +1998,7 @@
       "properties": {
         "id": 155,
         "name": "Gorg",
-        "line": "TMBMetroL10N",
+        "line": "TMBMetroL10",
         "order": 157
       },
       "id": 155
@@ -2180,7 +2180,7 @@
       "properties": {
         "id": 154,
         "name": "La Salut",
-        "line": "TMBMetroL10N",
+        "line": "TMBMetroL10",
         "order": 139
       },
       "id": 154
@@ -2278,7 +2278,7 @@
       "properties": {
         "id": 153,
         "name": "Llefià",
-        "line": "TMBMetroL10N",
+        "line": "TMBMetroL10",
         "order": 127
       },
       "id": 153
@@ -2334,7 +2334,7 @@
       "properties": {
         "id": 164,
         "name": "Can Tries | Gornal",
-        "line": "TMBMetroL10S",
+        "line": "TMBMetroL10",
         "order": 123
       },
       "id": 164
@@ -2460,7 +2460,7 @@
       "properties": {
         "id": 137,
         "name": "Mas Blau",
-        "line": "TMBMetroL9S",
+        "line": "TMBMetroL9",
         "order": 110
       },
       "id": 137
@@ -2572,7 +2572,7 @@
       "properties": {
         "id": 163,
         "name": "Provençana",
-        "line": "TMBMetroL10S",
+        "line": "TMBMetroL10",
         "order": 107
       },
       "id": 163
@@ -2782,7 +2782,7 @@
       "properties": {
         "id": 162,
         "name": "Ciutat de la Justícia",
-        "line": "TMBMetroL10S",
+        "line": "TMBMetroL10",
         "order": 89
       },
       "id": 162
@@ -2908,7 +2908,7 @@
       "properties": {
         "id": 152,
         "name": "Bon Pastor",
-        "line": "TMBMetroL10N",
+        "line": "TMBMetroL10",
         "order": 78
       },
       "id": 152
@@ -2978,7 +2978,7 @@
       "properties": {
         "id": 136,
         "name": "Aeroport T2",
-        "line": "TMBMetroL9S",
+        "line": "TMBMetroL9",
         "order": 70
       },
       "id": 136
@@ -3230,7 +3230,7 @@
       "properties": {
         "id": 161,
         "name": "Foneria",
-        "line": "TMBMetroL10S",
+        "line": "TMBMetroL10",
         "order": 56
       },
       "id": 161
@@ -3342,7 +3342,7 @@
       "properties": {
         "id": 151,
         "name": "Onze de Setembre",
-        "line": "TMBMetroL10N",
+        "line": "TMBMetroL10",
         "order": 46
       },
       "id": 151
@@ -3370,7 +3370,7 @@
       "properties": {
         "id": 160,
         "name": "Foc",
-        "line": "TMBMetroL10S",
+        "line": "TMBMetroL10",
         "order": 45
       },
       "id": 160
@@ -3804,7 +3804,7 @@
       "properties": {
         "id": 159,
         "name": "Zona Franca",
-        "line": "TMBMetroL10S",
+        "line": "TMBMetroL10",
         "order": 11
       },
       "id": 159
@@ -3818,7 +3818,7 @@
       "properties": {
         "id": 158,
         "name": "Port Comercial | La Factoria",
-        "line": "TMBMetroL10S",
+        "line": "TMBMetroL10",
         "order": 9
       },
       "id": 158
@@ -3888,7 +3888,7 @@
       "properties": {
         "id": 157,
         "name": "Ecoparc",
-        "line": "TMBMetroL10S",
+        "line": "TMBMetroL10",
         "order": 7
       },
       "id": 157
@@ -3958,35 +3958,11 @@
       "properties": {
         "id": 2,
         "name": "Parc de Montjuïc",
+        "alternate_names": ["Montjuic"],
         "line": "TMBMetroFm",
         "order": 1
       },
       "id": 2
     }
-  ],
-  "properties": {
-    "totalStations": 283,
-    "stationsPerLine": {
-      "TMBMetroFm": 2,
-      "TMBMetroL1": 30,
-      "TMBMetroL2": 18,
-      "TMBMetroL3": 26,
-      "TMBMetroL4": 22,
-      "TMBMetroL5": 27,
-      "TMBMetroL9": 9,
-      "TMBMetroL9S": 15,
-      "TMBMetroL10N": 6,
-      "TMBMetroL10S": 11,
-      "TMBMetroL11": 5,
-      "BarcelonaFunicularFv": 2,
-      "BarcelonaFunicularMm": 3,
-      "BarcelonaFunicularL1": 4,
-      "TramCatT1": 21,
-      "TramCatT2": 24,
-      "TramCatT3": 20,
-      "TramCatT4": 14,
-      "TramCatT5": 13,
-      "TramCatT6": 11
-    }
-  }
+  ]
 }

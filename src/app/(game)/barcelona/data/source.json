@@ -2989,7 +2989,7 @@
       "text_color": "#FFFFFF",
       "icon_name": "es-barcelona-TMBMetro-L9S",
       "icon_contains_name": true,
-      "live_line_code": "TMBMetroL9S",
+      "live_line_code": "TMBMetroL9",
       "brand": "TMBMetro",
       "mode": "metro",
       "supports_routeinfo": true,
@@ -3701,7 +3701,7 @@
       "text_color": "#FFFFFF",
       "icon_name": "es-barcelona-TMBMetro-L10N",
       "icon_contains_name": true,
-      "live_line_code": "TMBMetroL10N",
+      "live_line_code": "TMBMetroL10",
       "brand": "TMBMetro",
       "mode": "metro",
       "supports_routeinfo": true,
@@ -3893,7 +3893,7 @@
       "text_color": "#FFFFFF",
       "icon_name": "es-barcelona-TMBMetro-L10S",
       "icon_contains_name": true,
-      "live_line_code": "TMBMetroL10S",
+      "live_line_code": "TMBMetroL10",
       "brand": "TMBMetro",
       "mode": "metro",
       "supports_routeinfo": true,
@@ -44092,7 +44092,7 @@
     },
     "BarcelonaStation_ParcNou": {
       "live_code": "BarcelonaStation_ParcNou",
-      "routes": ["TMBMetroL9S"],
+      "routes": ["TMBMetroL9"],
       "brands": ["TMBMetro"],
       "name": "Parc Nou",
       "coords": [41.316628, 2.087929],
@@ -44475,7 +44475,7 @@
     },
     "BarcelonaStation_BonPastor": {
       "live_code": "BarcelonaStation_BonPastor",
-      "routes": ["TMBMetroL9", "TMBMetroL10N"],
+      "routes": ["TMBMetroL9", "TMBMetroL10"],
       "brands": ["TMBMetro"],
       "name": "Bon Pastor",
       "coords": [41.436203, 2.205294],
@@ -44683,7 +44683,7 @@
     },
     "BarcelonaStation_Foc": {
       "live_code": "BarcelonaStation_Foc",
-      "routes": ["TMBMetroL10S"],
+      "routes": ["TMBMetroL10"],
       "brands": ["TMBMetro"],
       "name": "Foc",
       "coords": [41.356161, 2.141804],
@@ -44961,7 +44961,7 @@
     },
     "BarcelonaStation_AeroportT2": {
       "live_code": "BarcelonaStation_AeroportT2",
-      "routes": ["TMBMetroL9S", "RodaliesR2N"],
+      "routes": ["TMBMetroL9", "RodaliesR2N"],
       "brands": ["TMBMetro", "Rodalies"],
       "name": "Aeroport T2",
       "coords": [41.3042, 2.073291],
@@ -45236,7 +45236,7 @@
     },
     "BarcelonaStation_ZalRiuVell": {
       "live_code": "BarcelonaStation_ZalRiuVell",
-      "routes": ["TMBMetroL10S"],
+      "routes": ["TMBMetroL10"],
       "brands": ["TMBMetro"],
       "name": "ZAL | Riu Vell",
       "coords": [41.323706, 2.133095],
@@ -46142,7 +46142,7 @@
     },
     "BarcelonaStation_CiutatDeLaJusticia": {
       "live_code": "BarcelonaStation_CiutatDeLaJusticia",
-      "routes": ["TMBMetroL10S"],
+      "routes": ["TMBMetroL10"],
       "brands": ["TMBMetro"],
       "name": "Ciutat de la Just\u00edcia",
       "coords": [41.363137, 2.132315],
@@ -46572,7 +46572,7 @@
     },
     "BarcelonaStation_LaSalut": {
       "live_code": "BarcelonaStation_LaSalut",
-      "routes": ["TMBMetroL10N"],
+      "routes": ["TMBMetroL10"],
       "brands": ["TMBMetro"],
       "name": "La Salut",
       "coords": [41.442817, 2.224737],
@@ -46623,7 +46623,7 @@
     },
     "BarcelonaStation_LesMoreres": {
       "live_code": "BarcelonaStation_LesMoreres",
-      "routes": ["TMBMetroL9S"],
+      "routes": ["TMBMetroL9"],
       "brands": ["TMBMetro"],
       "name": "Les Moreres",
       "coords": [41.329119, 2.103073],
@@ -47022,7 +47022,7 @@
         "TMBMetroL1",
         "TMBMetroL5",
         "TMBMetroL9",
-        "TMBMetroL10N",
+        "TMBMetroL10",
         "RodaliesR3",
         "RodaliesR4",
         "RodaliesR7",
@@ -47695,7 +47695,7 @@
     },
     "BarcelonaStation_AeroportT1": {
       "live_code": "BarcelonaStation_AeroportT1",
-      "routes": ["TMBMetroL9S"],
+      "routes": ["TMBMetroL9"],
       "brands": ["TMBMetro"],
       "name": "Aeroport T1",
       "coords": [41.288295, 2.071152],
@@ -48809,7 +48809,7 @@
     },
     "BarcelonaStation_Foneria": {
       "live_code": "BarcelonaStation_Foneria",
-      "routes": ["TMBMetroL10S"],
+      "routes": ["TMBMetroL10"],
       "brands": ["TMBMetro"],
       "name": "Foneria",
       "coords": [41.361099, 2.138229],
@@ -49066,7 +49066,7 @@
     },
     "BarcelonaStation_ZonaFranca": {
       "live_code": "BarcelonaStation_ZonaFranca",
-      "routes": ["TMBMetroL10S"],
+      "routes": ["TMBMetroL10"],
       "brands": ["TMBMetro"],
       "name": "Zona Franca",
       "coords": [41.342976, 2.144964],
@@ -49269,7 +49269,7 @@
     },
     "BarcelonaStation_Provencana": {
       "live_code": "BarcelonaStation_Provencana",
-      "routes": ["TMBMetroL10S"],
+      "routes": ["TMBMetroL10"],
       "brands": ["TMBMetro"],
       "name": "Proven\u00e7ana",
       "coords": [41.361354, 2.1241],
@@ -49805,7 +49805,7 @@
     "BarcelonaStation_EuropaFira_FGC": {
       "live_code": "BarcelonaStation_EuropaFira_FGC",
       "routes": [
-        "TMBMetroL9S",
+        "TMBMetroL9",
         "FGCL8",
         "FGCR5",
         "FGCR6",
@@ -49846,7 +49846,7 @@
     },
     "BarcelonaStation_Collblanc": {
       "live_code": "BarcelonaStation_Collblanc",
-      "routes": ["TMBMetroL5", "TMBMetroL9S", "TMBMetroL10S"],
+      "routes": ["TMBMetroL5", "TMBMetroL9", "TMBMetroL10"],
       "brands": ["TMBMetro"],
       "name": "Collblanc",
       "coords": [41.375959, 2.118097],
@@ -49894,7 +49894,7 @@
     },
     "BarcelonaStation_OnzeDeSetembre": {
       "live_code": "BarcelonaStation_OnzeDeSetembre",
-      "routes": ["TMBMetroL9", "TMBMetroL10N"],
+      "routes": ["TMBMetroL9", "TMBMetroL10"],
       "brands": ["TMBMetro"],
       "name": "Onze de Setembre",
       "coords": [41.429559, 2.193564],
@@ -50632,7 +50632,7 @@
     },
     "BarcelonaStation_ZonaUniversitaria": {
       "live_code": "BarcelonaStation_ZonaUniversitaria",
-      "routes": ["TMBMetroL3", "TMBMetroL9S"],
+      "routes": ["TMBMetroL3", "TMBMetroL9"],
       "brands": ["TMBMetro"],
       "name": "Zona Universit\u00e0ria",
       "coords": [41.383742, 2.111621],
@@ -50718,7 +50718,7 @@
     },
     "BarcelonaStation_CanTriesGornal": {
       "live_code": "BarcelonaStation_CanTriesGornal",
-      "routes": ["TMBMetroL9S", "TMBMetroL10S"],
+      "routes": ["TMBMetroL9", "TMBMetroL10"],
       "brands": ["TMBMetro"],
       "name": "Can Tries | Gornal",
       "coords": [41.360894, 2.117993],
@@ -50875,7 +50875,7 @@
     },
     "BarcelonaStation_MasBlau": {
       "live_code": "BarcelonaStation_MasBlau",
-      "routes": ["TMBMetroL9S"],
+      "routes": ["TMBMetroL9"],
       "brands": ["TMBMetro"],
       "name": "Mas Blau",
       "coords": [41.311225, 2.073471],
@@ -50935,7 +50935,7 @@
     },
     "BarcelonaStation_Llefia": {
       "live_code": "BarcelonaStation_Llefia",
-      "routes": ["TMBMetroL10N"],
+      "routes": ["TMBMetroL10"],
       "brands": ["TMBMetro"],
       "name": "Llefi\u00e0",
       "coords": [41.44136, 2.216906],
@@ -51205,7 +51205,7 @@
     },
     "BarcelonaStation_Gorg": {
       "live_code": "BarcelonaStation_Gorg",
-      "routes": ["TMBMetroL2", "TMBMetroL10N"],
+      "routes": ["TMBMetroL2", "TMBMetroL10"],
       "brands": ["TMBMetro"],
       "name": "Gorg",
       "coords": [41.440443, 2.233892],
@@ -51228,7 +51228,7 @@
     },
     "BarcelonaStation_Ecoparc": {
       "live_code": "BarcelonaStation_Ecoparc",
-      "routes": ["TMBMetroL10S"],
+      "routes": ["TMBMetroL10"],
       "brands": ["TMBMetro"],
       "name": "Ecoparc",
       "coords": [41.330159, 2.137071],
@@ -51564,7 +51564,7 @@
     },
     "BarcelonaStation_Mercabarna": {
       "live_code": "BarcelonaStation_Mercabarna",
-      "routes": ["TMBMetroL9S"],
+      "routes": ["TMBMetroL9"],
       "brands": ["TMBMetro"],
       "name": "Mercabarna",
       "coords": [41.333485, 2.111254],
@@ -51720,7 +51720,7 @@
     },
     "BarcelonaStation_Torrassa": {
       "live_code": "BarcelonaStation_Torrassa",
-      "routes": ["TMBMetroL1", "TMBMetroL9S", "TMBMetroL10S"],
+      "routes": ["TMBMetroL1", "TMBMetroL9", "TMBMetroL10"],
       "brands": ["TMBMetro"],
       "name": "Torrassa",
       "coords": [41.368223, 2.115756],
@@ -51831,7 +51831,7 @@
     },
     "BarcelonaStation_ElPratEstacio": {
       "live_code": "BarcelonaStation_ElPratEstacio",
-      "routes": ["TMBMetroL9S"],
+      "routes": ["TMBMetroL9"],
       "brands": ["TMBMetro"],
       "name": "El Prat Estaci\u00f3",
       "coords": [41.331993, 2.089927],
@@ -51954,7 +51954,7 @@
     },
     "BarcelonaStation_ParcLogistic": {
       "live_code": "BarcelonaStation_ParcLogistic",
-      "routes": ["TMBMetroL9S"],
+      "routes": ["TMBMetroL9"],
       "brands": ["TMBMetro"],
       "name": "Parc Log\u00edstic",
       "coords": [41.341664, 2.127401],
@@ -52168,7 +52168,7 @@
     },
     "BarcelonaStation_PortComercialLaFactoria": {
       "live_code": "BarcelonaStation_PortComercialLaFactoria",
-      "routes": ["TMBMetroL10S"],
+      "routes": ["TMBMetroL10"],
       "brands": ["TMBMetro"],
       "name": "Port Comercial | La Factoria",
       "coords": [41.335983, 2.140657],
@@ -52343,7 +52343,7 @@
     },
     "BarcelonaStation_Fira": {
       "live_code": "BarcelonaStation_Fira",
-      "routes": ["TMBMetroL9S"],
+      "routes": ["TMBMetroL9"],
       "brands": ["TMBMetro"],
       "name": "Fira",
       "coords": [41.351988, 2.130452],
@@ -53136,7 +53136,7 @@
     },
     "BarcelonaStation_Centric": {
       "live_code": "BarcelonaStation_Centric",
-      "routes": ["TMBMetroL9S"],
+      "routes": ["TMBMetroL9"],
       "brands": ["TMBMetro"],
       "name": "C\u00e8ntric",
       "coords": [41.32225, 2.093463],
