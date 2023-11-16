@@ -13,12 +13,7 @@ export type DataFeatureCollection = FeatureCollection<
     short_name?: string
     line?: string
   }
-> & {
-  properties: {
-    totalStations: number
-    stationsPerLine: { [key: string]: number }
-  }
-}
+>
 
 export type DataFeature = DataFeatureCollection['features'][number]
 
