@@ -18,6 +18,7 @@ import ny from '@/images/photos/ny.png'
 import wien from '@/images/photos/wien.png'
 import dc from '@/images/photos/dc.png'
 import madrid from '@/images/photos/madrid.png'
+import barcelona from '@/images/photos/barcelona.png'
 import Tweets from '@/components/Tweets'
 import LinkPreviews from '@/components/LinkPreviews'
 import ConfettiButton from '@/components/ConfettiButton'
@@ -31,37 +32,42 @@ interface ICity {
 
 const cities: ICity[] = [
   {
-    name: 'Paris Metro',
+    name: 'Paris',
     image: paris,
     link: 'https://memory.pour.paris',
   },
   {
-    name: 'London Tube',
+    name: 'London',
     image: london,
     link: '/london',
   },
   {
-    name: 'Berlin S- & U-Bahn',
+    name: 'Berlin',
     image: berlin,
     link: '/berlin',
   },
   {
-    name: 'Vienna U-Bahn',
+    name: 'Vienna',
     image: wien,
     link: '/wien',
   },
   {
-    name: "Washington DC's Metro",
+    name: 'Washington DC',
     image: dc,
     link: '/dc',
   },
   {
-    name: 'Madrid Metro',
+    name: 'Madrid',
     image: madrid,
     link: '/madrid',
   },
   {
-    name: 'New York Subway',
+    name: 'Barcelona',
+    image: barcelona,
+    link: '/barcelona',
+  },
+  {
+    name: 'New York City',
     image: ny,
     link: '/ny',
   },
