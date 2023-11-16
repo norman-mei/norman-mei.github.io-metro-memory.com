@@ -27,7 +27,8 @@ const main = async () => {
   routes = routes.filter(
     (r: any) =>
       !r.live_line_code.startsWith('Rodalies') &&
-      !r.live_line_code.startsWith('FGC'),
+      !r.live_line_code.startsWith('FGCS') &&
+      !r.live_line_code.startsWith('FGCR'),
   )
 
   const featuresRoutes = routes.flatMap((route: any, i: number) => {

@@ -160,12 +160,12 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [2.111263, 41.409328]
+        "coordinates": [2.168718, 41.385618]
       },
       "properties": {
         "id": 172,
-        "name": "Peu del Funicular",
-        "line": "BarcelonaFunicularFv",
+        "name": "Pl. Catalunya",
+        "line": "FGCL6",
         "order": 0
       },
       "id": 172
@@ -174,54 +174,68 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
+        "coordinates": [2.168718, 41.385618]
+      },
+      "properties": {
+        "id": 180,
+        "name": "Pl. Catalunya",
+        "line": "FGCL7",
+        "order": 0
+      },
+      "id": 180
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.035333, 41.357534]
+      },
+      "properties": {
+        "id": 187,
+        "name": "Molí Nou - Ciutat Cooperativa",
+        "line": "FGCL8",
+        "order": 0
+      },
+      "id": 187
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.118933, 41.398746]
+      },
+      "properties": {
+        "id": 198,
+        "name": "Reina Elisenda",
+        "line": "FGCL12",
+        "order": 0
+      },
+      "id": 198
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.111263, 41.409328]
+      },
+      "properties": {
+        "id": 200,
+        "name": "Peu del Funicular",
+        "line": "BarcelonaFunicularFv",
+        "order": 0
+      },
+      "id": 200
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
         "coordinates": [1.836499, 41.592258]
       },
       "properties": {
-        "id": 174,
+        "id": 202,
         "name": "Montserrat",
         "line": "BarcelonaFunicularMm",
-        "order": 0
-      },
-      "id": 174
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [2.154836, 42.397345]
-      },
-      "properties": {
-        "id": 177,
-        "name": "Nuria",
-        "line": "BarcelonaFunicularL1",
-        "order": 0
-      },
-      "id": 177
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [2.143175, 41.392206]
-      },
-      "properties": {
-        "id": 181,
-        "name": "Francesc Macià",
-        "line": "TramCatT1",
-        "order": 0
-      },
-      "id": 181
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [2.143175, 41.392206]
-      },
-      "properties": {
-        "id": 202,
-        "name": "Francesc Macià",
-        "line": "TramCatT2",
         "order": 0
       },
       "id": 202
@@ -230,15 +244,57 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
+        "coordinates": [2.154836, 42.397345]
+      },
+      "properties": {
+        "id": 205,
+        "name": "Nuria",
+        "line": "BarcelonaFunicularL1",
+        "order": 0
+      },
+      "id": 205
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
         "coordinates": [2.143175, 41.392206]
       },
       "properties": {
-        "id": 226,
+        "id": 209,
+        "name": "Francesc Macià",
+        "line": "TramCatT1",
+        "order": 0
+      },
+      "id": 209
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.143175, 41.392206]
+      },
+      "properties": {
+        "id": 230,
+        "name": "Francesc Macià",
+        "line": "TramCatT2",
+        "order": 0
+      },
+      "id": 230
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.143175, 41.392206]
+      },
+      "properties": {
+        "id": 254,
         "name": "Francesc Macià",
         "line": "TramCatT3",
         "order": 0
       },
-      "id": 226
+      "id": 254
     },
     {
       "type": "Feature",
@@ -247,13 +303,13 @@
         "coordinates": [2.19192, 41.387612]
       },
       "properties": {
-        "id": 246,
+        "id": 274,
         "name": "Ciutadella | Vila Olímpica",
         "alternate_names": ["Ciutadella", "Vila Olímpica"],
         "line": "TramCatT4",
         "order": 0
       },
-      "id": 246
+      "id": 274
     },
     {
       "type": "Feature",
@@ -262,12 +318,12 @@
         "coordinates": [2.186892, 41.401703]
       },
       "properties": {
-        "id": 273,
+        "id": 301,
         "name": "Glòries",
         "line": "TramCatT5",
         "order": 0
       },
-      "id": 273
+      "id": 301
     },
     {
       "type": "Feature",
@@ -276,12 +332,12 @@
         "coordinates": [2.18689, 41.40169]
       },
       "properties": {
-        "id": 286,
+        "id": 314,
         "name": "Glòries",
         "line": "TramCatT6",
         "order": 0
       },
-      "id": 286
+      "id": 314
     },
     {
       "type": "Feature",
@@ -559,12 +615,12 @@
         "coordinates": [2.076078, 41.370842]
       },
       "properties": {
-        "id": 225,
+        "id": 253,
         "name": "Llevant - Les planes",
         "line": "TramCatT2",
         "order": 441
       },
-      "id": 225
+      "id": 253
     },
     {
       "type": "Feature",
@@ -615,12 +671,12 @@
         "coordinates": [2.071194, 41.368659]
       },
       "properties": {
-        "id": 224,
+        "id": 252,
         "name": "Centre Miquel Martí i Pol",
         "line": "TramCatT2",
         "order": 414
       },
-      "id": 224
+      "id": 252
     },
     {
       "type": "Feature",
@@ -741,12 +797,12 @@
         "coordinates": [2.062949, 41.367795]
       },
       "properties": {
-        "id": 223,
+        "id": 251,
         "name": "La Fontsanta",
         "line": "TramCatT2",
         "order": 358
       },
-      "id": 223
+      "id": 251
     },
     {
       "type": "Feature",
@@ -812,13 +868,13 @@
         "coordinates": [2.053371, 41.379359]
       },
       "properties": {
-        "id": 245,
+        "id": 273,
         "name": "Sant Feliu | Consell Comarcal",
         "alternate_names": ["Sant Feliu", "Consell Comarcal"],
         "line": "TramCatT3",
         "order": 343
       },
-      "id": 245
+      "id": 273
     },
     {
       "type": "Feature",
@@ -869,12 +925,12 @@
         "coordinates": [2.060825, 41.37976]
       },
       "properties": {
-        "id": 244,
+        "id": 272,
         "name": "Torreblanca",
         "line": "TramCatT3",
         "order": 323
       },
-      "id": 244
+      "id": 272
     },
     {
       "type": "Feature",
@@ -897,12 +953,12 @@
         "coordinates": [2.058727, 41.364525]
       },
       "properties": {
-        "id": 201,
+        "id": 229,
         "name": "Bon Viatge",
         "line": "TramCatT1",
         "order": 317
       },
-      "id": 201
+      "id": 229
     },
     {
       "type": "Feature",
@@ -939,12 +995,12 @@
         "coordinates": [2.058818, 41.364608]
       },
       "properties": {
-        "id": 222,
+        "id": 250,
         "name": "Bon Viatge",
         "line": "TramCatT2",
         "order": 312
       },
-      "id": 222
+      "id": 250
     },
     {
       "type": "Feature",
@@ -953,12 +1009,12 @@
         "coordinates": [2.066896, 41.379715]
       },
       "properties": {
-        "id": 243,
+        "id": 271,
         "name": "Walden",
         "line": "TramCatT3",
         "order": 312
       },
-      "id": 243
+      "id": 271
     },
     {
       "type": "Feature",
@@ -1009,12 +1065,12 @@
         "coordinates": [2.07505, 41.378829]
       },
       "properties": {
-        "id": 242,
+        "id": 270,
         "name": "Rambla de Sant Just",
         "line": "TramCatT3",
         "order": 305
       },
-      "id": 242
+      "id": 270
     },
     {
       "type": "Feature",
@@ -1079,13 +1135,13 @@
         "coordinates": [2.062212, 41.36033]
       },
       "properties": {
-        "id": 200,
+        "id": 228,
         "name": "Fontsanta | Fatjó",
         "alternate_names": ["Fontsanta", "Fatjó"],
         "line": "TramCatT1",
         "order": 278
       },
-      "id": 200
+      "id": 228
     },
     {
       "type": "Feature",
@@ -1094,13 +1150,13 @@
         "coordinates": [2.062212, 41.36033]
       },
       "properties": {
-        "id": 221,
+        "id": 249,
         "name": "Fontsanta | Fatjó",
         "alternate_names": ["Fontsanta", "Fatjó"],
         "line": "TramCatT2",
         "order": 278
       },
-      "id": 221
+      "id": 249
     },
     {
       "type": "Feature",
@@ -1165,12 +1221,12 @@
         "coordinates": [2.066088, 41.35665]
       },
       "properties": {
-        "id": 199,
+        "id": 227,
         "name": "Les Aigües",
         "line": "TramCatT1",
         "order": 264
       },
-      "id": 199
+      "id": 227
     },
     {
       "type": "Feature",
@@ -1179,12 +1235,12 @@
         "coordinates": [2.066088, 41.35665]
       },
       "properties": {
-        "id": 220,
+        "id": 248,
         "name": "Les Aigües",
         "line": "TramCatT2",
         "order": 264
       },
-      "id": 220
+      "id": 248
     },
     {
       "type": "Feature",
@@ -1320,13 +1376,13 @@
         "coordinates": [2.075676, 41.372384]
       },
       "properties": {
-        "id": 241,
+        "id": 269,
         "name": "Hospital Sant Joan Despí | TV3",
         "alternate_names": ["Hospital Sant Joan Despí", "TV3"],
         "line": "TramCatT3",
         "order": 239
       },
-      "id": 241
+      "id": 269
     },
     {
       "type": "Feature",
@@ -1349,12 +1405,12 @@
         "coordinates": [2.166287, 42.300425]
       },
       "properties": {
-        "id": 180,
+        "id": 208,
         "name": "Ribes-Enllaç",
         "line": "BarcelonaFunicularL1",
         "order": 238
       },
-      "id": 180
+      "id": 208
     },
     {
       "type": "Feature",
@@ -1419,12 +1475,12 @@
         "coordinates": [2.070019, 41.357442]
       },
       "properties": {
-        "id": 198,
+        "id": 226,
         "name": "Cornellà Centre",
         "line": "TramCatT1",
         "order": 232
       },
-      "id": 198
+      "id": 226
     },
     {
       "type": "Feature",
@@ -1433,12 +1489,12 @@
         "coordinates": [2.070019, 41.357442]
       },
       "properties": {
-        "id": 219,
+        "id": 247,
         "name": "Cornellà Centre",
         "line": "TramCatT2",
         "order": 232
       },
-      "id": 219
+      "id": 247
     },
     {
       "type": "Feature",
@@ -1503,12 +1559,12 @@
         "coordinates": [2.171922, 42.308815]
       },
       "properties": {
-        "id": 179,
+        "id": 207,
         "name": "Ribes-Vila",
         "line": "BarcelonaFunicularL1",
         "order": 212
       },
-      "id": 179
+      "id": 207
     },
     {
       "type": "Feature",
@@ -1517,12 +1573,12 @@
         "coordinates": [2.072667, 41.361245]
       },
       "properties": {
-        "id": 197,
+        "id": 225,
         "name": "Ignasi Iglésias",
         "line": "TramCatT1",
         "order": 210
       },
-      "id": 197
+      "id": 225
     },
     {
       "type": "Feature",
@@ -1531,12 +1587,12 @@
         "coordinates": [2.072667, 41.361245]
       },
       "properties": {
-        "id": 218,
+        "id": 246,
         "name": "Ignasi Iglésias",
         "line": "TramCatT2",
         "order": 210
       },
-      "id": 218
+      "id": 246
     },
     {
       "type": "Feature",
@@ -1588,12 +1644,12 @@
         "coordinates": [2.076671, 41.365319]
       },
       "properties": {
-        "id": 196,
+        "id": 224,
         "name": "El Pedró",
         "line": "TramCatT1",
         "order": 201
       },
-      "id": 196
+      "id": 224
     },
     {
       "type": "Feature",
@@ -1602,12 +1658,12 @@
         "coordinates": [2.076671, 41.365319]
       },
       "properties": {
-        "id": 217,
+        "id": 245,
         "name": "El Pedró",
         "line": "TramCatT2",
         "order": 201
       },
-      "id": 217
+      "id": 245
     },
     {
       "type": "Feature",
@@ -1812,12 +1868,12 @@
         "coordinates": [2.080915, 41.369643]
       },
       "properties": {
-        "id": 195,
+        "id": 223,
         "name": "Montesa",
         "line": "TramCatT1",
         "order": 175
       },
-      "id": 195
+      "id": 223
     },
     {
       "type": "Feature",
@@ -1826,12 +1882,12 @@
         "coordinates": [2.080915, 41.369643]
       },
       "properties": {
-        "id": 216,
+        "id": 244,
         "name": "Montesa",
         "line": "TramCatT2",
         "order": 175
       },
-      "id": 216
+      "id": 244
     },
     {
       "type": "Feature",
@@ -1840,12 +1896,12 @@
         "coordinates": [2.080915, 41.369643]
       },
       "properties": {
-        "id": 240,
+        "id": 268,
         "name": "Montesa",
         "line": "TramCatT3",
         "order": 175
       },
-      "id": 240
+      "id": 268
     },
     {
       "type": "Feature",
@@ -1896,12 +1952,12 @@
         "coordinates": [2.23322, 41.439966]
       },
       "properties": {
-        "id": 285,
+        "id": 313,
         "name": "Gorg",
         "line": "TramCatT5",
         "order": 169
       },
-      "id": 285
+      "id": 313
     },
     {
       "type": "Feature",
@@ -1910,12 +1966,12 @@
         "coordinates": [2.084001, 41.37279]
       },
       "properties": {
-        "id": 194,
+        "id": 222,
         "name": "La Sardana",
         "line": "TramCatT1",
         "order": 165
       },
-      "id": 194
+      "id": 222
     },
     {
       "type": "Feature",
@@ -1924,12 +1980,12 @@
         "coordinates": [2.084001, 41.37279]
       },
       "properties": {
-        "id": 215,
+        "id": 243,
         "name": "La Sardana",
         "line": "TramCatT2",
         "order": 165
       },
-      "id": 215
+      "id": 243
     },
     {
       "type": "Feature",
@@ -1938,12 +1994,12 @@
         "coordinates": [2.084001, 41.37279]
       },
       "properties": {
-        "id": 239,
+        "id": 267,
         "name": "La Sardana",
         "line": "TramCatT3",
         "order": 165
       },
-      "id": 239
+      "id": 267
     },
     {
       "type": "Feature",
@@ -1980,12 +2036,12 @@
         "coordinates": [2.227593, 41.434946]
       },
       "properties": {
-        "id": 284,
+        "id": 312,
         "name": "Sant Roc",
         "line": "TramCatT5",
         "order": 160
       },
-      "id": 284
+      "id": 312
     },
     {
       "type": "Feature",
@@ -2022,12 +2078,12 @@
         "coordinates": [1.849179, 41.610373]
       },
       "properties": {
-        "id": 176,
+        "id": 204,
         "name": "Monistrol de Montserrat",
         "line": "BarcelonaFunicularMm",
         "order": 157
       },
-      "id": 176
+      "id": 204
     },
     {
       "type": "Feature",
@@ -2078,12 +2134,12 @@
         "coordinates": [2.088603, 41.376831]
       },
       "properties": {
-        "id": 193,
+        "id": 221,
         "name": "Pont d'Esplugues",
         "line": "TramCatT1",
         "order": 144
       },
-      "id": 193
+      "id": 221
     },
     {
       "type": "Feature",
@@ -2092,12 +2148,12 @@
         "coordinates": [2.088603, 41.376831]
       },
       "properties": {
-        "id": 214,
+        "id": 242,
         "name": "Pont d'Esplugues",
         "line": "TramCatT2",
         "order": 144
       },
-      "id": 214
+      "id": 242
     },
     {
       "type": "Feature",
@@ -2106,12 +2162,12 @@
         "coordinates": [2.088603, 41.376831]
       },
       "properties": {
-        "id": 238,
+        "id": 266,
         "name": "Pont d'Esplugues",
         "line": "TramCatT3",
         "order": 144
       },
-      "id": 238
+      "id": 266
     },
     {
       "type": "Feature",
@@ -2134,12 +2190,12 @@
         "coordinates": [2.22253, 41.430288]
       },
       "properties": {
-        "id": 283,
+        "id": 311,
         "name": "Encants de Sant Adrià",
         "line": "TramCatT5",
         "order": 142
       },
-      "id": 283
+      "id": 311
     },
     {
       "type": "Feature",
@@ -2176,12 +2232,12 @@
         "coordinates": [1.843697, 41.61567]
       },
       "properties": {
-        "id": 175,
+        "id": 203,
         "name": "Monistrol-Vila",
         "line": "BarcelonaFunicularMm",
         "order": 140
       },
-      "id": 175
+      "id": 203
     },
     {
       "type": "Feature",
@@ -2261,12 +2317,12 @@
         "coordinates": [2.225406, 41.42739]
       },
       "properties": {
-        "id": 282,
+        "id": 310,
         "name": "Sant Joan Baptista",
         "line": "TramCatT5",
         "order": 128
       },
-      "id": 282
+      "id": 310
     },
     {
       "type": "Feature",
@@ -2303,12 +2359,12 @@
         "coordinates": [2.093522, 41.376956]
       },
       "properties": {
-        "id": 192,
+        "id": 220,
         "name": "Can Clota",
         "line": "TramCatT1",
         "order": 127
       },
-      "id": 192
+      "id": 220
     },
     {
       "type": "Feature",
@@ -2317,12 +2373,12 @@
         "coordinates": [2.093522, 41.376956]
       },
       "properties": {
-        "id": 213,
+        "id": 241,
         "name": "Can Clota",
         "line": "TramCatT2",
         "order": 127
       },
-      "id": 213
+      "id": 241
     },
     {
       "type": "Feature",
@@ -2331,12 +2387,12 @@
         "coordinates": [2.093522, 41.376956]
       },
       "properties": {
-        "id": 237,
+        "id": 265,
         "name": "Can Clota",
         "line": "TramCatT3",
         "order": 127
       },
-      "id": 237
+      "id": 265
     },
     {
       "type": "Feature",
@@ -2360,12 +2416,12 @@
         "coordinates": [2.165699, 42.35174]
       },
       "properties": {
-        "id": 178,
+        "id": 206,
         "name": "Queralbs",
         "line": "BarcelonaFunicularL1",
         "order": 123
       },
-      "id": 178
+      "id": 206
     },
     {
       "type": "Feature",
@@ -2402,12 +2458,12 @@
         "coordinates": [2.098408, 41.376609]
       },
       "properties": {
-        "id": 191,
+        "id": 219,
         "name": "Ca n'Oliveres",
         "line": "TramCatT1",
         "order": 119
       },
-      "id": 191
+      "id": 219
     },
     {
       "type": "Feature",
@@ -2416,12 +2472,12 @@
         "coordinates": [2.098408, 41.376609]
       },
       "properties": {
-        "id": 212,
+        "id": 240,
         "name": "Ca n'Oliveres",
         "line": "TramCatT2",
         "order": 119
       },
-      "id": 212
+      "id": 240
     },
     {
       "type": "Feature",
@@ -2430,12 +2486,12 @@
         "coordinates": [2.098408, 41.376609]
       },
       "properties": {
-        "id": 236,
+        "id": 264,
         "name": "Ca n'Oliveres",
         "line": "TramCatT3",
         "order": 119
       },
-      "id": 236
+      "id": 264
     },
     {
       "type": "Feature",
@@ -2486,12 +2542,12 @@
         "coordinates": [2.230545, 41.423955]
       },
       "properties": {
-        "id": 259,
+        "id": 287,
         "name": "Estaciò de Sant Adrià",
         "line": "TramCatT4",
         "order": 110
       },
-      "id": 259
+      "id": 287
     },
     {
       "type": "Feature",
@@ -2500,12 +2556,12 @@
         "coordinates": [2.221941, 41.42264]
       },
       "properties": {
-        "id": 281,
+        "id": 309,
         "name": "La Catalana",
         "line": "TramCatT5",
         "order": 109
       },
-      "id": 281
+      "id": 309
     },
     {
       "type": "Feature",
@@ -2542,12 +2598,12 @@
         "coordinates": [2.105928, 41.376082]
       },
       "properties": {
-        "id": 190,
+        "id": 218,
         "name": "Can Rigal",
         "line": "TramCatT1",
         "order": 108
       },
-      "id": 190
+      "id": 218
     },
     {
       "type": "Feature",
@@ -2556,12 +2612,12 @@
         "coordinates": [2.105928, 41.376082]
       },
       "properties": {
-        "id": 211,
+        "id": 239,
         "name": "Can Rigal",
         "line": "TramCatT2",
         "order": 108
       },
-      "id": 211
+      "id": 239
     },
     {
       "type": "Feature",
@@ -2570,12 +2626,12 @@
         "coordinates": [2.105928, 41.376082]
       },
       "properties": {
-        "id": 235,
+        "id": 263,
         "name": "Can Rigal",
         "line": "TramCatT3",
         "order": 108
       },
-      "id": 235
+      "id": 263
     },
     {
       "type": "Feature",
@@ -2612,12 +2668,12 @@
         "coordinates": [2.217633, 41.41943]
       },
       "properties": {
-        "id": 280,
+        "id": 308,
         "name": "Parc del Besòs",
         "line": "TramCatT5",
         "order": 100
       },
-      "id": 280
+      "id": 308
     },
     {
       "type": "Feature",
@@ -2640,12 +2696,12 @@
         "coordinates": [2.23054, 41.42395]
       },
       "properties": {
-        "id": 295,
+        "id": 323,
         "name": "Estaciò de Sant Adrià",
         "line": "TramCatT6",
         "order": 97
       },
-      "id": 295
+      "id": 323
     },
     {
       "type": "Feature",
@@ -2668,12 +2724,12 @@
         "coordinates": [2.110709, 41.376514]
       },
       "properties": {
-        "id": 189,
+        "id": 217,
         "name": "Ernest Lluch",
         "line": "TramCatT1",
         "order": 94
       },
-      "id": 189
+      "id": 217
     },
     {
       "type": "Feature",
@@ -2682,12 +2738,12 @@
         "coordinates": [2.110709, 41.376514]
       },
       "properties": {
-        "id": 210,
+        "id": 238,
         "name": "Ernest Lluch",
         "line": "TramCatT2",
         "order": 94
       },
-      "id": 210
+      "id": 238
     },
     {
       "type": "Feature",
@@ -2696,12 +2752,12 @@
         "coordinates": [2.110709, 41.376514]
       },
       "properties": {
-        "id": 234,
+        "id": 262,
         "name": "Ernest Lluch",
         "line": "TramCatT3",
         "order": 94
       },
-      "id": 234
+      "id": 262
     },
     {
       "type": "Feature",
@@ -2710,12 +2766,12 @@
         "coordinates": [2.226164, 41.418871]
       },
       "properties": {
-        "id": 258,
+        "id": 286,
         "name": "Port Fòrum",
         "line": "TramCatT4",
         "order": 94
       },
-      "id": 258
+      "id": 286
     },
     {
       "type": "Feature",
@@ -2738,12 +2794,12 @@
         "coordinates": [2.226158, 41.418873]
       },
       "properties": {
-        "id": 305,
+        "id": 333,
         "name": "Port Fòrum",
         "line": "TramCatT6",
         "order": 93
       },
-      "id": 305
+      "id": 333
     },
     {
       "type": "Feature",
@@ -2822,12 +2878,12 @@
         "coordinates": [2.213556, 41.41719]
       },
       "properties": {
-        "id": 279,
+        "id": 307,
         "name": "Alfons el Magnànim",
         "line": "TramCatT5",
         "order": 85
       },
-      "id": 279
+      "id": 307
     },
     {
       "type": "Feature",
@@ -2836,12 +2892,12 @@
         "coordinates": [2.222929, 41.41524]
       },
       "properties": {
-        "id": 257,
+        "id": 285,
         "name": "Campus Diagonal - Besòs",
         "line": "TramCatT4",
         "order": 84
       },
-      "id": 257
+      "id": 285
     },
     {
       "type": "Feature",
@@ -2864,12 +2920,12 @@
         "coordinates": [2.220986, 41.418376]
       },
       "properties": {
-        "id": 294,
+        "id": 322,
         "name": "La Mina",
         "line": "TramCatT6",
         "order": 83
       },
-      "id": 294
+      "id": 322
     },
     {
       "type": "Feature",
@@ -2934,12 +2990,12 @@
         "coordinates": [2.217641, 41.419425]
       },
       "properties": {
-        "id": 293,
+        "id": 321,
         "name": "Parc del Besòs",
         "line": "TramCatT6",
         "order": 78
       },
-      "id": 293
+      "id": 321
     },
     {
       "type": "Feature",
@@ -2948,12 +3004,12 @@
         "coordinates": [2.21985, 41.411828]
       },
       "properties": {
-        "id": 256,
+        "id": 284,
         "name": "Fòrum",
         "line": "TramCatT4",
         "order": 76
       },
-      "id": 256
+      "id": 284
     },
     {
       "type": "Feature",
@@ -3004,12 +3060,26 @@
         "coordinates": [2.213564, 41.41719]
       },
       "properties": {
-        "id": 292,
+        "id": 320,
         "name": "Alfons el Magnànim",
         "line": "TramCatT6",
         "order": 70
       },
-      "id": 292
+      "id": 320
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.148471, 41.374522]
+      },
+      "properties": {
+        "id": 197,
+        "name": "Espanya",
+        "line": "FGCL8",
+        "order": 69
+      },
+      "id": 197
     },
     {
       "type": "Feature",
@@ -3043,15 +3113,43 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
+        "coordinates": [2.139025, 41.367379]
+      },
+      "properties": {
+        "id": 196,
+        "name": "Magòria La Campana",
+        "line": "FGCL8",
+        "order": 67
+      },
+      "id": 196
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
         "coordinates": [2.21563, 41.410491]
       },
       "properties": {
-        "id": 255,
+        "id": 283,
         "name": "El Maresme",
         "line": "TramCatT4",
         "order": 67
       },
-      "id": 255
+      "id": 283
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.130265, 41.360728]
+      },
+      "properties": {
+        "id": 195,
+        "name": "Ildefons Cerdà",
+        "line": "FGCL8",
+        "order": 64
+      },
+      "id": 195
     },
     {
       "type": "Feature",
@@ -3060,12 +3158,12 @@
         "coordinates": [2.114831, 41.38074]
       },
       "properties": {
-        "id": 188,
+        "id": 216,
         "name": "Avinguda de Xile",
         "line": "TramCatT1",
         "order": 64
       },
-      "id": 188
+      "id": 216
     },
     {
       "type": "Feature",
@@ -3074,12 +3172,12 @@
         "coordinates": [2.114831, 41.38074]
       },
       "properties": {
-        "id": 209,
+        "id": 237,
         "name": "Avinguda de Xile",
         "line": "TramCatT2",
         "order": 64
       },
-      "id": 209
+      "id": 237
     },
     {
       "type": "Feature",
@@ -3088,12 +3186,12 @@
         "coordinates": [2.114831, 41.38074]
       },
       "properties": {
-        "id": 233,
+        "id": 261,
         "name": "Avinguda de Xile",
         "line": "TramCatT3",
         "order": 64
       },
-      "id": 233
+      "id": 261
     },
     {
       "type": "Feature",
@@ -3113,15 +3211,30 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
+        "coordinates": [2.124301, 41.356465]
+      },
+      "properties": {
+        "id": 194,
+        "name": "Europa | Fira",
+        "alternate_names": ["Europa", "Fira"],
+        "line": "FGCL8",
+        "order": 62
+      },
+      "id": 194
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
         "coordinates": [2.210446, 41.409196]
       },
       "properties": {
-        "id": 254,
+        "id": 282,
         "name": "Selva de Mar",
         "line": "TramCatT4",
         "order": 62
       },
-      "id": 254
+      "id": 282
     },
     {
       "type": "Feature",
@@ -3144,12 +3257,12 @@
         "coordinates": [2.204912, 41.407809]
       },
       "properties": {
-        "id": 253,
+        "id": 281,
         "name": "Fluvià",
         "line": "TramCatT4",
         "order": 61
       },
-      "id": 253
+      "id": 281
     },
     {
       "type": "Feature",
@@ -3158,12 +3271,12 @@
         "coordinates": [2.198232, 41.406145]
       },
       "properties": {
-        "id": 252,
+        "id": 280,
         "name": "Pere IV",
         "line": "TramCatT4",
         "order": 60
       },
-      "id": 252
+      "id": 280
     },
     {
       "type": "Feature",
@@ -3200,12 +3313,12 @@
         "coordinates": [2.191495, 41.404446]
       },
       "properties": {
-        "id": 251,
+        "id": 279,
         "name": "Ca l'Aranyó",
         "line": "TramCatT4",
         "order": 59
       },
-      "id": 251
+      "id": 279
     },
     {
       "type": "Feature",
@@ -3258,12 +3371,12 @@
         "coordinates": [2.209647, 41.420152]
       },
       "properties": {
-        "id": 278,
+        "id": 306,
         "name": "Besòs",
         "line": "TramCatT5",
         "order": 56
       },
-      "id": 278
+      "id": 306
     },
     {
       "type": "Feature",
@@ -3272,12 +3385,12 @@
         "coordinates": [2.209654, 41.420153]
       },
       "properties": {
-        "id": 291,
+        "id": 319,
         "name": "Besòs",
         "line": "TramCatT6",
         "order": 55
       },
-      "id": 291
+      "id": 319
     },
     {
       "type": "Feature",
@@ -3286,12 +3399,26 @@
         "coordinates": [2.20472, 41.416403]
       },
       "properties": {
-        "id": 277,
+        "id": 305,
         "name": "Sant Martí de Provençals",
         "line": "TramCatT5",
         "order": 54
       },
-      "id": 277
+      "id": 305
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.117027, 41.354733]
+      },
+      "properties": {
+        "id": 193,
+        "name": "Gornal",
+        "line": "FGCL8",
+        "order": 53
+      },
+      "id": 193
     },
     {
       "type": "Feature",
@@ -3300,12 +3427,12 @@
         "coordinates": [2.197947, 41.411357]
       },
       "properties": {
-        "id": 276,
+        "id": 304,
         "name": "Espronceda",
         "line": "TramCatT5",
         "order": 53
       },
-      "id": 276
+      "id": 304
     },
     {
       "type": "Feature",
@@ -3314,12 +3441,26 @@
         "coordinates": [2.204726, 41.416477]
       },
       "properties": {
-        "id": 290,
+        "id": 318,
         "name": "Sant Martí de Provençals",
         "line": "TramCatT6",
         "order": 53
       },
-      "id": 290
+      "id": 318
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.125574, 41.398499]
+      },
+      "properties": {
+        "id": 179,
+        "name": "Sarrià",
+        "line": "FGCL6",
+        "order": 52
+      },
+      "id": 179
     },
     {
       "type": "Feature",
@@ -3328,12 +3469,12 @@
         "coordinates": [2.1979, 41.41138]
       },
       "properties": {
-        "id": 289,
+        "id": 317,
         "name": "Espronceda",
         "line": "TramCatT6",
         "order": 51
       },
-      "id": 289
+      "id": 317
     },
     {
       "type": "Feature",
@@ -3348,6 +3489,20 @@
         "order": 48
       },
       "id": 127
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.136801, 41.409526]
+      },
+      "properties": {
+        "id": 186,
+        "name": "Av. Tibidabo",
+        "line": "FGCL7",
+        "order": 47
+      },
+      "id": 186
     },
     {
       "type": "Feature",
@@ -3370,12 +3525,12 @@
         "coordinates": [2.193607, 41.408114]
       },
       "properties": {
-        "id": 275,
+        "id": 303,
         "name": "Can Jaumandreu",
         "line": "TramCatT5",
         "order": 46
       },
-      "id": 275
+      "id": 303
     },
     {
       "type": "Feature",
@@ -3395,15 +3550,71 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
+        "coordinates": [2.130812, 41.397848]
+      },
+      "properties": {
+        "id": 178,
+        "name": "Les Tres Torres",
+        "line": "FGCL6",
+        "order": 45
+      },
+      "id": 178
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.109996, 41.36058]
+      },
+      "properties": {
+        "id": 192,
+        "name": "Sant Josep",
+        "line": "FGCL8",
+        "order": 45
+      },
+      "id": 192
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
         "coordinates": [2.193653, 41.408156]
       },
       "properties": {
-        "id": 288,
+        "id": 316,
         "name": "Can Jaumandreu",
         "line": "TramCatT6",
         "order": 45
       },
-      "id": 288
+      "id": 316
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.139091, 41.405735]
+      },
+      "properties": {
+        "id": 185,
+        "name": "El Putxet",
+        "line": "FGCL7",
+        "order": 43
+      },
+      "id": 185
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.10268, 41.357867]
+      },
+      "properties": {
+        "id": 191,
+        "name": "L'Hospitalet - Av. Carrilet",
+        "line": "FGCL8",
+        "order": 43
+      },
+      "id": 191
     },
     {
       "type": "Feature",
@@ -3412,12 +3623,12 @@
         "coordinates": [2.114423, 41.384292]
       },
       "properties": {
-        "id": 187,
+        "id": 215,
         "name": "Zona Universitària",
         "line": "TramCatT1",
         "order": 43
       },
-      "id": 187
+      "id": 215
     },
     {
       "type": "Feature",
@@ -3426,12 +3637,12 @@
         "coordinates": [2.114423, 41.384292]
       },
       "properties": {
-        "id": 208,
+        "id": 236,
         "name": "Zona Universitària",
         "line": "TramCatT2",
         "order": 43
       },
-      "id": 208
+      "id": 236
     },
     {
       "type": "Feature",
@@ -3440,12 +3651,12 @@
         "coordinates": [2.114423, 41.384292]
       },
       "properties": {
-        "id": 232,
+        "id": 260,
         "name": "Zona Universitària",
         "line": "TramCatT3",
         "order": 43
       },
-      "id": 232
+      "id": 260
     },
     {
       "type": "Feature",
@@ -3479,6 +3690,48 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
+        "coordinates": [2.136434, 41.397859]
+      },
+      "properties": {
+        "id": 177,
+        "name": "La Bonanova",
+        "line": "FGCL6",
+        "order": 40
+      },
+      "id": 177
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.085219, 41.353202]
+      },
+      "properties": {
+        "id": 190,
+        "name": "Almeda",
+        "line": "FGCL8",
+        "order": 40
+      },
+      "id": 190
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.142708, 41.403466]
+      },
+      "properties": {
+        "id": 184,
+        "name": "Pàdua",
+        "line": "FGCL7",
+        "order": 34
+      },
+      "id": 184
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
         "coordinates": [2.130871, 41.38412]
       },
       "properties": {
@@ -3493,15 +3746,43 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
+        "coordinates": [2.071263, 41.351474]
+      },
+      "properties": {
+        "id": 189,
+        "name": "Cornellà Riera",
+        "line": "FGCL8",
+        "order": 33
+      },
+      "id": 189
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
         "coordinates": [2.186896, 41.401681]
       },
       "properties": {
-        "id": 250,
+        "id": 278,
         "name": "Glòries",
         "line": "TramCatT4",
         "order": 33
       },
-      "id": 250
+      "id": 278
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.142336, 41.39854]
+      },
+      "properties": {
+        "id": 176,
+        "name": "Muntaner",
+        "line": "FGCL6",
+        "order": 31
+      },
+      "id": 176
     },
     {
       "type": "Feature",
@@ -3538,12 +3819,12 @@
         "coordinates": [2.118457, 41.385927]
       },
       "properties": {
-        "id": 186,
+        "id": 214,
         "name": "Palau Reial",
         "line": "TramCatT1",
         "order": 27
       },
-      "id": 186
+      "id": 214
     },
     {
       "type": "Feature",
@@ -3552,12 +3833,12 @@
         "coordinates": [2.118457, 41.385927]
       },
       "properties": {
-        "id": 207,
+        "id": 235,
         "name": "Palau Reial",
         "line": "TramCatT2",
         "order": 27
       },
-      "id": 207
+      "id": 235
     },
     {
       "type": "Feature",
@@ -3566,12 +3847,12 @@
         "coordinates": [2.118457, 41.385927]
       },
       "properties": {
-        "id": 231,
+        "id": 259,
         "name": "Palau Reial",
         "line": "TramCatT3",
         "order": 27
       },
-      "id": 231
+      "id": 259
     },
     {
       "type": "Feature",
@@ -3591,15 +3872,29 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
+        "coordinates": [2.146709, 41.401646]
+      },
+      "properties": {
+        "id": 183,
+        "name": "Sant Gervasi / Pl. Molina",
+        "line": "FGCL7",
+        "order": 26
+      },
+      "id": 183
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
         "coordinates": [2.188582, 41.404199]
       },
       "properties": {
-        "id": 274,
+        "id": 302,
         "name": "La Farinera",
         "line": "TramCatT5",
         "order": 26
       },
-      "id": 274
+      "id": 302
     },
     {
       "type": "Feature",
@@ -3619,16 +3914,30 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
+        "coordinates": [2.147208, 41.401154]
+      },
+      "properties": {
+        "id": 175,
+        "name": "Sant Gervasi / Pl. Molina",
+        "line": "FGCL6",
+        "order": 24
+      },
+      "id": 175
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
         "coordinates": [2.18688, 41.397536]
       },
       "properties": {
-        "id": 249,
+        "id": 277,
         "name": "Auditori | Teatre Nacional",
         "alternate_names": ["Auditori", "Teatre Nacional"],
         "line": "TramCatT4",
         "order": 24
       },
-      "id": 249
+      "id": 277
     },
     {
       "type": "Feature",
@@ -3651,12 +3960,12 @@
         "coordinates": [2.121601, 41.386723]
       },
       "properties": {
-        "id": 185,
+        "id": 213,
         "name": "Pius XII",
         "line": "TramCatT1",
         "order": 23
       },
-      "id": 185
+      "id": 213
     },
     {
       "type": "Feature",
@@ -3665,12 +3974,12 @@
         "coordinates": [2.121601, 41.386723]
       },
       "properties": {
-        "id": 206,
+        "id": 234,
         "name": "Pius XII",
         "line": "TramCatT2",
         "order": 23
       },
-      "id": 206
+      "id": 234
     },
     {
       "type": "Feature",
@@ -3679,12 +3988,12 @@
         "coordinates": [2.121601, 41.386723]
       },
       "properties": {
-        "id": 230,
+        "id": 258,
         "name": "Pius XII",
         "line": "TramCatT3",
         "order": 23
       },
-      "id": 230
+      "id": 258
     },
     {
       "type": "Feature",
@@ -3693,12 +4002,12 @@
         "coordinates": [2.18857, 41.40419]
       },
       "properties": {
-        "id": 287,
+        "id": 315,
         "name": "La Farinera",
         "line": "TramCatT6",
         "order": 22
       },
-      "id": 287
+      "id": 315
     },
     {
       "type": "Feature",
@@ -3707,12 +4016,12 @@
         "coordinates": [2.126509, 41.38797]
       },
       "properties": {
-        "id": 184,
+        "id": 212,
         "name": "Maria Cristina",
         "line": "TramCatT1",
         "order": 18
       },
-      "id": 184
+      "id": 212
     },
     {
       "type": "Feature",
@@ -3721,12 +4030,12 @@
         "coordinates": [2.126509, 41.38797]
       },
       "properties": {
-        "id": 205,
+        "id": 233,
         "name": "Maria Cristina",
         "line": "TramCatT2",
         "order": 18
       },
-      "id": 205
+      "id": 233
     },
     {
       "type": "Feature",
@@ -3735,12 +4044,26 @@
         "coordinates": [2.126509, 41.38797]
       },
       "properties": {
-        "id": 229,
+        "id": 257,
         "name": "Maria Cristina",
         "line": "TramCatT3",
         "order": 18
       },
-      "id": 229
+      "id": 257
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.125574, 41.398499]
+      },
+      "properties": {
+        "id": 199,
+        "name": "Sarrià",
+        "line": "FGCL12",
+        "order": 17
+      },
+      "id": 199
     },
     {
       "type": "Feature",
@@ -3760,15 +4083,43 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
+        "coordinates": [2.152666, 41.3991]
+      },
+      "properties": {
+        "id": 174,
+        "name": "Gràcia",
+        "line": "FGCL6",
+        "order": 15
+      },
+      "id": 174
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.152666, 41.3991]
+      },
+      "properties": {
+        "id": 182,
+        "name": "Gràcia",
+        "line": "FGCL7",
+        "order": 15
+      },
+      "id": 182
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
         "coordinates": [2.186914, 41.394061]
       },
       "properties": {
-        "id": 248,
+        "id": 276,
         "name": "Marina",
         "line": "TramCatT4",
         "order": 15
       },
-      "id": 248
+      "id": 276
     },
     {
       "type": "Feature",
@@ -3777,12 +4128,12 @@
         "coordinates": [2.131951, 41.389346]
       },
       "properties": {
-        "id": 183,
+        "id": 211,
         "name": "Numància",
         "line": "TramCatT1",
         "order": 12
       },
-      "id": 183
+      "id": 211
     },
     {
       "type": "Feature",
@@ -3791,12 +4142,12 @@
         "coordinates": [2.131951, 41.389346]
       },
       "properties": {
-        "id": 204,
+        "id": 232,
         "name": "Numància",
         "line": "TramCatT2",
         "order": 12
       },
-      "id": 204
+      "id": 232
     },
     {
       "type": "Feature",
@@ -3805,12 +4156,12 @@
         "coordinates": [2.131951, 41.389346]
       },
       "properties": {
-        "id": 228,
+        "id": 256,
         "name": "Numància",
         "line": "TramCatT3",
         "order": 12
       },
-      "id": 228
+      "id": 256
     },
     {
       "type": "Feature",
@@ -3825,6 +4176,20 @@
         "order": 11
       },
       "id": 159
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.042853, 41.348557]
+      },
+      "properties": {
+        "id": 188,
+        "name": "Sant Boi",
+        "line": "FGCL8",
+        "order": 11
+      },
+      "id": 188
     },
     {
       "type": "Feature",
@@ -3862,12 +4227,12 @@
         "coordinates": [2.136522, 41.390508]
       },
       "properties": {
-        "id": 182,
+        "id": 210,
         "name": "L'Illa",
         "line": "TramCatT1",
         "order": 8
       },
-      "id": 182
+      "id": 210
     },
     {
       "type": "Feature",
@@ -3876,12 +4241,12 @@
         "coordinates": [2.136522, 41.390508]
       },
       "properties": {
-        "id": 203,
+        "id": 231,
         "name": "L'Illa",
         "line": "TramCatT2",
         "order": 8
       },
-      "id": 203
+      "id": 231
     },
     {
       "type": "Feature",
@@ -3890,12 +4255,12 @@
         "coordinates": [2.136522, 41.390508]
       },
       "properties": {
-        "id": 227,
+        "id": 255,
         "name": "L'Illa",
         "line": "TramCatT3",
         "order": 8
       },
-      "id": 227
+      "id": 255
     },
     {
       "type": "Feature",
@@ -3910,6 +4275,34 @@
         "order": 7
       },
       "id": 157
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.15806, 41.392836]
+      },
+      "properties": {
+        "id": 173,
+        "name": "Provença",
+        "line": "FGCL6",
+        "order": 7
+      },
+      "id": 173
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.15806, 41.392836]
+      },
+      "properties": {
+        "id": 181,
+        "name": "Provença",
+        "line": "FGCL7",
+        "order": 7
+      },
+      "id": 181
     },
     {
       "type": "Feature",
@@ -3932,12 +4325,12 @@
         "coordinates": [2.105833, 41.414123]
       },
       "properties": {
-        "id": 173,
+        "id": 201,
         "name": "Vallvidrera Superior",
         "line": "BarcelonaFunicularFv",
         "order": 4
       },
-      "id": 173
+      "id": 201
     },
     {
       "type": "Feature",
@@ -3946,12 +4339,12 @@
         "coordinates": [2.188524, 41.390173]
       },
       "properties": {
-        "id": 247,
+        "id": 275,
         "name": "Wellington",
         "line": "TramCatT4",
         "order": 4
       },
-      "id": 247
+      "id": 275
     },
     {
       "type": "Feature",
@@ -3981,28 +4374,5 @@
       },
       "id": 2
     }
-  ],
-  "properties": {
-    "totalStations": 283,
-    "stationsPerLine": {
-      "TMBMetroFm": 2,
-      "TMBMetroL1": 30,
-      "TMBMetroL2": 18,
-      "TMBMetroL3": 26,
-      "TMBMetroL4": 22,
-      "TMBMetroL5": 27,
-      "TMBMetroL9": 24,
-      "TMBMetroL10": 17,
-      "TMBMetroL11": 5,
-      "BarcelonaFunicularFv": 2,
-      "BarcelonaFunicularMm": 3,
-      "BarcelonaFunicularL1": 4,
-      "TramCatT1": 21,
-      "TramCatT2": 24,
-      "TramCatT3": 20,
-      "TramCatT4": 14,
-      "TramCatT5": 13,
-      "TramCatT6": 11
-    }
-  }
+  ]
 }
