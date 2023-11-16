@@ -19,7 +19,6 @@ const Bun = {
 
 const main = async () => {
   // --- STATIONS ---
-  // @todo parametrize
   const data = Bun.file(path.join(__dirname, './source.json'))
 
   const { routes, stops } = (await data.json()) as any

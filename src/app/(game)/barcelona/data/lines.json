@@ -42,25 +42,11 @@
     "order": 5
   },
   "TMBMetroL9": {
-    "name": "L9N",
-    "color": "#F18C12",
-    "backgroundColor": "#7A4607",
-    "textColor": "#FFFFFF",
-    "order": 6
-  },
-  "TMBMetroL9": {
     "name": "L9S",
     "color": "#F18C12",
     "backgroundColor": "#7A4607",
     "textColor": "#FFFFFF",
     "order": 7
-  },
-  "TMBMetroL10": {
-    "name": "L10N",
-    "color": "#009EE1",
-    "backgroundColor": "#004F71",
-    "textColor": "#FFFFFF",
-    "order": 8
   },
   "TMBMetroL10": {
     "name": "L10S",

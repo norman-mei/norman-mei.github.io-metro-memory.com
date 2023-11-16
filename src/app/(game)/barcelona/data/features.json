@@ -136,6 +136,7 @@
       "properties": {
         "id": 156,
         "name": "ZAL | Riu Vell",
+        "alternate_names": ["ZAL", "Riu Vell"],
         "line": "TMBMetroL10",
         "order": 0
       },
@@ -248,6 +249,7 @@
       "properties": {
         "id": 246,
         "name": "Ciutadella | Vila Olímpica",
+        "alternate_names": ["Ciutadella", "Vila Olímpica"],
         "line": "TramCatT4",
         "order": 0
       },
@@ -346,6 +348,7 @@
       "properties": {
         "id": 146,
         "name": "Can Tries | Gornal",
+        "alternate_names": ["Can Tries", "Gornal"],
         "line": "TMBMetroL9",
         "order": 551
       },
@@ -360,6 +363,7 @@
       "properties": {
         "id": 145,
         "name": "Europa | Fira",
+        "alternate_names": ["Europa", "Fira"],
         "line": "TMBMetroL9",
         "order": 536
       },
@@ -486,6 +490,7 @@
       "properties": {
         "id": 124,
         "name": "El Coll | La Teixonera",
+        "alternate_names": ["El Coll", "La Teixonera"],
         "line": "TMBMetroL5",
         "order": 464
       },
@@ -766,6 +771,7 @@
       "properties": {
         "id": 94,
         "name": "Guinardó | Hospital de Sant Pau",
+        "alternate_names": ["Guinardó", "Hospital de Sant Pau"],
         "line": "TMBMetroL4",
         "order": 346
       },
@@ -808,6 +814,7 @@
       "properties": {
         "id": 245,
         "name": "Sant Feliu | Consell Comarcal",
+        "alternate_names": ["Sant Feliu", "Consell Comarcal"],
         "line": "TramCatT3",
         "order": 343
       },
@@ -1074,6 +1081,7 @@
       "properties": {
         "id": 200,
         "name": "Fontsanta | Fatjó",
+        "alternate_names": ["Fontsanta", "Fatjó"],
         "line": "TramCatT1",
         "order": 278
       },
@@ -1088,6 +1096,7 @@
       "properties": {
         "id": 221,
         "name": "Fontsanta | Fatjó",
+        "alternate_names": ["Fontsanta", "Fatjó"],
         "line": "TramCatT2",
         "order": 278
       },
@@ -1200,6 +1209,7 @@
       "properties": {
         "id": 115,
         "name": "Sant Pau | Dos de Maig",
+        "alternate_names": ["Sant Pau", "Dos de Maig"],
         "line": "TMBMetroL5",
         "order": 260
       },
@@ -1312,6 +1322,7 @@
       "properties": {
         "id": 241,
         "name": "Hospital Sant Joan Despí | TV3",
+        "alternate_names": ["Hospital Sant Joan Despí", "TV3"],
         "line": "TramCatT3",
         "order": 239
       },
@@ -1550,6 +1561,7 @@
       "properties": {
         "id": 46,
         "name": "Artigues | Sant Adrià",
+        "alternate_names": ["Artigues", "Sant Adrià"],
         "line": "TMBMetroL2",
         "order": 205
       },
@@ -2194,6 +2206,7 @@
       "properties": {
         "id": 85,
         "name": "Ciutadella | Vila Olímpica",
+        "alternate_names": ["Ciutadella", "Vila Olímpica"],
         "line": "TMBMetroL4",
         "order": 138
       },
@@ -2334,6 +2347,7 @@
       "properties": {
         "id": 164,
         "name": "Can Tries | Gornal",
+        "alternate_names": ["Can Tries", "Gornal"],
         "line": "TMBMetroL10",
         "order": 123
       },
@@ -3202,6 +3216,7 @@
       "properties": {
         "id": 80,
         "name": "El Maresme | Fòrum",
+        "alternate_names": ["El Maresme", "Fòrum"],
         "line": "TMBMetroL4",
         "order": 57
       },
@@ -3216,6 +3231,7 @@
       "properties": {
         "id": 169,
         "name": "Torre Baró | Vallbona",
+        "alternate_names": ["Torre Baró", "Vallbona"],
         "line": "TMBMetroL11",
         "order": 57
       },
@@ -3608,6 +3624,7 @@
       "properties": {
         "id": 249,
         "name": "Auditori | Teatre Nacional",
+        "alternate_names": ["Auditori", "Teatre Nacional"],
         "line": "TramCatT4",
         "order": 24
       },
@@ -3818,6 +3835,7 @@
       "properties": {
         "id": 158,
         "name": "Port Comercial | La Factoria",
+        "alternate_names": ["Port Comercial", "La Factoria"],
         "line": "TMBMetroL10",
         "order": 9
       },
@@ -3958,11 +3976,33 @@
       "properties": {
         "id": 2,
         "name": "Parc de Montjuïc",
-        "alternate_names": ["Montjuic"],
         "line": "TMBMetroFm",
         "order": 1
       },
       "id": 2
     }
-  ]
+  ],
+  "properties": {
+    "totalStations": 283,
+    "stationsPerLine": {
+      "TMBMetroFm": 2,
+      "TMBMetroL1": 30,
+      "TMBMetroL2": 18,
+      "TMBMetroL3": 26,
+      "TMBMetroL4": 22,
+      "TMBMetroL5": 27,
+      "TMBMetroL9": 24,
+      "TMBMetroL10": 17,
+      "TMBMetroL11": 5,
+      "BarcelonaFunicularFv": 2,
+      "BarcelonaFunicularMm": 3,
+      "BarcelonaFunicularL1": 4,
+      "TramCatT1": 21,
+      "TramCatT2": 24,
+      "TramCatT3": 20,
+      "TramCatT4": 14,
+      "TramCatT5": 13,
+      "TramCatT6": 11
+    }
+  }
 }

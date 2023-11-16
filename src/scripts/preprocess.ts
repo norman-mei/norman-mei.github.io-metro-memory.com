@@ -19,10 +19,7 @@ const Bun = {
 
 const main = async () => {
   // --- STATIONS ---
-  // @todo parametrize
-  const data = Bun.file(
-    path.join(__dirname, '../app/(game)/ny/data/source.json'),
-  )
+  const data = Bun.file(path.join(__dirname, './source.json'))
 
   const { routes, stops } = (await data.json()) as any
 
@@ -83,25 +80,18 @@ const main = async () => {
   )
 
   Bun.write(
-    path.join(__dirname, '../app/(game)/ny/data/features.json'),
+    path.join(__dirname, './features.json'),
     JSON.stringify({
       type: 'FeatureCollection',
       features: sortBy(
         featuresStations,
         (f) => -(f.properties.order || Infinity),
       ),
-      properties: {
-        totalStations: featuresStations.length,
-        stationsPerLine: mapValues(
-          groupBy(featuresStations, (feature) => feature.properties!.line),
-          (stations) => stations.length,
-        ),
-      },
     }),
   )
 
   Bun.write(
-    path.join(__dirname, '../app/(game)/ny/data/routes.json'),
+    path.join(__dirname, './routes.json'),
     JSON.stringify({
       type: 'FeatureCollection',
       features: sortBy(featuresRoutes, (f) => -f.properties.order),
@@ -109,7 +99,7 @@ const main = async () => {
   )
 
   Bun.write(
-    path.join(__dirname, '../app/(game)/ny/data/lines.json'),
+    path.join(__dirname, './lines.json'),
     JSON.stringify(
       routes.reduce((acc: any, route: any, i: number) => {
         acc[route.live_line_code] = {

@@ -19,11 +19,11 @@ const Bun = {
 
 const main = async () => {
   // --- STATIONS ---
-  // @todo parametrize
   const data = Bun.file(path.join(__dirname, './source.json'))
 
   let { routes, stops } = (await data.json()) as any
 
+  // specific
   routes = routes.filter(
     (r: any) =>
       !r.live_line_code.startsWith('Rodalies') &&
@@ -56,6 +56,10 @@ const main = async () => {
         return pattern.stop_points.map(
           ({ id: code, path_index }: { id: string; path_index: number }) => {
             const id = ++index
+
+            const alternateNames = stops[code].name.includes('|')
+              ? stops[code].name.split('|').map((s: string) => s.trim())
+              : undefined
             return {
               type: 'Feature',
               geometry: {
@@ -68,6 +72,7 @@ const main = async () => {
               properties: {
                 id,
                 name: stops[code].name,
+                alternate_names: alternateNames,
                 line: route.live_line_code,
                 order: path_index,
               },
@@ -89,13 +94,6 @@ const main = async () => {
           featuresStations,
           (f) => -(f.properties.order || Infinity),
         ),
-        properties: {
-          totalStations: featuresStations.length,
-          stationsPerLine: mapValues(
-            groupBy(featuresStations, (feature) => feature.properties!.line),
-            (stations) => stations.length,
-          ),
-        },
       },
       null,
       2,
