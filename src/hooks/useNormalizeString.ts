@@ -115,6 +115,17 @@ const replacers: { [key: string]: (str: string) => string } = {
       .replace(/south /g, 's ')
       .replace(/ and /g, ' ')
       .replace(/ & /g, ' '),
+
+  barcelona: (str) =>
+    str
+      .replace(/carrer/g, 'c')
+      .replace(/calle/g, 'c')
+      .replace(/avinguda/g, 'av')
+      .replace(/placa/g, 'pl')
+      .replace(/plaça/g, 'pl')
+      .replace(/passeig/g, 'pg')
+      .replace('/sant /g', 'st ')
+      .replace(/rambla/g, 'rbla'),
 }
 
 const getCustomReplacer = (cityName: string) => {

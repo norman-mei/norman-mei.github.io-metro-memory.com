@@ -57,6 +57,33 @@ export const i18n = rosetta({
       'Este enlace abrirá una nueva pestaña y tu progreso se guarda en tu navegador.',
     keepGoingForFree: 'Continuar gratis',
   },
+  ca: {
+    restartWarning:
+      'Perdràs tot el teu progrés. Estàs segur que vols començar de nou?',
+    introInstruction: "Escriu el nom d'una estació, i prem Enter",
+    backToTheGame: 'Torna al joc',
+    stations: ({ count }: { count: number }) =>
+      `${count} estació${count > 1 ? 's' : ''}`,
+    stationsFound: 'estacions trobades',
+    inputPlaceholder: 'Estació',
+    alreadyFound: 'Ja trobada',
+    startOver: 'Començar de nou',
+    showSolutions: 'Mostra solucions',
+    hideSolutions: 'Amaga solucions',
+    supportProject: 'Ajuda el projecte',
+    about: 'Sobre',
+    congrats: ({ foundProportion }: { foundProportion: number }) =>
+      `Molt bé, has arribat al ${Math.floor(foundProportion * 100)}%!`,
+    freeGame: 'Aquest joc és gratuït.',
+    supportWithDonation: ({ title }: { title: string }) => (
+      <span>
+        Ajuda el desenvolupament de <strong>{title}</strong> fent una donació.
+      </span>
+    ),
+    opensANewTab:
+      'Aquest enllaç obrirà una nova pestanya i el teu progrés es guarda al teu navegador.',
+    keepGoingForFree: 'Continua gratis',
+  },
   de: {
     restartWarning:
       'Du wirst deinen Fortschritt verlieren. Bist du sicher, dass du von vorne anfangen willst?',
