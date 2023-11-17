@@ -60,6 +60,10 @@ const main = async () => {
 
             const alternateNames = stops[code].name.includes('|')
               ? stops[code].name.split('|').map((s: string) => s.trim())
+              : stops[code].name.includes(' - ')
+              ? stops[code].name.split(' - ').map((s: string) => s.trim())
+              : stops[code].name.includes(' / ')
+              ? stops[code].name.split(' / ').map((s: string) => s.trim())
               : undefined
             return {
               type: 'Feature',

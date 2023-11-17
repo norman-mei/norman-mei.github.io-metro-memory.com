@@ -109,13 +109,16 @@ export default function GamePage({ fc }: { fc: DataFeatureCollection }) {
           'properties.long_name',
           'properties.short_name',
           'properties.name',
+          'properties.alternate_names',
         ],
         minMatchCharLength: 2,
         threshold: 0.15,
         distance: 10,
         getFn: (obj, path) => {
           const value = Fuse.config.getFn(obj, path)
-          if (Array.isArray(value)) {
+          if (value === undefined) {
+            return ''
+          } else if (Array.isArray(value)) {
             return value.map((el) => normalizeString(el))
           } else {
             return normalizeString(value as string)
