@@ -134,6 +134,8 @@ const main = async () => {
       2,
     ),
   )
+
+  console.log(uniqBy(featuresStations, (f) => f.properties.name).length)
 }
 
 main()
