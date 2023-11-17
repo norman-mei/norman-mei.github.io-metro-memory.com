@@ -20,6 +20,7 @@ import dc from '@/images/photos/dc.png'
 import madrid from '@/images/photos/madrid.png'
 import seoul from '@/images/photos/seoul.png'
 import barcelona from '@/images/photos/barcelona.png'
+import mexicoCity from '@/images/photos/mexico-city.png'
 import Tweets from '@/components/Tweets'
 import LinkPreviews from '@/components/LinkPreviews'
 import ConfettiButton from '@/components/ConfettiButton'
@@ -71,6 +72,11 @@ const cities: ICity[] = [
     name: 'Seoul',
     image: seoul,
     link: '/seoul',
+  },
+  {
+    name: 'Mexico City',
+    image: mexicoCity,
+    link: '/mexico-city',
   },
   {
     name: 'New York Subway',
