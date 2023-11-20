@@ -132,6 +132,10 @@
       "properties": {
         "id": 114,
         "name": "Garibaldi/Lagunilla",
+        "alternate_names": [
+          "Garibaldi",
+          "Lagunilla"
+        ],
         "line": "DFMetro8",
         "order": 0
       },
@@ -489,6 +493,10 @@
       "properties": {
         "id": 56,
         "name": "Niños Héroes/ Poder Judicial Cdmx",
+        "alternate_names": [
+          "Niños Héroes",
+          "Poder Judicial Cdmx"
+        ],
         "line": "DFMetro3",
         "order": 84
       },
@@ -863,6 +871,10 @@
       "properties": {
         "id": 53,
         "name": "Etiopía / Plaza de La Transparencia",
+        "alternate_names": [
+          "Etiopía",
+          "Plaza de La Transparencia"
+        ],
         "line": "DFMetro3",
         "order": 67
       },
@@ -1288,6 +1300,10 @@
       "properties": {
         "id": 98,
         "name": "La Villa/Basílica",
+        "alternate_names": [
+          "La Villa",
+          "Basílica"
+        ],
         "line": "DFMetro6",
         "order": 50
       },
@@ -1798,6 +1814,10 @@
       "properties": {
         "id": 48,
         "name": "Viveros/ Derechos Humanos",
+        "alternate_names": [
+          "Viveros",
+          "Derechos Humanos"
+        ],
         "line": "DFMetro3",
         "order": 34
       },
@@ -2325,6 +2345,10 @@
       "properties": {
         "id": 92,
         "name": "Ferrería/Arena Ciudad de México",
+        "alternate_names": [
+          "Ferrería",
+          "Arena Ciudad de México"
+        ],
         "line": "DFMetro6",
         "order": 19
       },
@@ -3175,6 +3199,10 @@
       "properties": {
         "id": 177,
         "name": "Garibaldi/Lagunilla",
+        "alternate_names": [
+          "Garibaldi",
+          "Lagunilla"
+        ],
         "line": "DFMetroB",
         "order": 4
       },

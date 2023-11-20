@@ -51,6 +51,14 @@ const main = async () => {
         return pattern.stop_points.map(
           ({ id: code, path_index }: { id: string; path_index: number }) => {
             const id = ++index
+            const alternateNames = stops[code].name.includes('|')
+              ? stops[code].name.split('|').map((s: string) => s.trim())
+              : stops[code].name.includes(' - ')
+              ? stops[code].name.split(' - ').map((s: string) => s.trim())
+              : stops[code].name.includes('/')
+              ? stops[code].name.split('/').map((s: string) => s.trim())
+              : undefined
+
             return {
               type: 'Feature',
               geometry: {
@@ -63,6 +71,7 @@ const main = async () => {
               properties: {
                 id,
                 name: stops[code].name,
+                alternate_names: alternateNames,
                 line: route.live_line_code,
                 order: path_index,
               },
