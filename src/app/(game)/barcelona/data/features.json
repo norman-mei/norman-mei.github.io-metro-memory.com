@@ -94,6 +94,7 @@
       "properties": {
         "id": 126,
         "name": "La Sagrera-Meridiana",
+        "alternate_names": ["La Sagrera"],
         "line": "TMBMetroL9",
         "order": 0
       },
@@ -122,6 +123,7 @@
       "properties": {
         "id": 150,
         "name": "La Sagrera-Meridiana",
+        "alternate_names": ["La Sagrera"],
         "line": "TMBMetroL10",
         "order": 0
       },
@@ -815,6 +817,7 @@
       "properties": {
         "id": 25,
         "name": "La Sagrera-Meridiana",
+        "alternate_names": ["La Sagrera"],
         "line": "TMBMetroL1",
         "order": 357
       },
@@ -1111,6 +1114,7 @@
       "properties": {
         "id": 117,
         "name": "La Sagrera-Meridiana",
+        "alternate_names": ["La Sagrera"],
         "line": "TMBMetroL5",
         "order": 289
       },
