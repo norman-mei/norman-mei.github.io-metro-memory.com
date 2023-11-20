@@ -1,9 +1,10 @@
 import * as path from 'path'
-import { groupBy, mapValues, sortBy, uniqBy } from 'lodash'
+import { groupBy, mapValues, sortBy, uniq, uniqBy } from 'lodash'
 import { promises as fs } from 'fs'
 import Color from 'color'
-
-// copy this to the /data folder of the city.
+import { extractKorean } from '@/lib/extractKorean'
+import Aromanize from 'aromanize'
+import { normalizeString } from '@/hooks/useNormalizeString'
 
 const Bun = {
   file(path: string) {
@@ -21,6 +22,7 @@ const Bun = {
 
 const main = async () => {
   // --- STATIONS ---
+  // @todo parametrize
   const data = Bun.file(path.join(__dirname, './source.json'))
 
   const { routes, stops } = (await data.json()) as any
@@ -58,6 +60,13 @@ const main = async () => {
               const id = ++index
 
               const name = stops[code].name
+              const [korean, english] = extractKorean(name)
+              const [koreanParenthesis, englishParenthesis] = extractKorean(
+                name
+                  .replace(/[^\(]*(\(.*?\))[^\(]*/, '$1')
+                  .replace(/[\(\)]/g, ' '),
+              )
+
               return {
                 type: 'Feature',
                 geometry: {
@@ -70,6 +79,20 @@ const main = async () => {
                 properties: {
                   id,
                   name: stops[code].name,
+                  alternate_names: uniq(
+                    [
+                      english.trim(),
+                      korean.trim(),
+                      Aromanize.hangulToLatin(korean.trim(), 'rr-translit'),
+                      Aromanize.romanize(korean.trim()),
+                      koreanParenthesis.trim(),
+                      englishParenthesis.trim(),
+                      (english + ' ' + englishParenthesis).trim(),
+                      (korean + ' ' + koreanParenthesis).trim(),
+                    ]
+                      .filter(Boolean)
+                      .map(normalizeString('seoul')),
+                  ),
                   line: route.live_line_code,
                   order: path_index,
                 },
@@ -85,21 +108,36 @@ const main = async () => {
 
   Bun.write(
     path.join(__dirname, './features.json'),
-    JSON.stringify({
-      type: 'FeatureCollection',
-      features: sortBy(
-        featuresStations,
-        (f) => -(f.properties.order || Infinity),
-      ),
-    }),
+    JSON.stringify(
+      {
+        type: 'FeatureCollection',
+        features: sortBy(
+          featuresStations,
+          (f) => -(f.properties.order || Infinity),
+        ),
+        properties: {
+          totalStations: featuresStations.length,
+          stationsPerLine: mapValues(
+            groupBy(featuresStations, (feature) => feature.properties!.line),
+            (stations) => stations.length,
+          ),
+        },
+      },
+      null,
+      2,
+    ),
   )
 
   Bun.write(
     path.join(__dirname, './routes.json'),
-    JSON.stringify({
-      type: 'FeatureCollection',
-      features: sortBy(featuresRoutes, (f) => -f.properties.order),
-    }),
+    JSON.stringify(
+      {
+        type: 'FeatureCollection',
+        features: sortBy(featuresRoutes, (f) => -f.properties.order),
+      },
+      null,
+      2,
+    ),
   )
 
   Bun.write(
@@ -115,6 +153,8 @@ const main = async () => {
         }
         return acc
       }, {}),
+      null,
+      2,
     ),
   )
 }

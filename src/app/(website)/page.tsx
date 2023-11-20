@@ -18,6 +18,7 @@ import ny from '@/images/photos/ny.png'
 import wien from '@/images/photos/wien.png'
 import dc from '@/images/photos/dc.png'
 import madrid from '@/images/photos/madrid.png'
+import seoul from '@/images/photos/seoul.png'
 import barcelona from '@/images/photos/barcelona.png'
 import Tweets from '@/components/Tweets'
 import LinkPreviews from '@/components/LinkPreviews'
@@ -67,7 +68,12 @@ const cities: ICity[] = [
     link: '/barcelona',
   },
   {
-    name: 'New York City',
+    name: 'Seoul',
+    image: seoul,
+    link: '/seoul',
+  },
+  {
+    name: 'New York Subway',
     image: ny,
     link: '/ny',
   },

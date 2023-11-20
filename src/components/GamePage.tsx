@@ -106,9 +106,9 @@ export default function GamePage({ fc }: { fc: DataFeatureCollection }) {
         includeScore: true,
         includeMatches: true,
         keys: [
+          'properties.name',
           'properties.long_name',
           'properties.short_name',
-          'properties.name',
           'properties.alternate_names',
         ],
         minMatchCharLength: 2,
