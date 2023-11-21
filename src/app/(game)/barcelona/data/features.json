@@ -1215,6 +1215,7 @@
       "properties": {
         "id": 140,
         "name": "El Prat Estació",
+        "alternate_names": ["El Prat", "El Prat de LLobregat"],
         "line": "TMBMetroL9",
         "order": 265
       },
