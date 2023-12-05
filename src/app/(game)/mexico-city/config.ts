@@ -123,7 +123,7 @@ export const MAP_CONFIG: MapboxOptions = {
   fadeDuration: 50,
 }
 
-export const STRIPE_LINK = 'https://buy.stripe.com/cN2aFb0nI1rI9bi5km'
+export const STRIPE_LINK = 'https://buy.stripe.com/9AQaFb0nI6M2gDK8wE'
 
 export const CITY_NAME = 'mexico-city'
 
