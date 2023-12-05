@@ -33,14 +33,14 @@ const FoundList = ({
   const sortOptions: SortOption[] = useMemo(() => {
     return [
       {
-        name: 'Date added',
+        name: t('sort.order'),
         id: 'order',
         shortName: <DateAddedIcon className="h-4 w-4" />,
       },
-      { name: 'Name', id: 'name', shortName: 'A-Z' },
-      { name: 'Line', id: 'line', shortName: '1-9' },
+      { name: t('sort.name'), id: 'name', shortName: 'A-Z' },
+      { name: t('sort.line'), id: 'line', shortName: '1-9' },
     ]
-  }, [])
+  }, [t])
 
   const [sort, setSort] = useState<SortOptionType>('order')
 

@@ -29,6 +29,11 @@ export const i18n = rosetta({
     opensANewTab:
       'This link will open a new tab and your progress is saved in your browser.',
     keepGoingForFree: 'Keep going for free',
+    sort: {
+      order: 'Date added',
+      line: 'Line',
+      name: 'Name',
+    },
   },
   es: {
     restartWarning:
@@ -56,6 +61,11 @@ export const i18n = rosetta({
     opensANewTab:
       'Este enlace abrirá una nueva pestaña y tu progreso se guarda en tu navegador.',
     keepGoingForFree: 'Continuar gratis',
+    sort: {
+      order: 'Fecha añadida',
+      line: 'Línea',
+      name: 'Nombre',
+    },
   },
   ca: {
     restartWarning:
@@ -83,6 +93,11 @@ export const i18n = rosetta({
     opensANewTab:
       'Aquest enllaç obrirà una nova pestanya i el teu progrés es guarda al teu navegador.',
     keepGoingForFree: 'Continua gratis',
+    sort: {
+      order: 'Data afegida',
+      line: 'Línia',
+      name: 'Nom',
+    },
   },
   de: {
     restartWarning:
@@ -111,6 +126,11 @@ export const i18n = rosetta({
     opensANewTab:
       'Dieser Link öffnet einen neuen Tab und dein Fortschritt wird in deinem Browser gespeichert.',
     keepGoingForFree: 'Kostenlos weitermachen',
+    sort: {
+      order: 'Hinzugefügt am',
+      line: 'Linie',
+      name: 'Name',
+    },
   },
   ko: {
     restartWarning: '진행한 모든 내용이 사라집니다. 계속하시겠습니까?',
@@ -133,5 +153,42 @@ export const i18n = rosetta({
     opensANewTab:
       '이 링크를 클릭하면 새 탭에서 열리며, 진행 상황은 브라우저에 저장됩니다.',
     keepGoingForFree: '무료로 계속 진행하기',
+    sort: {
+      order: '추가된 날짜',
+      line: '노선',
+      name: '이름',
+    },
+  },
+  tr: {
+    restartWarning:
+      'Tüm ilerlemeniz kaybolacak. Yeniden başlamak istediğinize emin misiniz?',
+    introInstruction: 'Bir istasyon adı girin ve Enter tuşuna basın',
+    backToTheGame: 'Oyuna geri dön',
+    stations: ({ count }: { count: number }) =>
+      `${count} istasyon${count > 1 ? '' : ''}`,
+    stationsFound: 'istasyon bulundu',
+    inputPlaceholder: 'İstasyon',
+    alreadyFound: 'Zaten bulundu',
+    startOver: 'Yeniden başla',
+    showSolutions: 'Çözümleri göster',
+    hideSolutions: 'Çözümleri gizle',
+    supportProject: 'Projeyi destekle',
+    about: 'Hakkında',
+    congrats: ({ foundProportion }: { foundProportion: number }) =>
+      `Tebrikler, ${Math.floor(foundProportion * 100)}%'ye ulaştınız!`,
+    freeGame: 'Bu oyun ücretsizdir.',
+    supportWithDonation: ({ title }: { title: string }) => (
+      <span>
+        <strong>{title}</strong> gelişimini bağış yaparak destekleyin.
+      </span>
+    ),
+    opensANewTab:
+      'Bu bağlantı yeni bir sekmede açılır ve ilerlemeniz tarayıcınızda kaydedilir.',
+    keepGoingForFree: 'Ücretsiz devam et',
+    sort: {
+      order: 'Eklenme tarihi',
+      line: 'Hat',
+      name: 'İsim',
+    },
   },
 })
