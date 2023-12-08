@@ -32,10 +32,13 @@ const CityStats = async ({ name, slug }: { name: string; slug: string }) => {
       ([_, v]) => -v!,
     ) as [string, number][]
 
-    await fs.writeFile(
-      `public/stats/${slug}.json`,
-      JSON.stringify(data, null, 2),
-    )
+    // cache in dev
+    if (process.env.NODE_ENV !== 'production') {
+      await fs.writeFile(
+        `public/stats/${slug}.json`,
+        JSON.stringify(data, null, 2),
+      )
+    }
 
     cityStats = data
   }
