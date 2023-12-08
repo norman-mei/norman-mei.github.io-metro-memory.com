@@ -2,6 +2,16 @@ import _, { filter, sortBy, zip } from 'lodash'
 import StatsGraph from './StatsGraph'
 import { kv } from '@vercel/kv'
 import { promises as fs } from 'fs'
+import { cache } from 'react'
+
+const getKeys = cache(async (slug: string) => {
+  const [_cursor, keys] = await kv.scan(0, {
+    match: `${slug}-*`,
+    count: 5000,
+  })
+
+  return keys
+})
 
 const CityStats = async ({ name, slug }: { name: string; slug: string }) => {
   const features = await import(`@/app/(game)/${slug}/data/features.json`)
@@ -17,10 +27,7 @@ const CityStats = async ({ name, slug }: { name: string; slug: string }) => {
   } catch (error) {
     console.log(`loading ${slug} from kv store`)
     // scan all keys
-    const [_cursor, keys] = await kv.scan(0, {
-      match: `${slug}-*`,
-      count: 5000,
-    })
+    const keys = await getKeys(slug)
 
     const counts = zip(
       keys,
