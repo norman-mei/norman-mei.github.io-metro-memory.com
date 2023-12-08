@@ -1,7 +1,7 @@
 import CityStats from '@/components/CityStats'
 import { cities } from '@/lib/citiesConfig'
 
-export const revalidate = 3600
+export const revalidate = 86400 // 24 hours
 
 const hostedCities = cities.map((city) => ({
   slug:
