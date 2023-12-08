@@ -1,23 +1,11 @@
-import _, { filter, sortBy, zip } from 'lodash'
+import _ from 'lodash'
 import StatsGraph from './StatsGraph'
-import { kv } from '@vercel/kv'
 import { promises as fs } from 'fs'
-import { cache } from 'react'
-
-const getKeys = cache(async (slug: string) => {
-  const [_cursor, keys] = await kv.scan(0, {
-    match: `${slug}-*`,
-    count: 5000,
-  })
-
-  return keys
-})
 
 const CityStats = async ({ name, slug }: { name: string; slug: string }) => {
   const features = await import(`@/app/(game)/${slug}/data/features.json`)
 
   let cityStats: [string, number][] = []
-
   try {
     // load from file cache
     cityStats = JSON.parse(
@@ -25,29 +13,11 @@ const CityStats = async ({ name, slug }: { name: string; slug: string }) => {
     )
     console.log('loaded from file cache')
   } catch (error) {
-    console.log(`loading ${slug} from kv store`)
+    console.log(`loading ${slug} from API`)
     // scan all keys
-    const keys = await getKeys(slug)
-
-    const counts = zip(
-      keys,
-      await Promise.all(keys.map(async (key) => (await kv.get(key)) as number)),
-    ) as [string, number][]
-
-    const data = sortBy(
-      filter(counts, ([key]) => key!.startsWith(`${slug}`)),
-      ([_, v]) => -v!,
-    ) as [string, number][]
-
-    // cache in dev
-    if (process.env.NODE_ENV !== 'production') {
-      await fs.writeFile(
-        `public/stats/${slug}.json`,
-        JSON.stringify(data, null, 2),
-      )
-    }
-
-    cityStats = data
+    cityStats = await fetch('https://www.metro-memory.com/api/stats/' + slug, {
+      cache: 'force-cache',
+    }).then((res) => res.json())
   }
 
   const mapFeature = ([key, value]: [string, number]) => {
