@@ -188,12 +188,7 @@ const StatsGraph = ({
       map.remove()
     }
   }, [slug, values])
-  return (
-    <div
-      id={`map-${slug}`}
-      className="h-[80vh] w-full max-w-5xl rounded border"
-    ></div>
-  )
+  return <div id={`map-${slug}`} className="h-[80vh] w-full"></div>
 }
 
 const formatPercentile = (percentile: number) => {

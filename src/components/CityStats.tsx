@@ -91,7 +91,7 @@ const CityStats = async ({ name, slug }: { name: string; slug: string }) => {
   }
 
   return (
-    <div>
+    <div className="max-w-5xl rounded border bg-white p-2">
       <h1 className="text-xl font-medium">{name}</h1>
       <StatsGraph values={values} slug={slug} />
     </div>
