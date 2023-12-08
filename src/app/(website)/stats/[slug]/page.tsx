@@ -1,17 +1,10 @@
 import CityStats from '@/components/CityStats'
 import { cities } from '@/lib/citiesConfig'
 import slugify from '@/lib/slugify'
-import { redirect, useParams } from 'next/navigation'
+import { redirect } from 'next/navigation'
 
 export const revalidate = 86400 // 24 hours
 export const dynamic = 'force-static'
-
-const hostedCities = cities
-  .filter((city) => !city.hideInStats)
-  .map((city) => ({
-    slug: slugify(city),
-    name: city.name,
-  }))
 
 const StatsPage = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params
