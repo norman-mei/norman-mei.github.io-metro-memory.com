@@ -26,7 +26,7 @@ const StatsPage = async ({ params }: { params: { slug: string } }) => {
       <h1 className="mb-6 text-center text-3xl font-bold">
         Stats of most found stations - {city.name}
       </h1>
-      <p className="mb-12 text-center text-gray-800">
+      <p className="mb-12 text-center text-gray-800 dark:text-gray-300">
         Spoilers ahead. If you want to play the game, avoid looking at this page
         and hovering the map!
       </p>
