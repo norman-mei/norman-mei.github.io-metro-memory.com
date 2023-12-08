@@ -1,21 +1,21 @@
 import CityStats from '@/components/CityStats'
 import { cities } from '@/lib/citiesConfig'
+import slugify from '@/lib/slugify'
 import { redirect, useParams } from 'next/navigation'
 
 export const revalidate = 86400 // 24 hours
 export const dynamic = 'force-static'
 
-const hostedCities = cities.map((city) => ({
-  slug:
-    city.link === 'https://memory.pour.paris' // only city hosted elsewhere
-      ? 'paris'
-      : city.link.replace('/', ''),
-  name: city.name,
-}))
+const hostedCities = cities
+  .filter((city) => !city.hideInStats)
+  .map((city) => ({
+    slug: slugify(city),
+    name: city.name,
+  }))
 
 const StatsPage = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params
-  const city = hostedCities.find((city) => city.slug === slug)
+  const city = cities.find((city) => slugify(city) === slug)
 
   if (!city) {
     return redirect('/404')

@@ -17,6 +17,7 @@ export interface ICity {
   image: StaticImageData
   link: string
   disabled?: boolean
+  hideInStats?: boolean
 }
 
 export const cities: ICity[] = [
@@ -74,5 +75,6 @@ export const cities: ICity[] = [
     name: 'Istanbul',
     image: istanbul,
     link: '/istanbul',
+    hideInStats: true,
   },
 ]
