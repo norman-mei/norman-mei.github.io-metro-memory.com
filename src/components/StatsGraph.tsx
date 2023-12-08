@@ -1,0 +1,223 @@
+'use client'
+
+import { useEffect } from 'react'
+import maplibregl, { GeoJSONSource } from 'maplibre-gl'
+import { bbox, bboxPolygon, buffer } from '@turf/turf'
+import { BBox2d } from '@turf/helpers/lib/geojson'
+import 'maplibre-gl/dist/maplibre-gl.css'
+
+interface CityProperties {
+  value: number
+  normalizedValue: number
+  name: string
+  lines: string[]
+  percentile: number | string
+  id: number
+}
+
+const StatsGraph = ({
+  values,
+  slug,
+}: {
+  values: {
+    lines: string[]
+    value: number
+    name: string
+    geometry: GeoJSON.Point
+    id: number
+    percentile: number
+  }[]
+  slug: string
+}) => {
+  useEffect(() => {
+    const collection: GeoJSON.FeatureCollection<GeoJSON.Point, CityProperties> =
+      {
+        type: 'FeatureCollection',
+        features: values
+          .map(
+            (value): GeoJSON.Feature<GeoJSON.Point, CityProperties> => ({
+              type: 'Feature',
+              properties: {
+                value: value.value,
+                normalizedValue: value.value / values[0].value,
+                name: value.name,
+                lines: value.lines,
+                id: value.id,
+                percentile: formatPercentile(value.percentile),
+              },
+              geometry: value.geometry,
+              id: value.id,
+            }),
+          )
+          .reverse(),
+      }
+
+    var map = new maplibregl.Map({
+      container: `map-${slug}`, // container id
+      bounds: bbox(
+        buffer(bboxPolygon(bbox(collection)), 1, { units: 'kilometers' }),
+      ) as BBox2d,
+      scrollZoom: false,
+      style: {
+        version: 8,
+        sources: {
+          points: {
+            type: 'geojson',
+            data: collection,
+          },
+          hovered: {
+            type: 'geojson',
+            data: {
+              type: 'FeatureCollection',
+              features: [],
+            },
+          },
+        },
+        glyphs:
+          'https://fonts.openmaptiles.org/{fontstack}/{range}.pbf?key=Xfb74aIJXmRrUdfJyYo5',
+        layers: [
+          {
+            id: 'background',
+            type: 'background',
+            paint: {
+              'background-color': '#fff',
+            },
+          },
+          {
+            id: 'points',
+            type: 'circle',
+            source: 'points',
+            paint: {
+              'circle-radius': ['*', ['get', 'normalizedValue'], 10],
+              'circle-color': [
+                'interpolate',
+                ['linear'],
+                ['get', 'normalizedValue'],
+                0,
+                '#ffeda0',
+                0.7,
+                '#feb24c',
+                1,
+                '#f03b20',
+              ],
+              'circle-opacity': 0.9,
+              'circle-stroke-color': [
+                'case',
+                ['boolean', ['feature-state', 'hover'], false],
+                '#000',
+                'rgba(0,0,0,0)',
+              ],
+              'circle-stroke-width': [
+                'case',
+                ['boolean', ['feature-state', 'hover'], false],
+                2,
+                0,
+              ],
+            },
+          },
+          {
+            id: 'hovered-names',
+            type: 'symbol',
+            source: 'hovered',
+            layout: {
+              'text-field': [
+                'format',
+                ['get', 'name'],
+                { 'font-scale': 1.2 },
+                '\n',
+                {},
+                ['get', 'percentile'],
+                { 'font-scale': 0.8 },
+              ],
+              'text-font': ['Open Sans Regular'],
+              'text-size': 12,
+              'text-offset': [0, -2.5],
+            },
+            paint: {
+              'text-opacity': 1,
+              'text-color': '#000',
+              'text-halo-color': 'rgba(255,255,255,0.5)',
+              'text-halo-width': 1,
+            },
+          },
+        ],
+      },
+      center: [0, 0], // starting position [lng, lat]
+      zoom: 1, // starting zoom
+    })
+
+    map.addControl(new maplibregl.FullscreenControl())
+    map.addControl(new maplibregl.NavigationControl())
+
+    map.on('mousemove', (e) => {
+      // get the features around the mouse pointer
+      const features = map.queryRenderedFeatures(
+        [
+          [e.point.x - 2, e.point.y - 2],
+          [e.point.x + 2, e.point.y + 2],
+        ],
+        {
+          layers: ['points'],
+        },
+      )
+
+      const feature = features?.[0]
+
+      if (feature) {
+        map.getCanvas().style.cursor = 'pointer'
+        map.removeFeatureState({ source: 'points' })
+        map.setFeatureState(
+          { source: 'points', id: feature.id },
+          { hover: true },
+        )
+        ;(map.getSource('hovered') as GeoJSONSource).setData({
+          type: 'FeatureCollection',
+          features: [feature],
+        })
+      } else {
+        map.getCanvas().style.cursor = ''
+        map.removeFeatureState({ source: 'points' })
+        ;(map.getSource('hovered') as GeoJSONSource).setData({
+          type: 'FeatureCollection',
+          features: [],
+        })
+      }
+    })
+
+    return () => {
+      map.remove()
+    }
+  }, [slug, values])
+  return <div id={`map-${slug}`} className="h-[80vh] w-full"></div>
+}
+
+const formatPercentile = (percentile: number) => {
+  console.log(percentile)
+  if (percentile === 1) {
+    return 'Worst'
+  }
+
+  if (percentile === 0) {
+    return 'Best'
+  }
+
+  if (percentile < 0.1) {
+    return `Top ${Math.ceil(percentile * 100)}%`
+  }
+
+  if (percentile > 0.9) {
+    return `Bottom ${Math.ceil((1 - percentile) * 100)}%`
+  }
+
+  if (percentile < 0.45) {
+    return `Top ${5 * Math.ceil(percentile * 20)}%`
+  }
+
+  if (percentile > 0.55) {
+    return `Bottom ${5 * Math.ceil((1 - percentile) * 20)}%`
+  }
+
+  return 'Average'
+}
+
+export default StatsGraph

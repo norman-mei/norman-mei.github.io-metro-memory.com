@@ -5,6 +5,8 @@ import remarkGfm from 'remark-gfm'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
+  // page generation timeout
+  staticPageGenerationTimeout: 300,
 }
 
 const withMDX = nextMDX({
