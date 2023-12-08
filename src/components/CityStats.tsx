@@ -1,4 +1,4 @@
-import _, { filter, groupBy, reverse, sortBy, uniqBy, zip } from 'lodash'
+import _, { filter, sortBy, zip } from 'lodash'
 import StatsGraph from './StatsGraph'
 import { kv } from '@vercel/kv'
 import { promises as fs } from 'fs'
@@ -88,10 +88,6 @@ const CityStats = async ({ name, slug }: { name: string; slug: string }) => {
     .values()
     .map(reduceLines)
     .value() as any
-
-  if (values[0].value < 500) {
-    return null
-  }
 
   return (
     <div className="max-w-5xl rounded border bg-white p-2">
