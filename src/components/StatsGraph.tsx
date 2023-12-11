@@ -105,7 +105,11 @@ const StatsGraph = ({
             type: 'circle',
             source: 'points',
             paint: {
-              'circle-radius': ['*', ['-', 1, ['get', 'percentile']], 9],
+              'circle-radius': [
+                '+',
+                ['*', ['-', 1, ['get', 'percentile']], 8],
+                2,
+              ],
               'circle-color': '#fff',
               //   [
               //   'interpolate',
