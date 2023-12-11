@@ -11,7 +11,8 @@ interface CityProperties {
   normalizedValue: number
   name: string
   lines: string[]
-  percentile: number | string
+  percentile: number
+  formattedPercentile: string
   id: number
 }
 
@@ -45,7 +46,8 @@ const StatsGraph = ({
                 name: value.name,
                 lines: value.lines,
                 id: value.id,
-                percentile: formatPercentile(value.percentile),
+                formattedPercentile: formatPercentile(value.percentile),
+                percentile: value.percentile,
               },
               geometry: value.geometry,
               id: value.id,
@@ -103,7 +105,7 @@ const StatsGraph = ({
             type: 'circle',
             source: 'points',
             paint: {
-              'circle-radius': ['*', ['get', 'normalizedValue'], 10],
+              'circle-radius': ['*', ['-', 1, ['get', 'percentile']], 9],
               'circle-color': '#fff',
               //   [
               //   'interpolate',
@@ -152,7 +154,7 @@ const StatsGraph = ({
                 { 'font-scale': 1.2 },
                 '\n',
                 {},
-                ['get', 'percentile'],
+                ['get', 'formattedPercentile'],
                 { 'font-scale': 0.8 },
               ],
               'text-font': ['Open Sans Regular'],
@@ -179,8 +181,8 @@ const StatsGraph = ({
       // get the features around the mouse pointer
       const features = map.queryRenderedFeatures(
         [
-          [e.point.x - 2, e.point.y - 2],
-          [e.point.x + 2, e.point.y + 2],
+          [e.point.x - 4, e.point.y - 4],
+          [e.point.x + 4, e.point.y + 4],
         ],
         {
           layers: ['points'],

@@ -2,6 +2,8 @@ import { kv } from '@vercel/kv'
 import { zip, sortBy, filter } from 'lodash'
 import { promises as fs } from 'fs'
 
+export const revalidate = 600 // 10 minutes
+
 export const GET = async (
   req: Request,
   { params }: { params: { slug: string } },
