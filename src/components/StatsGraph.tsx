@@ -18,6 +18,7 @@ interface CityProperties {
 const StatsGraph = ({
   values,
   slug,
+  routes,
 }: {
   values: {
     lines: string[]
@@ -28,6 +29,7 @@ const StatsGraph = ({
     percentile: number
   }[]
   slug: string
+  routes: GeoJSON.FeatureCollection<GeoJSON.LineString, { color: string }>
 }) => {
   useEffect(() => {
     const collection: GeoJSON.FeatureCollection<GeoJSON.Point, CityProperties> =
@@ -57,13 +59,16 @@ const StatsGraph = ({
       bounds: bbox(
         buffer(bboxPolygon(bbox(collection)), 1, { units: 'kilometers' }),
       ) as BBox2d,
-      scrollZoom: false,
       style: {
         version: 8,
         sources: {
           points: {
             type: 'geojson',
             data: collection,
+          },
+          routes: {
+            type: 'geojson',
+            data: routes,
           },
           hovered: {
             type: 'geojson',
@@ -84,34 +89,55 @@ const StatsGraph = ({
             },
           },
           {
+            id: 'routes',
+            type: 'line',
+            source: 'routes',
+            paint: {
+              'line-color': ['get', 'color'],
+              'line-opacity': 0.5,
+              'line-width': 2,
+            },
+          },
+          {
             id: 'points',
             type: 'circle',
             source: 'points',
             paint: {
               'circle-radius': ['*', ['get', 'normalizedValue'], 10],
-              'circle-color': [
-                'interpolate',
-                ['linear'],
-                ['get', 'normalizedValue'],
-                0,
-                '#ffeda0',
-                0.7,
-                '#feb24c',
-                1,
-                '#f03b20',
-              ],
-              'circle-opacity': 0.9,
+              'circle-color': '#fff',
+              //   [
+              //   'interpolate',
+              //   ['linear'],
+              //   ['get', 'normalizedValue'],
+              //   0,
+              //   '#ffeda0',
+              //   0.7,
+              //   '#feb24c',
+              //   1,
+              //   '#f03b20',
+              // ],
+              'circle-opacity': 1,
               'circle-stroke-color': [
                 'case',
                 ['boolean', ['feature-state', 'hover'], false],
                 '#000',
-                'rgba(0,0,0,0)',
+                [
+                  'interpolate',
+                  ['linear'],
+                  ['get', 'normalizedValue'],
+                  0,
+                  '#eee',
+                  0.7,
+                  '#777',
+                  1,
+                  '#000',
+                ],
               ],
               'circle-stroke-width': [
                 'case',
                 ['boolean', ['feature-state', 'hover'], false],
+                3,
                 2,
-                0,
               ],
             },
           },
@@ -136,8 +162,8 @@ const StatsGraph = ({
             paint: {
               'text-opacity': 1,
               'text-color': '#000',
-              'text-halo-color': 'rgba(255,255,255,0.5)',
-              'text-halo-width': 1,
+              'text-halo-color': 'rgba(255,255,255,0.8)',
+              'text-halo-width': 2,
             },
           },
         ],
@@ -187,7 +213,7 @@ const StatsGraph = ({
     return () => {
       map.remove()
     }
-  }, [slug, values])
+  }, [slug, values, routes])
   return <div id={`map-${slug}`} className="h-[80vh] w-full"></div>
 }
 

@@ -4,6 +4,7 @@ import { promises as fs } from 'fs'
 
 const CityStats = async ({ name, slug }: { name: string; slug: string }) => {
   const features = await import(`@/app/(game)/${slug}/data/features.json`)
+  const routes = await import(`@/app/(game)/${slug}/data/routes.json`)
 
   let cityStats: [string, number][] = []
   try {
@@ -18,6 +19,15 @@ const CityStats = async ({ name, slug }: { name: string; slug: string }) => {
     cityStats = await fetch('https://www.metro-memory.com/api/stats/' + slug, {
       cache: 'force-cache',
     }).then((res) => res.json())
+
+    if (process.env.NODE_ENV !== 'production') {
+      // save to file cache
+      await fs.writeFile(
+        `public/stats/${slug}.json`,
+        JSON.stringify(cityStats),
+        'utf-8',
+      )
+    }
   }
 
   const mapFeature = ([key, value]: [string, number]) => {
@@ -67,9 +77,12 @@ const CityStats = async ({ name, slug }: { name: string; slug: string }) => {
     .value() as any
 
   return (
-    <div className="max-w-5xl rounded border bg-white p-2">
-      <h1 className="text-xl font-medium text-gray-800">{name}</h1>
-      <StatsGraph values={values} slug={slug} />
+    <div className="mx-auto w-full max-w-5xl rounded border bg-white p-2">
+      <StatsGraph
+        values={values}
+        routes={JSON.parse(JSON.stringify(routes))}
+        slug={slug}
+      />
     </div>
   )
 }

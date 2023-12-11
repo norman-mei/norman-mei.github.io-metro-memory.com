@@ -9,7 +9,7 @@ export const GET = async (
   const { slug } = params
   const [_cursor, keys] = await kv.scan(0, {
     match: `${slug}-*`,
-    count: 5000,
+    count: 10000,
   })
 
   const counts = zip(
