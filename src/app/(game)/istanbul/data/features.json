@@ -95,6 +95,7 @@
       "properties": {
         "id": 101,
         "name": "Boğaziçi Üniversitesi",
+        "alternate_names": ["hisarüstü"],
         "line": "CM_Istanbulmetro_m6",
         "order": 0
       },
