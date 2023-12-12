@@ -802,6 +802,7 @@
       "properties": {
         "id": 13,
         "name": "Bakırköy-İncirli",
+        "alternate_names": ["Bakırköy", "İncirli"],
         "line": "CM_Istanbulmetro_m1",
         "order": 129
       },
@@ -2346,6 +2347,7 @@
       "properties": {
         "id": 4,
         "name": "Topkapı-Ulubatlı",
+        "alternate_names": ["Topkapı", "Ulubatlı"],
         "line": "CM_Istanbulmetro_m1",
         "order": 19
       },
@@ -2417,6 +2419,7 @@
       "properties": {
         "id": 107,
         "name": "Yüzyıl-Oruç Reis",
+        "alternate_names": ["Yüzyıl", "Oruç Reis"],
         "line": "CM_Istanbulmetro_m7",
         "order": 16
       },
@@ -3092,6 +3095,7 @@
       "properties": {
         "id": 88,
         "name": "İmam Hatip",
+        "alternate_names": ["İmam Hatip Lisesi"],
         "line": "CM_Istanbulmetro_m5",
         "order": 3
       },

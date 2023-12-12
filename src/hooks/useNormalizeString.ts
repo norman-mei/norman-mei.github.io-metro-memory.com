@@ -153,6 +153,7 @@ export const normalizeString = (city: string) => {
     (str || '')
       .toLowerCase()
       .normalize('NFD')
+      .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, ' ')
       .replace(/[\u2010-\u2015]/g, ' ')
       .replace(/[\u0300-\u036F]/g, '')
 
