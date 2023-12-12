@@ -1,7 +1,4 @@
-import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
-import clsx from 'clsx'
-import classNames from 'classnames'
 
 import { Container } from '@/components/Container'
 import { GitHubIcon, LinkedInIcon, TwitterIcon } from '@/components/SocialIcons'
@@ -9,7 +6,6 @@ import { GitHubIcon, LinkedInIcon, TwitterIcon } from '@/components/SocialIcons'
 import Tweets from '@/components/Tweets'
 import LinkPreviews from '@/components/LinkPreviews'
 import ConfettiButton from '@/components/ConfettiButton'
-import { ICity } from '@/lib/citiesConfig'
 import SearcheableCitiesList from '@/components/SearcheableCitiesList'
 
 function SocialLink({

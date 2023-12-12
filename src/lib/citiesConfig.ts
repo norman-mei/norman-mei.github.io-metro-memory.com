@@ -8,7 +8,7 @@ import madrid from '@/images/photos/madrid.png'
 import seoul from '@/images/photos/seoul.png'
 import barcelona from '@/images/photos/barcelona.png'
 import mexicoCity from '@/images/photos/mexico-city.png'
-import istanbul from '@/images/photos/mexico-city.png'
+import istanbul from '@/images/photos/istanbul.png'
 
 import { StaticImageData } from 'next/image'
 
