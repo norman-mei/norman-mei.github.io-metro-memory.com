@@ -1,0 +1,51 @@
+{
+  "Tunnelbana10": {
+    "name": "T10",
+    "color": "#0066B7",
+    "backgroundColor": "#00335C",
+    "textColor": "#FFFFFF",
+    "order": 0
+  },
+  "Tunnelbana11": {
+    "name": "T11",
+    "color": "#0066B7",
+    "backgroundColor": "#00335C",
+    "textColor": "#FFFFFF",
+    "order": 1
+  },
+  "Tunnelbana13": {
+    "name": "T13",
+    "color": "#D90011",
+    "backgroundColor": "#6D0008",
+    "textColor": "#FFFFFF",
+    "order": 2
+  },
+  "Tunnelbana14": {
+    "name": "T14",
+    "color": "#D90011",
+    "backgroundColor": "#6D0008",
+    "textColor": "#FFFFFF",
+    "order": 3
+  },
+  "Tunnelbana17": {
+    "name": "T17",
+    "color": "#44A326",
+    "backgroundColor": "#225213",
+    "textColor": "#FFFFFF",
+    "order": 4
+  },
+  "Tunnelbana18": {
+    "name": "T18",
+    "color": "#44A326",
+    "backgroundColor": "#225213",
+    "textColor": "#FFFFFF",
+    "order": 5
+  },
+  "Tunnelbana19": {
+    "name": "T19",
+    "color": "#44A326",
+    "backgroundColor": "#225213",
+    "textColor": "#FFFFFF",
+    "order": 6
+  }
+}
