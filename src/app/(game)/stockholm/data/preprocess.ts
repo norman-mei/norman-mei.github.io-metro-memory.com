@@ -25,26 +25,30 @@ const main = async () => {
   const { routes, stops } = (await data.json()) as any
 
   const availableLines = new Set(
-    routes.map((route: any) => route.live_line_code),
+    routes
+      .map((route: any) => route.live_line_code)
+      .filter((code: string) => code.startsWith('Tunnelbana')),
   )
 
-  const featuresRoutes = routes.flatMap((route: any, i: number) => {
-    return route.patterns.map((pattern: any) => {
-      return {
-        type: 'Feature',
-        geometry: {
-          type: 'LineString',
-          coordinates: pattern.path.map((coord: any) => [coord[1], coord[0]]),
-        },
-        properties: {
-          line: route.live_line_code,
-          name: route.name,
-          color: route.color,
-          order: i,
-        },
-      }
+  const featuresRoutes = routes
+    .flatMap((route: any, i: number) => {
+      return route.patterns.map((pattern: any) => {
+        return {
+          type: 'Feature',
+          geometry: {
+            type: 'LineString',
+            coordinates: pattern.path.map((coord: any) => [coord[1], coord[0]]),
+          },
+          properties: {
+            line: route.live_line_code,
+            name: route.name,
+            color: route.color,
+            order: i,
+          },
+        }
+      })
     })
-  })
+    .filter((f: any) => availableLines.has(f.properties.line))
 
   let index = 0
 

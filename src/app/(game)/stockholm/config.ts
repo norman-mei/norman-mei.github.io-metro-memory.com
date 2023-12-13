@@ -72,7 +72,7 @@ export const METADATA: Metadata = {
 
 export const MAP_CONFIG: MapboxOptions = {
   container: 'map',
-  // style: 'mapbox://styles/benjamintd/clox61b80011o01qofw8s8hdv',
+  style: 'mapbox://styles/benjamintd/clq43c36701xd01pj25i277ad',
   bounds: [
     [17.5, 59.1],
     [19.5, 60.2],

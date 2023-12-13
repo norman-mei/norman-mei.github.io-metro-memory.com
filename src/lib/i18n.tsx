@@ -191,4 +191,36 @@ export const i18n = rosetta({
       name: 'İsim',
     },
   },
+  sv: {
+    restartWarning:
+      'Du kommer att förlora all din progress. Är du säker på att du vill börja om?',
+    introInstruction: 'Skriv in en station och tryck på Enter',
+    backToTheGame: 'Tillbaka till spelet',
+    stations: ({ count }: { count: number }) =>
+      `${count} station${count > 1 ? 'er' : ''}`,
+    stationsFound: 'stationer hittade',
+    inputPlaceholder: 'Station',
+    alreadyFound: 'Redan hittad',
+    startOver: 'Börja om',
+    showSolutions: 'Visa lösningar',
+    hideSolutions: 'Dölj lösningar',
+    supportProject: 'Stöd projektet',
+    about: 'Om',
+    congrats: ({ foundProportion }: { foundProportion: number }) =>
+      `Bra jobbat, du nådde ${Math.floor(foundProportion * 100)}%!`,
+    freeGame: 'Detta spel är gratis.',
+    supportWithDonation: ({ title }: { title: string }) => (
+      <span>
+        Stöd utvecklingen av <strong>{title}</strong> genom att donera.
+      </span>
+    ),
+    opensANewTab:
+      'Denna länk öppnar en ny flik och din progress sparas i din webbläsare.',
+    keepGoingForFree: 'Fortsätt gratis',
+    sort: {
+      order: 'Datum tillagt',
+      line: 'Linje',
+      name: 'Namn',
+    },
+  },
 })
