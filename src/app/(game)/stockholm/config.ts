@@ -74,18 +74,18 @@ export const MAP_CONFIG: MapboxOptions = {
   container: 'map',
   style: 'mapbox://styles/benjamintd/clq43c36701xd01pj25i277ad',
   bounds: [
-    [17.5, 59.1],
-    [19.5, 60.2],
+    [17.582708, 59.153138],
+    [18.571478, 59.46854],
   ],
   maxBounds: [
-    [16.5, 58.1],
-    [20.5, 61.2],
+    [16.582708, 58.153138],
+    [19.571478, 60.46854],
   ],
   minZoom: 6,
   fadeDuration: 50,
 }
 
-export const STRIPE_LINK = 'https://buy.stripe.com/cN2aFb0nI1rI9bi5km'
+export const STRIPE_LINK = 'https://buy.stripe.com/eVa14B1rM1rIfzG14d'
 
 export const CITY_NAME = 'stockholm'
 
