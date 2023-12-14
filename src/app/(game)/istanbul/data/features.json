@@ -1294,6 +1294,7 @@
       "properties": {
         "id": 174,
         "name": "Akşemsettin",
+        "alternate_names": ["Seyitnizam-Akşemsettin"],
         "line": "CM_CagdasTramvay_t1",
         "order": 70
       },
@@ -1814,7 +1815,11 @@
       "properties": {
         "id": 164,
         "name": "Laleli-Üniversite",
-        "alternate_names": ["Laleli"],
+        "alternate_names": [
+          "Laleli",
+          "Istanbul University - Laleli",
+          "İstanbul Universitesi - Laleli"
+        ],
         "line": "CM_CagdasTramvay_t1",
         "order": 40
       },

@@ -122,11 +122,11 @@ export const LINES: {
 }
 
 export const METADATA: Metadata = {
-  title: 'Istabul Metro Memory',
+  title: 'Istanbul Metro Memory',
   description:
     'İstanbul metrosu hakkında bilgi edinin ve hafızanızı test edin.',
   openGraph: {
-    title: 'Istabul Metro Memory',
+    title: 'Istanbul Metro Memory',
     description:
       'İstanbul metrosu hakkında bilgi edinin ve hafızanızı test edin.',
     type: 'website',
