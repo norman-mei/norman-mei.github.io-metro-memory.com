@@ -134,7 +134,15 @@ const replacers: { [key: string]: (str: string) => string } = {
       .replace('university', 'univ')
       .replace('international', 'intl')
       .replace('national', 'natl')
-      .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '')
+      .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim(),
+
+  tokyo: (str) =>
+    str
+      .toLowerCase()
+      .replace(/\([^()]*\)/g, '')
+      .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, ' ')
       .replace(/\s+/g, ' ')
       .trim(),
 }
@@ -144,8 +152,8 @@ const getCustomReplacer = (cityName: string) => {
 }
 
 export const normalizeString = (city: string) => {
-  // normalization for seoul does not use roman characters only
-  if (city === 'seoul') {
+  // normalization for seoul and tokyo does not use roman characters only
+  if (city === 'seoul' || city === 'tokyo') {
     return getCustomReplacer(city)
   }
 
