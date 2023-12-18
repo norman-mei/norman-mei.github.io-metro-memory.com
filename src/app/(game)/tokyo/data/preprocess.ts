@@ -2,7 +2,6 @@ import * as path from 'path'
 import { groupBy, mapValues, sortBy, uniq, uniqBy } from 'lodash'
 import { promises as fs } from 'fs'
 import Color from 'color'
-import Aromanize from 'aromanize'
 import { normalizeString } from '@/hooks/useNormalizeString'
 import { extractJapanese } from '@/lib/extractJapanese'
 
@@ -28,26 +27,33 @@ const main = async () => {
   const { routes, stops } = (await data.json()) as any
 
   const availableLines = new Set(
-    routes.map((route: any) => route.live_line_code),
+    routes
+      .map((route: any) => route.live_line_code)
+      .filter(
+        (code: string) =>
+          code.startsWith('TokyoMetro') || code.startsWith('Toei'),
+      ),
   )
 
-  const featuresRoutes = routes.flatMap((route: any, i: number) => {
-    return route.patterns.map((pattern: any) => {
-      return {
-        type: 'Feature',
-        geometry: {
-          type: 'LineString',
-          coordinates: pattern.path.map((coord: any) => [coord[1], coord[0]]),
-        },
-        properties: {
-          line: route.live_line_code,
-          name: route.name,
-          color: route.color,
-          order: i,
-        },
-      }
+  const featuresRoutes = routes
+    .flatMap((route: any, i: number) => {
+      return route.patterns.map((pattern: any) => {
+        return {
+          type: 'Feature',
+          geometry: {
+            type: 'LineString',
+            coordinates: pattern.path.map((coord: any) => [coord[1], coord[0]]),
+          },
+          properties: {
+            line: route.live_line_code,
+            name: route.name,
+            color: route.color,
+            order: i,
+          },
+        }
+      })
     })
-  })
+    .filter((f: any) => availableLines.has(f.properties.line))
 
   let index = 0
 
@@ -61,11 +67,6 @@ const main = async () => {
 
               const name = stops[code].name
               const [japanese, english] = extractJapanese(name)
-              const [japaneseParenthesis, englishParenthesis] = extractJapanese(
-                name
-                  .replace(/[^\(]*(\(.*?\))[^\(]*/, '$1')
-                  .replace(/[\(\)]/g, ' '),
-              )
 
               return {
                 type: 'Feature',
@@ -80,14 +81,7 @@ const main = async () => {
                   id,
                   name: stops[code].name,
                   alternate_names: uniq(
-                    [
-                      english.trim(),
-                      japanese.trim(),
-                      japaneseParenthesis.trim(),
-                      englishParenthesis.trim(),
-                      (english + ' ' + englishParenthesis).trim(),
-                      (japanese + ' ' + japaneseParenthesis).trim(),
-                    ]
+                    [english.trim(), japanese.trim()]
                       .filter(Boolean)
                       .map(normalizeString('seoul')),
                   ),
@@ -141,16 +135,18 @@ const main = async () => {
   Bun.write(
     path.join(__dirname, './lines.json'),
     JSON.stringify(
-      routes.reduce((acc: any, route: any, i: number) => {
-        acc[route.live_line_code] = {
-          name: route.name,
-          color: route.color,
-          backgroundColor: Color(route.color).darken(0.5).hex(),
-          textColor: route.text_color || '#FFFFFF',
-          order: i,
-        }
-        return acc
-      }, {}),
+      routes
+        .filter((r: any) => availableLines.has(r.live_line_code))
+        .reduce((acc: any, route: any, i: number) => {
+          acc[route.live_line_code] = {
+            name: route.name,
+            color: route.color,
+            backgroundColor: Color(route.color).darken(0.5).hex(),
+            textColor: route.text_color || '#FFFFFF',
+            order: i,
+          }
+          return acc
+        }, {}),
       null,
       2,
     ),

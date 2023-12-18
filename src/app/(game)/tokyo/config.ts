@@ -105,55 +105,6 @@ export const LINES: {
     textColor: '#FFFFFF',
     order: 13,
   },
-  YokohamaMunicipalBl: {
-    name: 'BL',
-    color: '#0068b7',
-    backgroundColor: '#00345C',
-    textColor: '#ffffff',
-    order: 14,
-  },
-  YokohamaMunicipalGl: {
-    name: 'GL',
-    color: '#00a968',
-    backgroundColor: '#005434',
-    textColor: '#ffffff',
-    order: 15,
-  },
-  MIRTx: {
-    name: 'つくばエクスプレス Tsukuba Express',
-    color: '#000000',
-    backgroundColor: '#000000',
-    textColor: '#FFFFFF',
-    order: 16,
-  },
-  RinkaiR: {
-    name: 'りんかい線 Rinkai Line',
-    color: '#222D65',
-    backgroundColor: '#111733',
-    textColor: '#FFFFFF',
-    order: 17,
-  },
-  TamaMonorail_TamaMonorail: {
-    name: '多摩モノレール Tama Monorail',
-    color: '#286460',
-    backgroundColor: '#143230',
-    textColor: '#FFFFFF',
-    order: 18,
-  },
-  NipporiToneriLinerNt: {
-    name: '日暮里・舎人ライナー Nippori-Toneri Liner',
-    color: '#000000',
-    backgroundColor: '#000000',
-    textColor: '#FFFFFF',
-    order: 19,
-  },
-  SakuraTramArakawaLine: {
-    name: '都電荒川線 Arakawa Line',
-    color: '#000000',
-    backgroundColor: '#000000',
-    textColor: '#FFFFFF',
-    order: 20,
-  },
 }
 
 export const METADATA: Metadata = {
