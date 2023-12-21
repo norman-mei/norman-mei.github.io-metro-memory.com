@@ -9,6 +9,7 @@ import seoul from '@/images/photos/seoul.png'
 import barcelona from '@/images/photos/barcelona.png'
 import mexicoCity from '@/images/photos/mexico-city.png'
 import istanbul from '@/images/photos/istanbul.png'
+import stockholm from '@/images/photos/stockholm.png'
 
 import { StaticImageData } from 'next/image'
 
@@ -75,6 +76,12 @@ export const cities: ICity[] = [
     name: 'Istanbul',
     image: istanbul,
     link: '/istanbul',
+    hideInStats: true,
+  },
+  {
+    name: 'Stockholm',
+    image: stockholm,
+    link: '/stockholm',
     hideInStats: true,
   },
 ]
