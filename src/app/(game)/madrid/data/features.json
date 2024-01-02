@@ -315,6 +315,7 @@
       "properties": {
         "id": 282,
         "name": "Getafe Centro",
+        "alternate_names": ["Getafe Central", "Getafe"],
         "line": "MadridMetroL12",
         "order": 302
       },
@@ -2373,6 +2374,7 @@
       "properties": {
         "id": 308,
         "name": "Somosaguas Centro",
+        "alternate_names": ["Somosaguas Central", "Somosaguas"],
         "line": "MetroLigeroMl2",
         "order": 52
       },
@@ -2648,6 +2650,7 @@
       "properties": {
         "id": 320,
         "name": "Boadilla Centro",
+        "alternate_names": ["Boadilla Central", "Boadilla"],
         "line": "MetroLigeroMl3",
         "order": 41
       },
