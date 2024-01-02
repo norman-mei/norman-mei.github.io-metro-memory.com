@@ -191,6 +191,38 @@ export const i18n = rosetta({
       name: 'İsim',
     },
   },
+  jp: {
+    restartWarning: '進捗が失われます。本当にやり直しますか？',
+    introInstruction: '駅名を入力してEnterキーを押してください',
+    backToTheGame: 'ゲームに戻る',
+    stations: ({ count }: { count: number }) => `${count}駅`,
+    stationsFound: '駅が見つかりました',
+    inputPlaceholder: '駅名',
+    alreadyFound: 'すでに見つかりました',
+    startOver: '最初からやり直す',
+    showSolutions: '解答を表示',
+    hideSolutions: '解答を非表示',
+    supportProject: 'プロジェクトを支援する',
+    about: '情報',
+    congrats: ({ foundProportion }: { foundProportion: number }) =>
+      `おめでとうございます！${Math.floor(
+        foundProportion * 100,
+      )}%達成しました！`,
+    freeGame: 'このゲームは無料です。',
+    supportWithDonation: ({ title }: { title: string }) => (
+      <span>
+        <strong>{title}</strong> の開発を寄付によって支援してください。
+      </span>
+    ),
+    opensANewTab:
+      'このリンクをクリックすると新しいタブが開き、進捗はブラウザに保存されます。',
+    keepGoingForFree: '無料で続ける',
+    sort: {
+      order: '追加された日付',
+      line: '路線',
+      name: '名前',
+    },
+  },
   sv: {
     restartWarning:
       'Du kommer att förlora all din progress. Är du säker på att du vill börja om?',
