@@ -1640,6 +1640,7 @@
       "properties": {
         "id": 21,
         "name": "Kymlinge norrut",
+        "alternate_names": ["Kymlinge"],
         "line": "Tunnelbana11",
         "order": 49
       },
