@@ -142,6 +142,8 @@ const replacers: { [key: string]: (str: string) => string } = {
     str
       .toLowerCase()
       .replace(/\([^()]*\)/g, '')
+      .replace(/\([^<>]*\)/g, '')
+      .replace(/\([^〈〉]*\)/g, '')
       .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, ' ')
       .replace(/\s+/g, ' ')
       .trim(),

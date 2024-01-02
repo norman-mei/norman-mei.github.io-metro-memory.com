@@ -71,28 +71,28 @@
   },
   "ToeiSubwayI": {
     "name": "三田線 Mita Line",
-    "color": "#006ab8",
+    "color": "#0067B0",
     "backgroundColor": "#003458",
     "textColor": "#FFFFFF",
     "order": 10
   },
   "ToeiSubwayE": {
     "name": "大江戸線 Oedo Line",
-    "color": "#ce045b",
+    "color": "#CF3366",
     "backgroundColor": "#681933",
     "textColor": "#FFFFFF",
     "order": 11
   },
   "ToeiSubwayS": {
     "name": "新宿線 Shinjuku Line",
-    "color": "#b0bf1e",
+    "color": "#9FB01C",
     "backgroundColor": "#50580E",
     "textColor": "#FFFFFF",
     "order": 12
   },
   "ToeiSubwayA": {
     "name": "浅草線 Asakusa Line",
-    "color": "#ec6e65",
+    "color": "#FF535F",
     "backgroundColor": "#A9000C",
     "textColor": "#FFFFFF",
     "order": 13

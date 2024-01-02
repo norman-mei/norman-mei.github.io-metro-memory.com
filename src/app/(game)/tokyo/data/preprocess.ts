@@ -66,7 +66,21 @@ const main = async () => {
               const id = ++index
 
               const name = stops[code].name
-              const [japanese, english] = extractJapanese(name)
+
+              const components = extractJapanese(name).flatMap((str) => {
+                // Regular expression to match text outside and inside the angle brackets
+                const regex = /([^()<>〈〉]+)(?=[()<>〈〉]|$)/g
+
+                // Extract matches using the regular expression
+                const matches = str.match(regex)
+
+                // If matches are found, return them
+                if (matches) {
+                  return matches.map((match) => match.trim())
+                } else {
+                  return [] // Return an empty array if no matches are found
+                }
+              })
 
               return {
                 type: 'Feature',
@@ -81,9 +95,10 @@ const main = async () => {
                   id,
                   name: stops[code].name,
                   alternate_names: uniq(
-                    [english.trim(), japanese.trim()]
+                    components
+                      .map((str) => str.trim())
                       .filter(Boolean)
-                      .map(normalizeString('seoul')),
+                      .map(normalizeString('tokyo')),
                   ),
                   line: route.live_line_code,
                   order: path_index,
