@@ -70,7 +70,7 @@ const SearcheableCitiesList = () => {
           >
             <CityCard
               city={city}
-              className={i % 2 ? 'rotate-2' : '-rotate-2'}
+              className={i % 2 ? 'rotate-1' : '-rotate-1'}
             />
           </Transition>
         ))}

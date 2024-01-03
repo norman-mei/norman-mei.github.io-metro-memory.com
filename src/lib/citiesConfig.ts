@@ -1,17 +1,17 @@
-import paris from '@/images/photos/paris.png'
-import london from '@/images/photos/london.png'
-import berlin from '@/images/photos/berlin.png'
-import ny from '@/images/photos/ny.png'
-import wien from '@/images/photos/wien.png'
-import dc from '@/images/photos/dc.png'
-import madrid from '@/images/photos/madrid.png'
-import seoul from '@/images/photos/seoul.png'
-import barcelona from '@/images/photos/barcelona.png'
-import mexicoCity from '@/images/photos/mexico-city.png'
-import istanbul from '@/images/photos/istanbul.png'
-import tokyo from '@/images/photos/tokyo.png'
-import stockholm from '@/images/photos/stockholm.png'
-
+import paris from '@/app/(game)/paris/opengraph-image.jpg'
+import london from '@/app/(game)/london/opengraph-image.jpg'
+import berlin from '@/app/(game)/berlin/opengraph-image.jpg'
+import ny from '@/app/(game)/ny/opengraph-image.jpg'
+import wien from '@/app/(game)/wien/opengraph-image.jpg'
+import dc from '@/app/(game)/dc/opengraph-image.jpg'
+import madrid from '@/app/(game)/madrid/opengraph-image.jpg'
+import seoul from '@/app/(game)/seoul/opengraph-image.jpg'
+import barcelona from '@/app/(game)/barcelona/opengraph-image.jpg'
+import mexicoCity from '@/app/(game)/mexico-city/opengraph-image.jpg'
+import istanbul from '@/app/(game)/istanbul/opengraph-image.jpg'
+import tokyo from '@/app/(game)/tokyo/opengraph-image.jpg'
+import stockholm from '@/app/(game)/stockholm/opengraph-image.jpg'
+import singapore from '@/app/(game)/singapore/opengraph-image.jpg'
 import { StaticImageData } from 'next/image'
 
 export interface ICity {
@@ -87,5 +87,10 @@ export const cities: ICity[] = [
     name: 'Stockholm',
     image: stockholm,
     link: '/stockholm',
+  },
+  {
+    name: 'Singapore',
+    image: singapore,
+    link: '/singapore',
   },
 ]
