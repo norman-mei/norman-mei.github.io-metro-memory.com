@@ -5,9 +5,9 @@ import { DataFeatureCollection } from '@/lib/types'
 import config from './config'
 import GamePage from '@/components/GamePage'
 import { Provider } from '@/lib/configContext'
-import { Noto_Sans_KR } from 'next/font/google'
+import { Noto_Sans_JP } from 'next/font/google'
 
-const font = Noto_Sans_KR({
+const font = Noto_Sans_JP({
   weight: ['400', '700'],
   style: ['normal'],
   display: 'swap',

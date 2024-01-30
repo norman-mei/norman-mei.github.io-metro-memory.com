@@ -124,12 +124,12 @@ export const MAP_CONFIG: MapboxOptions = {
   container: 'map',
   style: 'mapbox://styles/benjamintd/clqaydk86007a01qr445u7p8i',
   bounds: [
-    [139.5, 35.5],
-    [140.5, 36.5],
+    [138.94, 35.18],
+    [140.57, 36.16],
   ],
   maxBounds: [
-    [138.5, 34.5],
-    [141.5, 37.5],
+    [137.94, 34.18],
+    [141.57, 37.16],
   ],
   minZoom: 6,
   fadeDuration: 50,
