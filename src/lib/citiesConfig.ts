@@ -12,6 +12,9 @@ import istanbul from '@/app/(game)/istanbul/opengraph-image.jpg'
 import tokyo from '@/app/(game)/tokyo/opengraph-image.jpg'
 import stockholm from '@/app/(game)/stockholm/opengraph-image.jpg'
 import singapore from '@/app/(game)/singapore/opengraph-image.jpg'
+import montreal from '@/app/(game)/montreal/opengraph-image.jpg'
+import vancouver from '@/app/(game)/vancouver/opengraph-image.jpg'
+
 import { StaticImageData } from 'next/image'
 
 export interface ICity {
@@ -93,4 +96,14 @@ export const cities: ICity[] = [
     image: singapore,
     link: '/singapore',
   },
+  {
+    name: 'Montréal',
+    image: montreal,
+    link: '/montreal',
+  },
+  // {
+  //   name: 'Vancouver',
+  //   image: vancouver,
+  //   link: '/vancouver',
+  // },
 ]

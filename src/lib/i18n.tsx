@@ -35,6 +35,40 @@ export const i18n = rosetta({
       name: 'Name',
     },
   },
+  fr: {
+    restartWarning:
+      'Vous allez perdre tout votre progression. Êtes-vous sûr de vouloir recommencer ?',
+    introInstruction: 'Tapez le nom d’une station, et appuyez sur Entrée',
+    backToTheGame: 'Retour au jeu',
+    stations: ({ count }: { count: number }) =>
+      `${count} station${count > 1 ? 's' : ''}`,
+    stationsFound: 'stations trouvées',
+    inputPlaceholder: 'Station',
+    alreadyFound: 'Déjà trouvée',
+    startOver: 'Recommencer',
+    showSolutions: 'Afficher les solutions',
+    hideSolutions: 'Masquer les solutions',
+    supportProject: 'Soutenir le projet',
+    about: 'À propos',
+    congrats: ({ foundProportion }: { foundProportion: number }) =>
+      `Bravo, vous avez atteint les ${
+        10 * Math.floor((foundProportion * 100) / 10)
+      }% !`,
+    freeGame: 'Ce jeu est gratuit.',
+    supportWithDonation: ({ title }: { title: string }) => (
+      <span>
+        Soutenez le développement de <strong>{title}</strong> en faisant un don.
+      </span>
+    ),
+    opensANewTab:
+      'Ce lien ouvrira un nouvel onglet et votre progression est sauvegardée dans votre navigateur.',
+    keepGoingForFree: 'Continuer gratuitement',
+    sort: {
+      order: 'Date d’ajout',
+      line: 'Ligne',
+      name: 'Nom',
+    },
+  },
   es: {
     restartWarning:
       'Vas a perder todo tu progreso. ¿Estás seguro de que quieres empezar de nuevo?',
