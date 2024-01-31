@@ -64,6 +64,24 @@ const replacers: { [key: string]: (str: string) => string } = {
       .replace(/ and /g, ' ')
       .replace(/ & /g, ' '),
 
+  chicago: (str) =>
+    str
+      .replace(/street/g, 'st')
+      .replace(/ avenue/g, ' av')
+      .replace(/ ave/g, ' av')
+      .replace(/ heights/g, ' hts')
+      .replace(/ road/g, ' rd')
+      .replace(/ parkway/g, ' pkwy')
+      .replace(/ square/g, ' sq')
+      .replace(/ junction/g, ' jct')
+      .replace(/ place/g, ' pl')
+      .replace(/ center/g, ' ctr')
+      .replace(/ boulevard/g, ' blvd')
+      .replace(/ south west/g, ' sw')
+      .replace(/ east/g, ' e')
+      .replace(/ and /g, ' ')
+      .replace(/ & /g, ' '),
+
   ny: (str) =>
     str
       .replace(/street/g, 'st')
