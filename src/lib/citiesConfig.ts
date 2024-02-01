@@ -14,6 +14,7 @@ import stockholm from '@/app/(game)/stockholm/opengraph-image.jpg'
 import singapore from '@/app/(game)/singapore/opengraph-image.jpg'
 import montreal from '@/app/(game)/montreal/opengraph-image.jpg'
 import chicago from '@/app/(game)/chicago/opengraph-image.jpg'
+import boston from '@/app/(game)/boston/opengraph-image.jpg'
 
 import { StaticImageData } from 'next/image'
 
@@ -105,6 +106,11 @@ export const cities: ICity[] = [
     name: 'Chicago',
     image: chicago,
     link: '/chicago',
+  },
+  {
+    name: 'Boston',
+    image: boston,
+    link: '/boston',
   },
   // {
   //   name: 'Vancouver',
