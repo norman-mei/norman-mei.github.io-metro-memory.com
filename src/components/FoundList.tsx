@@ -30,6 +30,12 @@ const FoundList = ({
   const { LINES } = useConfig()
   const { t } = useTranslation()
 
+  console.log(
+    Array.from(idMap.entries()).filter(
+      (f) => !found.find((e) => e === f[1].properties.id),
+    ),
+  )
+
   const sortOptions: SortOption[] = useMemo(() => {
     return [
       {
