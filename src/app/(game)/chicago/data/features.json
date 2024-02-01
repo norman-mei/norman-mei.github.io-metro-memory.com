@@ -1840,6 +1840,34 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
+        "coordinates": [-87.6586741879951, 41.97799186164995, 0]
+      },
+      "properties": {
+        "id": 1971,
+        "name": "Berwyn",
+        "line": "CTAMetroRedLine",
+        "order": 39.5
+      },
+      "id": 1971
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.65849872909713, 41.96914680841935, 0]
+      },
+      "properties": {
+        "id": 1972,
+        "name": "Lawrence",
+        "line": "CTAMetroRedLine",
+        "order": 39.7
+      },
+      "id": 1972
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
         "coordinates": [-87.838032, 41.984291]
       },
       "properties": {

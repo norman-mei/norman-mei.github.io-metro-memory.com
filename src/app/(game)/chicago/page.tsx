@@ -19,7 +19,7 @@ const fc = {
 
 export const metadata = config.METADATA
 
-export default function DC() {
+export default function Chicago() {
   return (
     <Provider value={config}>
       <main className={font.className}>
