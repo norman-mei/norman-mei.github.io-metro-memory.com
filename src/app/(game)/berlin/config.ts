@@ -193,7 +193,7 @@ export const METADATA: Metadata = {
       'Wie viele S- und U-Bahn-Stationen können Sie auswendig nennen? Spielen Sie das Berlin Bahn Memory und finden Sie es heraus!',
     type: 'website',
     locale: 'de_DE',
-    url: 'https://berlin.metro-memory.com/',
+    url: 'https://metro-memory.com/berlin',
   },
 }
 

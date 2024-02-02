@@ -10,6 +10,13 @@ const replacers: { [key: string]: (str: string) => string } = {
       .replace(/ und /g, ' ')
       .replace(/ & /g, ' '),
 
+  hamburg: (str) =>
+    str
+      .replace(/straße/g, 'str')
+      .replace(/strasse/g, 'str')
+      .replace(/ und /g, ' ')
+      .replace(/ & /g, ' '),
+
   london: (str) =>
     str
       .replace(/street/g, 'st')
