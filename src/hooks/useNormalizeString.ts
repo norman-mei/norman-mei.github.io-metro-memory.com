@@ -15,7 +15,16 @@ const replacers: { [key: string]: (str: string) => string } = {
       .replace(/straße/g, 'str')
       .replace(/strasse/g, 'str')
       .replace(/ und /g, ' ')
-      .replace(/ & /g, ' '),
+      .replace(/ & /g, ' ')
+      .replace(/hbf/g, 'hauptbahnhof'),
+
+  muenchen: (str) =>
+    str
+      .replace(/straße/g, 'str')
+      .replace(/strasse/g, 'str')
+      .replace(/ und /g, ' ')
+      .replace(/ & /g, ' ')
+      .replace(/hbf/g, 'hauptbahnhof'),
 
   london: (str) =>
     str
