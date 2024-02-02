@@ -224,7 +224,6 @@ const StatsGraph = ({
 }
 
 const formatPercentile = (percentile: number) => {
-  console.log(percentile)
   if (percentile === 1) {
     return 'Worst'
   }

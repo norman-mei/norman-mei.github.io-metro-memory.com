@@ -15,6 +15,13 @@ export type DataFeatureCollection = FeatureCollection<
   }
 >
 
+export type RoutesFeatureCollection = FeatureCollection<
+  LineString | MultiLineString,
+  {
+    color: string
+  }
+>
+
 export type DataFeature = DataFeatureCollection['features'][number]
 
 export interface SortOption {
@@ -32,6 +39,7 @@ export interface Line {
 }
 
 export interface Config {
+  MAP_FROM_DATA?: boolean
   GAUGE_COLORS?: 'inverted' | 'default'
   LOCALE: string
   CITY_NAME: string

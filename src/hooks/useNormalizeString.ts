@@ -8,7 +8,27 @@ const replacers: { [key: string]: (str: string) => string } = {
       .replace(/straße/g, 'str')
       .replace(/strasse/g, 'str')
       .replace(/ und /g, ' ')
-      .replace(/ & /g, ' '),
+      .replace(/ & /g, ' ')
+      .replace(/ß/g, 'ss'),
+
+  hamburg: (str) =>
+    str
+      .replace(/straße/g, 'str')
+      .replace(/strasse/g, 'str')
+      .replace(/ und /g, ' ')
+      .replace(/ & /g, ' ')
+      .replace(/hbf/g, 'hauptbahnhof')
+      .replace(/ß/g, 'ss'),
+
+  muenchen: (str) =>
+    str
+      .replace(/straße/g, 'str')
+      .replace(/strasse/g, 'str')
+      .replace(/ und /g, ' ')
+      .replace(/ & /g, ' ')
+      .replace(/hbf/g, 'hauptbahnhof')
+      .replace(/ß/g, 'ss')
+      .replace(/saint /g, 'st '),
 
   london: (str) =>
     str
@@ -200,7 +220,6 @@ export const normalizeString = (city: string) => {
   const normalizeStringBefore = (str?: string) =>
     (str || '')
       .toLowerCase()
-      .normalize('NFD')
       .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, ' ')
       .replace(/[\u2010-\u2015]/g, ' ')
       .replace(/[\u0300-\u036F]/g, '')
@@ -209,6 +228,7 @@ export const normalizeString = (city: string) => {
 
   const normalizeStringAfter = (str?: string) =>
     (str || '')
+      .normalize('NFD')
       .replace(/[^a-z0-9]/g, '')
       .replace(/\s+/g, ' ')
       .trim()

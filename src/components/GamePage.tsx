@@ -10,7 +10,11 @@ import 'react-circular-progressbar/dist/styles.css'
 import MenuComponent from '@/components/Menu'
 import IntroModal from '@/components/IntroModal'
 import FoundSummary from '@/components/FoundSummary'
-import { DataFeatureCollection, DataFeature } from '@/lib/types'
+import {
+  DataFeatureCollection,
+  DataFeature,
+  RoutesFeatureCollection,
+} from '@/lib/types'
 import Input from '@/components/Input'
 import useHideLabels from '@/hooks/useHideLabels'
 import StripeModal from '@/components/StripeModal'
@@ -18,9 +22,17 @@ import { useConfig } from '@/lib/configContext'
 import useTranslation from '@/hooks/useTranslation'
 import FoundList from '@/components/FoundList'
 import useNormalizeString from '@/hooks/useNormalizeString'
+import { bbox } from '@turf/turf'
 
-export default function GamePage({ fc }: { fc: DataFeatureCollection }) {
-  const { BEG_THRESHOLD, CITY_NAME, MAP_CONFIG, LINES } = useConfig()
+export default function GamePage({
+  fc,
+  routes,
+}: {
+  fc: DataFeatureCollection
+  routes?: RoutesFeatureCollection
+}) {
+  const { BEG_THRESHOLD, CITY_NAME, MAP_CONFIG, LINES, MAP_FROM_DATA } =
+    useConfig()
   const { t } = useTranslation()
 
   const normalizeString = useNormalizeString()
@@ -166,6 +178,80 @@ export default function GamePage({ fc }: { fc: DataFeatureCollection }) {
         },
       })
 
+      if (MAP_FROM_DATA && routes) {
+        mapboxMap.addSource('lines', {
+          type: 'geojson',
+          data: routes,
+        })
+
+        mapboxMap.addLayer({
+          id: 'lines',
+          type: 'line',
+          paint: {
+            'line-width': [
+              'interpolate',
+              ['linear'],
+              ['zoom'],
+              8.763,
+              1.5,
+              15,
+              3,
+              22,
+              3,
+            ],
+            'line-color': ['get', 'color'],
+            'line-offset': ['match', ['get', 'line'], '', 2, 0],
+          },
+          source: 'lines',
+          layout: {
+            'line-sort-key': ['-', 100, ['get', 'order']],
+          },
+        })
+
+        mapboxMap.addLayer({
+          type: 'circle',
+          source: 'features',
+          id: 'stations',
+          paint: {
+            'circle-radius': [
+              'interpolate',
+              ['linear'],
+              ['zoom'],
+              9,
+              1.5,
+              16,
+              10,
+            ],
+            'circle-color': '#ffffff',
+            'circle-stroke-color': 'rgb(122, 122, 122)',
+            'circle-stroke-width': [
+              'interpolate',
+              ['linear'],
+              ['zoom'],
+              8,
+              0.5,
+              22,
+              2,
+            ],
+          },
+        })
+
+        const box = bbox(routes)
+
+        mapboxMap.fitBounds(
+          [
+            [box[0], box[1]],
+            [box[2], box[3]],
+          ],
+          { padding: 100, duration: 0 },
+        )
+
+        mapboxMap.setMaxBounds([
+          [box[0] - 1, box[1] - 1],
+          [box[2] + 1, box[3] + 1],
+        ])
+      }
+
       mapboxMap.addLayer({
         id: 'stations-hovered',
         type: 'circle',
@@ -309,7 +395,7 @@ export default function GamePage({ fc }: { fc: DataFeatureCollection }) {
     return () => {
       mapboxMap.remove()
     }
-  }, [setMap, fc, LINES, MAP_CONFIG])
+  }, [setMap, fc, LINES, MAP_CONFIG, MAP_FROM_DATA, routes])
 
   useEffect(() => {
     if (!map) {
