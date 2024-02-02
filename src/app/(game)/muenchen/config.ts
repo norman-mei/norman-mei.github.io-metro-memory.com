@@ -105,6 +105,20 @@ export const LINES: {
     textColor: '#FFFFFF',
     order: 13,
   },
+  MunichSBahn_DbRegioAgBayernS7: {
+    name: 'S7',
+    color: '#823B36',
+    backgroundColor: '#411E1B',
+    textColor: '#FFFFFF',
+    order: 14,
+  },
+  MunichSBahn_DbRegioAgBayernS8: {
+    name: 'S8',
+    color: '#201C1C',
+    backgroundColor: '#100E0E',
+    textColor: '#FFFFFF',
+    order: 15,
+  },
 }
 
 export const METADATA: Metadata = {
