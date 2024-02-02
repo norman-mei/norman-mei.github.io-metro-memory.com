@@ -25,7 +25,7 @@ const CityCard = ({ city, className }: { city: ICity; className?: string }) => {
       </h1>
       <div
         className={clsx(
-          'relative aspect-square w-60 flex-none overflow-hidden rounded-xl bg-zinc-100 shadow transition-all  dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
+          'relative aspect-square w-52 flex-none overflow-hidden rounded-xl bg-zinc-100 shadow transition-all dark:bg-zinc-800 sm:rounded-2xl md:w-40 lg:w-52 xl:w-56',
           {
             'group-hover:shadow-lg group-hover:shadow-orange-300/60':
               !city.disabled,

@@ -57,7 +57,7 @@ const SearcheableCitiesList = () => {
           </svg>
         </div>
       </div>
-      <div className="mx-auto grid max-w-full grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mx-auto grid max-w-full grid-cols-1  gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {cities.map((city, i) => (
           <Transition
             as="div"
