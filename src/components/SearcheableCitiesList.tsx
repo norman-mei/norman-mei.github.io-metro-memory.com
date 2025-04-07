@@ -1,10 +1,10 @@
 'use client'
 
 import { cities } from '@/lib/citiesConfig'
+import { Transition } from '@headlessui/react'
 import Fuse from 'fuse.js'
 import { useMemo, useState } from 'react'
 import CityCard from './CityCard'
-import { Transition } from '@headlessui/react'
 
 const SearcheableCitiesList = () => {
   const [search, setSearch] = useState('')
@@ -96,7 +96,20 @@ const SuggestCity = () => {
   return (
     <p className="mt-6">
       If you want the game to be available in your city, send me a message on 𝕏{' '}
-      <a href="https://twitter.com/_benjamintd">@_benjamintd</a>.
+      <a
+        className="font-medium hover:underline"
+        href="https://twitter.com/_benjamintd"
+      >
+        @_benjamintd
+      </a>
+      , or contribute on{' '}
+      <a
+        className="font-medium hover:underline"
+        href="https://github.com/benjamintd/metro-memory.com"
+      >
+        Github
+      </a>
+      .
     </p>
   )
 }
