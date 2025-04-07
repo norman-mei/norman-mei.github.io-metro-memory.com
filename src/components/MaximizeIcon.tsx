@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import { SVGProps } from 'react'
 
 export function MaximizeIcon(props: SVGProps<SVGSVGElement>) {
   return (
@@ -14,5 +14,5 @@ export function MaximizeIcon(props: SVGProps<SVGSVGElement>) {
         d="M16.59 8.59L12 13.17L7.41 8.59L6 10l6 6l6-6l-1.41-1.41z"
       ></path>
     </svg>
-  );
+  )
 }

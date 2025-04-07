@@ -1,25 +1,25 @@
-import React, { Fragment, ReactNode } from "react";
-import { Listbox, Transition } from "@headlessui/react";
-import { SortIcon } from "./SortIcon";
-import { CheckIcon } from "./CheckIcon";
-import { SortOption, SortOptionType } from "@/lib/types";
-import classNames from "classnames";
+import React, { Fragment, ReactNode } from 'react'
+import { Listbox, Transition } from '@headlessui/react'
+import { SortIcon } from './SortIcon'
+import { CheckIcon } from './CheckIcon'
+import { SortOption, SortOptionType } from '@/lib/types'
+import classNames from 'classnames'
 
 export default function SortMenu({
   sortOptions,
   setSort,
   sort,
 }: {
-  sortOptions: SortOption[];
-  setSort: (sort: SortOptionType) => void;
-  sort: SortOptionType;
+  sortOptions: SortOption[]
+  setSort: (sort: SortOptionType) => void
+  sort: SortOptionType
 }) {
   return (
     <div className="h-8 w-16">
       <Listbox value={sort} onChange={setSort}>
         <div className="relative mt-1">
-          <Listbox.Button className="relative w-full flex items-center justify-between cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left shadow focus:outline-none focus-visible:border-zinc-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300">
-            <span className="font-bold text-gray-600 text-xs whitespace-nowrap">
+          <Listbox.Button className="relative flex w-full cursor-default items-center justify-between rounded-lg bg-white py-2 pl-3 pr-10 text-left shadow focus:outline-none focus-visible:border-zinc-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300">
+            <span className="whitespace-nowrap text-xs font-bold text-gray-600">
               {sortOptions.find((o) => o.id === sort)!.shortName}
             </span>
             <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
@@ -32,7 +32,7 @@ export default function SortMenu({
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Listbox.Options className="absolute mt-1 max-h-60 w-72 z-30 right-0 overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+            <Listbox.Options className="absolute right-0 z-30 mt-1 max-h-60 w-72 overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
               {sortOptions.map((option) => (
                 <Option key={option.id} option={option} />
               ))}
@@ -41,7 +41,7 @@ export default function SortMenu({
         </div>
       </Listbox>
     </div>
-  );
+  )
 }
 
 const Option = ({ option }: { option: SortOption }) => {
@@ -50,16 +50,16 @@ const Option = ({ option }: { option: SortOption }) => {
       {({ selected, active }) => (
         <li
           className={classNames(
-            "relative cursor-default select-none py-2 pl-10 pr-4",
+            'relative cursor-default select-none py-2 pl-10 pr-4',
             {
-              "bg-zinc-100 text-zinc-900": active,
-              "text-gray-900": !active,
-            }
+              'bg-zinc-100 text-zinc-900': active,
+              'text-gray-900': !active,
+            },
           )}
         >
           <span
             className={`block truncate ${
-              selected ? "font-medium" : "font-normal"
+              selected ? 'font-medium' : 'font-normal'
             }`}
           >
             {option.name}
@@ -72,5 +72,5 @@ const Option = ({ option }: { option: SortOption }) => {
         </li>
       )}
     </Listbox.Option>
-  );
-};
+  )
+}

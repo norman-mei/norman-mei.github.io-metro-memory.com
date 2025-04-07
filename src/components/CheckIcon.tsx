@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import { SVGProps } from 'react'
 
 export function CheckIcon(props: SVGProps<SVGSVGElement>) {
   return (
@@ -14,5 +14,5 @@ export function CheckIcon(props: SVGProps<SVGSVGElement>) {
         d="M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z"
       ></path>
     </svg>
-  );
+  )
 }
